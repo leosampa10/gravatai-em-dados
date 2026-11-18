@@ -1,1 +1,1 @@
-# gravatai-em-dados
+Painel Gravataí em dados — publicado via Netlify.
