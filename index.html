@@ -541,7 +541,7 @@ body.tf-on{overflow:hidden}
 .gl:hover,.gl:focus-visible{border-color:var(--pb);color:var(--pb)}
 #gl-pop{position:fixed;z-index:9999;max-width:300px;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.45;padding:10px 12px;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
 #gl-pop b{display:block;margin-bottom:3px}
-</style>
+.tl{list-style:none;margin:12px 0 6px;padding:0 0 0 18px;border-left:2px solid var(--line)}.tl li{position:relative;display:grid;grid-template-columns:120px 1fr;gap:14px;padding:9px 0}.tl li:before{content:"";position:absolute;left:-25px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--pb);border:2px solid var(--bg)}.tl b{font-size:15px}.tl span{font-size:15px;line-height:1.45}@media(max-width:600px){.tl li{grid-template-columns:1fr;gap:2px}}</style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%231d1e1a%22/%3E%3Cg%20transform%3D%22translate%2810%2024%29%22%20fill%3D%22%23ecebe4%22%3E%3Ccircle%20cx%3D%2224.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2236.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2276.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2213.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2218.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2225.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2282.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2287.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%222.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%225.7%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2216.1%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2214.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2283.9%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2294.3%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2298.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3C/g%3E%3C/svg%3E">
 </head>
 <body>
@@ -905,7 +905,7 @@ body.tf-on{overflow:hidden}
  <div class="page" id="g-prefeitura" hidden>
   <div class="ph"><h1>Prefeitura de Gravataí</h1><p class="upd-p" data-upd="prefeitura"></p><p>Indicadores da cidade ao longo das gestões, para onde foi o dinheiro, o que foi prometido e entregue, e o histórico desde 1997. As faixas nos gráficos marcam cada gestão.</p></div>
   <div class="bar2 pfbar" id="pfbar"></div>
-  <div class="snav" id="psnav"><button data-s="p-gov" aria-pressed="true">Quem governa</button><button data-s="p-ind">Indicadores</button><button data-s="p-fin">Finanças</button><button data-s="p-proj">Projeção 2027</button><button data-s="p-pro">Promessas e demandas</button><button data-s="p-his">Histórico das gestões</button></div>
+  <div class="snav" id="psnav"><button data-s="p-gov" aria-pressed="true">Quem governa</button><button data-s="p-ind">Indicadores</button><button data-s="p-fin">Finanças</button><button data-s="p-proj">Projeção 2027</button><button data-s="p-pro">Promessas e demandas</button><button data-s="p-his">História e gestões</button></div>
   <div class="sub" id="p-gov"><p class="sec-l" id="gov-lead"></p>
 <div id="gov-list"></div>
 <div class="sec"><h2 class="sec-t">Patrimônio declarado: prefeitos e vices</h2>
@@ -1139,6 +1139,43 @@ body.tf-on{overflow:hidden}
   </div>
 </section></div>
   <div class="sub" id="p-his" hidden><section class="panel">
+  <div class="sec-h"><span>0</span><div><h3>Antes da prefeitura: a cidade</h3><p>De aldeia guarani a polo automotivo: as datas que explicam a Gravataí de hoje.</p></div></div>
+  <div class="card" id="his-tl">
+    <h2>Linha do tempo de Gravataí</h2>
+    <ol class="tl">
+      <li><b>1753–1756</b><span>Guerra Guaranítica nos Sete Povos das Missões. Parte dos guaranis expulsos é levada para a região do rio Gravataí.</span></li>
+      <li><b>8/4/1763</b><span>Fundação da Aldeia de Nossa Senhora dos Anjos, com cerca de mil guaranis conduzidos pelo capitão Antônio Pinto Carneiro. É a data de aniversário comemorada em abril.</span></li>
+      <li><b>1772</b><span>Com o governador José Marcelino de Figueiredo, a aldeia ganha paróquia e começa a crescer.</span></li>
+      <li><b>1806</b><span>O território vira freguesia de Porto Alegre.</span></li>
+      <li><b>1880</b><span>Lei provincial de 11 de junho emancipa a antiga aldeia; o município é instalado em 23 de outubro, segunda data comemorada pela cidade.</span></li>
+      <li><b>1939</b><span>Canoas, até então distrito de Gravataí, vira município.</span></li>
+      <li><b>1965</b><span>Lei estadual de 9 de novembro emancipa Cachoeirinha, outro distrito de Gravataí.</span></li>
+      <li><b>Anos 1970</b><span>Instalação do Distrito Industrial. A população dobra entre 1970 e 1980.</span></li>
+      <li><b>1988</b><span>Glorinha se emancipa e Gravataí chega aos limites atuais.</span></li>
+      <li><b>2000</b><span>Em 20 de julho, a General Motors inaugura o Complexo Industrial Automotivo, primeira fábrica da empresa fora de São Paulo. O primeiro carro é o Celta.</span></li>
+      <li><b>2004</b><span>Quilombo Manoel Barbosa é reconhecido pela Fundação Palmares.</span></li>
+      <li><b>2012</b><span>A fábrica passa a produzir o Onix, que vira o carro mais produzido da GM no Brasil.</span></li>
+      <li><b>2026</b><span>O complexo chega a 5 milhões de veículos produzidos.</span></li>
+    </ol>
+    <div class="src">Fontes: Câmara Municipal de Gravataí (história oficial), IBGE (Biblioteca, histórico do município), Fundação Palmares (Portaria nº 19/2004), General Motors e imprensa. Datas de emancipação de Canoas, Cachoeirinha e Glorinha: IBGE.</div>
+  </div>
+  <div class="grid2">
+    <div class="card" id="his-pop">
+      <h2>Habitantes, censo a censo</h2>
+      <p class="lead">De 5,9 mil moradores em 1872 para 265 mil em 2022. O maior salto foi entre 1970 e 1980, quando a população dobrou com a industrialização e os loteamentos.</p>
+      <div id="his-pop-ch"></div>
+      <p class="note">Até 1939 o território incluía Canoas; até 1965, Cachoeirinha; até 1988, Glorinha. Por isso as quedas de território não aparecem como queda de população: a cidade crescia mais do que perdia. Estimativa do IBGE para 2025: 275.430.</p>
+      <div class="src">Fonte: IBGE, censos demográficos de 1872 a 2022.</div>
+    </div>
+    <div class="card" id="his-ele">
+      <h2>Eleitores</h2>
+      <div class="kpis" style="margin:8px 0 0"><div class="kpi"><b>185.345</b><span>eleitores aptos em 2020</span></div><div class="kpi"><b>193.867</b><span>eleitores aptos em 2024 (+4,6%)</span></div></div>
+      <p class="lead" style="margin-top:14px">Cidades com mais de 200 mil eleitores têm segundo turno para prefeito. Se o ritmo de 2020 a 2024 continuar, Gravataí pode passar dessa marca em 2028 e ser a sexta cidade gaúcha com segundo turno.</p>
+      <div class="src">Fonte: TSE, via Jornal do Comércio (jul/2024). Regra do segundo turno: Constituição Federal, art. 29, II.</div>
+    </div>
+  </div>
+  <div class="sec-h"><span>1</span><div><h3>Os governos desde 1997</h3><p>O que cada gestão gastou, em quê, e os marcos de cada período.</p></div></div>
+  
   <div class="card">
     <h2>Quase 30 anos de prefeitura</h2>
     <p class="lead">Despesa total por ano, em <span id="hist-unit"></span>. A chegada da GM (2000) fez o orçamento real triplicar em dez anos; desde 2013 o crescimento é lento, e em 2024–25 parou.</p>
@@ -2529,6 +2566,17 @@ function apply(root){root.querySelectorAll('.card, .ph').forEach(card=>{const do
  nodes.forEach(n=>{if(!n.parentElement||n.parentElement.closest('button,a,svg,.gl'))return;for(let k=0;k<D.length;k++){if(done.has(String(k)))continue;const m=n.nodeValue.match(D[k][0]);if(!m)continue;const after=n.splitText(m.index+m[0].length);const b=document.createElement('button');b.type='button';b.className='gl';b.dataset.k=k;b.textContent='?';b.setAttribute('aria-label','O que é '+D[k][1]+'?');after.parentNode.insertBefore(b,after);done.add(String(k));n=after;}});});});}
 let t=null,busy=false;const mo=new MutationObserver(()=>{if(busy)return;clearTimeout(t);t=setTimeout(()=>{busy=true;mo.disconnect();try{apply(document.querySelector('main'))}finally{mo.observe(document.querySelector('main'),{childList:true,subtree:true});busy=false}},250)});
 const m=document.querySelector('main');if(m){apply(m);mo.observe(m,{childList:true,subtree:true});}})();
+</script>
+<script>
+(function(){const P=[[1872,5852],[1890,9693],[1900,12855],[1920,20394],[1940,22894],[1950,27853],[1960,45951],[1970,52462],[1980,107437],[1991,181035],[2000,232629],[2010,255660],[2022,265074]];
+function draw(){const b=document.getElementById('his-pop-ch');if(!b)return;const W=560,H=250,l=46,r=14,t=10,bt=H-28,x=y=>l+(y-1872)/(2022-1872)*(W-l-r),y=v=>bt-v/280000*(bt-t);
+let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="População de Gravataí nos censos de 1872 a 2022" style="width:100%;height:auto">`;
+[0,100000,200000].forEach(v=>{s+=`<line x1="${l}" x2="${W-r}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${l-6}" y="${y(v)+4}" text-anchor="end" font-size="11" fill="var(--muted)">${v/1000} mil</text>`});
+[[1939,'Canoas',0],[1965,'Cachoeirinha',0],[1988,'Glorinha',14]].forEach(([a,n,o])=>{s+=`<line x1="${x(a)}" x2="${x(a)}" y1="${t}" y2="${bt}" stroke="var(--muted)" stroke-dasharray="3 3"/><text x="${x(a)+3}" y="${t+8+o}" font-size="10" fill="var(--muted)">${n} sai</text>`});
+s+=`<polyline fill="none" stroke="var(--pb)" stroke-width="2.5" points="${P.map(([a,v])=>x(a)+','+y(v)).join(' ')}"/>`;
+P.forEach(([a,v],i)=>{s+=`<circle cx="${x(a)}" cy="${y(v)}" r="4" fill="var(--pb)"><title>${a}: ${v.toLocaleString('pt-BR')} habitantes</title></circle>`;if([0,7,8,12].includes(i))s+=`<text x="${x(a)}" y="${y(v)-9}" text-anchor="${i===12?'end':'middle'}" font-size="11" font-weight="600" fill="var(--ink)">${(v/1000).toLocaleString('pt-BR',{maximumFractionDigits:1})} mil</text>`});
+[1872,1900,1940,1970,2000,2022].forEach(a=>{s+=`<text x="${x(a)}" y="${H-8}" text-anchor="middle" font-size="11" fill="var(--muted)">${a}</text>`});
+b.innerHTML=s+'</svg>';}R.push(draw);draw();})();
 </script>
 </body>
 </html>
