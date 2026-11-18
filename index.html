@@ -861,6 +861,14 @@ body.tf-on{overflow:hidden}
         <li><b>Emendas impositivas:</b> não encontrei previsão na Lei Orgânica nem nos documentos da Câmara. O vereador não tem uma parte do orçamento para indicar; emendas a projetos do prefeito precisam de votação, e 17 das 23 contestadas foram rejeitadas.</li>
       </ul>
     </div>
+    <div class="card" id="orc-cam">
+      <h2>Orçamento da Câmara</h2>
+      <p class="lead" id="orc-lead"></p>
+      <div id="orc-ch"></div>
+      <div class="cp-leg"><span><i style="background:var(--surface-2);outline:1px solid var(--muted)"></i>Orçamento aprovado</span><span><i style="background:var(--pb)"></i>Gasto (liquidado)</span></div>
+      <p class="note">Inclui as despesas intraorçamentárias (contribuição patronal à previdência dos servidores). O que a Câmara não gasta volta à Prefeitura no fim do ano. 2026: gasto até agosto.</p>
+      <div class="src">Fonte: Tesouro Nacional/SICONFI, RREO Anexo 2, função Legislativa (dotação inicial e despesa liquidada; 6º bimestre, 2026 até o 4º). Inflação: IPCA. Atualizado em 18/11/2026.</div>
+    </div>
     <div class="card">
       <h2>A Câmara inteira</h2>
       <ul class="clean">
@@ -2441,6 +2449,21 @@ const ref=[...g.children].find(x=>/Alunos na rede municipal/.test(x.textContent)
 R.push(draw);setTimeout(draw,0);})();
 </script>
 <script>(function(){const P=[["Fila da creche","Quantas crianças esperam vaga, por mês e bairro. A Prefeitura não publica; pedimos pela Lei de Acesso à Informação em 18/11/2026."],["Espera por consultas e exames","Pacientes na fila por especialidade e tempo médio de espera. Pedido pela LAI em 18/11/2026."],["Tarifa de ônibus e passageiros","Reajustes desde 2013 comparados à inflação e passageiros por mês. Pedido pela LAI em 18/11/2026."]];function draw(){const g=document.getElementById("indgrid");if(!g||g.querySelector(".pend"))return;P.forEach(([t,d])=>{const c=document.createElement("div");c.className="card pend";c.innerHTML=`<h2>${t}</h2><p class="lead">${d}</p><p class="note"><span class="chip gray">Dado pedido à Prefeitura</span> Prazo legal de resposta: 08/12/2026, prorrogável por 10 dias.</p>`;g.appendChild(c);});}R.push(draw);setTimeout(draw,0);})();</script>
+<script>
+(function(){const O=[[2021,19.468,15.792],[2022,20.010,17.975],[2023,23.000,22.536],[2024,23.500,22.109],[2025,26.500,24.379],[2026,40.700,16.761]];
+const f=v=>v.toLocaleString('pt-BR',{minimumFractionDigits:1,maximumFractionDigits:1});
+function draw(){const box=document.getElementById('orc-ch');if(!box)return;const W=720,H=300,l=10,b=H-34,mx=44,bw=44,gap=(W-l*2)/O.length;
+let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Orçamento aprovado e gasto da Câmara, 2021 a 2026" style="width:100%;height:auto">`;
+O.forEach(([y,d,g],i)=>{const x=l+i*gap+gap/2;const hd=d/mx*(b-30),hg=g/mx*(b-30);
+s+=`<rect x="${x-bw-2}" y="${b-hd}" width="${bw}" height="${hd}" rx="4" fill="var(--surface-2)" stroke="var(--muted)" stroke-width="1"><title>${y}: orçamento R$ ${f(d)} mi</title></rect>`;
+s+=`<rect x="${x+2}" y="${b-hg}" width="${bw}" height="${hg}" rx="4" fill="var(--pb)"><title>${y}: gasto R$ ${f(g)} mi${y===2026?' (até agosto)':''}</title></rect>`;
+s+=`<text x="${x-bw/2-2}" y="${b-hd-8}" text-anchor="middle" font-size="13" font-weight="${y===2026?700:500}" fill="var(--ink)">${f(d)}</text>`;
+s+=`<text x="${x}" y="${b+22}" text-anchor="middle" font-size="13" fill="var(--muted)">${y}${y===2026?'*':''}</text>`;});
+s+=`<line x1="${l}" x2="${W-l}" y1="${b}" y2="${b}" stroke="var(--muted)" stroke-width="1"/></svg>`;box.innerHTML=s;
+const r21=O[0][1]*dflY(2021),inf=ipcaAc(2021,2025);
+document.getElementById('orc-lead').innerHTML=`O orçamento aprovado da Câmara foi de <b>R$ 26,5 milhões em 2025</b> para <b>R$ 40,7 milhões em 2026</b>: +R$ 14,2 milhões (+54%), o maior salto da série. Entre 2021 e 2025 tinha subido 36%, para uma inflação de ${pctS(inf)} no período (os R$ 19,5 milhões de 2021 valem R$ ${f(r21)} milhões em reais de 2025). Até agosto de 2026, a Câmara gastou R$ 16,8 milhões, 41% do previsto. Valores em R$ milhões.`;}
+R.push(draw);draw();})();
+</script>
 </body>
 </html>
 
