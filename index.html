@@ -2429,7 +2429,7 @@ function salDraw(){const box=$('#sal-box');const S=DATA.sal;if(!box||!S)return;
  const pb=PR.filter(r=>!r[7]).sort((x,y)=>e20(y)-e20(x)),pbm=Math.max(...pb.map(e20))*1.04;
  const profBars=pb.map(r=>`<div class="r ${r[0]==='Gravataí'?'me':''}"><span>${r[0]}<small style="display:block;font-weight:400;color:var(--muted)">${r[6]}${r[2]!==20?` · ${r[2]}h no edital`:''}</small></span><span class="t"><i style="width:${e20(r)/pbm*100}%"></i><b class="mk" style="left:${p20/pbm*100}%"></b></span><span class="v">R$ ${nf(e20(r),0)}</span></div>`).join('');
  box.innerHTML=`<div class="kpis" style="margin:0 0 14px">${cards}</div>
- <h3>Evolução em reais (valor de cada ano)</h3><p class="note">As linhas tracejadas mostram quanto o prefeito e o vereador ganhariam se o salário de ${a} tivesse sido corrigido só pela inflação. A linha pontilhada é o rendimento médio do trabalhador gaúcho (${S.rs.d}).</p>
+ <h3>Evolução em reais (valor de cada ano)</h3><p class="note">A linha pontilhada é o rendimento médio do trabalhador gaúcho (${S.rs.d}).</p>
  <div class="infx-f" role="group" aria-label="Período">${P.map(p=>`<button type="button" data-sp="${p[0]}" class="${p[0]===cur[0]?'on':''}">${p[1]}</button>`).join('')}</div>
  <div class="chart" id="sal-ch"></div>
  <h3 style="margin-top:18px">Quanto cada salário mudou de ${a} a ${b}</h3><p class="infx-s">Comparado com a inflação e com o reajuste geral dos servidores.${b>2025?' A inflação de 2026 ainda não fechou: a comparação usa o IPCA até 2025.':''}</p>${bars}
@@ -2442,7 +2442,7 @@ function salDraw(){const box=$('#sal-box');const S=DATA.sal;if(!box||!S)return;
  box.querySelectorAll('[data-sp]').forEach(x=>x.onclick=()=>{SAL_P=x.dataset.sp;salDraw()});
  // gráfico em reais
  const ys=S.yrs.filter(y=>y>=a&&y<=b);const L=ser.map(([n])=>[n,C[n],ys.map(y=>v(n,y)??null)]).filter(x=>x[2].some(q=>q!=null));
- ['Prefeito','Vereador'].forEach(n=>{const b0=v(n,a);if(b0!=null)L.push([n+' corrigido pela inflação',C[n],ys.map(y=>y<=2025?b0*dflY(a)/dflY(y):null),1]);});
+ 
  const w=760,H=320,l=64,r=190,t0=12,b0=H-24;const all=L.flatMap(x=>x[2]).filter(x=>x!=null).concat([rs]);const mxv=Math.max(...all)*1.05;const sx=y=>l+(ys.length>1?(y-ys[0])/(ys[ys.length-1]-ys[0]):0)*(w-l-r);const sy=q=>b0-q/mxv*(b0-t0);
  const s=svg(w,H);s.setAttribute('aria-label','Evolução dos salários em reais');
  ticks(0,mxv,5).forEach(q=>{if(q>mxv)return;el('line',{x1:l,x2:w-r,y1:sy(q),y2:sy(q),stroke:css('--line')},s);el('text',{x:l-6,y:sy(q)+4,'text-anchor':'end',fill:css('--muted'),'font-size':11},s,'R$ '+nf(q/1000,0)+' mil');});
