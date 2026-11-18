@@ -524,6 +524,23 @@ body.tf-on{overflow:hidden}
 .pm-cp{font-size:13px;color:var(--muted);margin-top:6px}.pm-cp b{color:var(--ink)}
 
 .esc22 .row{display:grid;grid-template-columns:110px 1fr;gap:8px;align-items:center;margin:10px 0}.esc22 .bars{display:grid;gap:3px}.esc22 .b{display:grid;grid-template-columns:70px 1fr 52px;gap:6px;align-items:center;font-size:12px;color:var(--muted)}.esc22 .b i{display:block;height:8px;border-radius:4px}.esc22 .b em{font-style:normal;text-align:right;color:var(--ink);font-weight:600}.esc22 .t{font-size:13px;font-weight:600}
+
+.sec-h{display:flex;gap:16px;align-items:flex-start;margin:34px 0 10px;padding-top:18px;border-top:2px solid var(--ink)}
+.sec-h>span{font-weight:900;font-size:40px;line-height:1;color:var(--pb);min-width:34px}
+.panel>.sec-h:first-child{margin-top:4px}
+.sec-h h3{margin:0;font-size:22px;text-transform:uppercase;letter-spacing:-.01em}
+.sec-h p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.fixo{display:inline-block;margin:0 0 8px;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:2px 9px}
+.ind-grp{grid-column:1/-1;margin:22px 0 0;padding-top:12px;border-top:2px solid var(--ink);font-size:20px;text-transform:uppercase;letter-spacing:-.01em}
+.ind-grp:first-child{margin-top:0}
+.tgl{display:inline-flex;gap:0;border:1px solid var(--line);border-radius:999px;overflow:hidden;margin:0 0 10px}
+.tgl button{all:unset;cursor:pointer;font-size:12px;padding:4px 12px;color:var(--muted)}
+.tgl button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.tgl button:focus-visible{outline:2px solid var(--pb)}
+.gl{all:unset;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;margin:0 2px 0 3px;border-radius:50%;border:1px solid var(--muted);color:var(--muted);font:700 10px/1 system-ui,sans-serif;vertical-align:1px}
+.gl:hover,.gl:focus-visible{border-color:var(--pb);color:var(--pb)}
+#gl-pop{position:fixed;z-index:9999;max-width:300px;background:var(--ink);color:var(--bg);font-size:13px;line-height:1.45;padding:10px 12px;border-radius:8px;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+#gl-pop b{display:block;margin-bottom:3px}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%231d1e1a%22/%3E%3Cg%20transform%3D%22translate%2810%2024%29%22%20fill%3D%22%23ecebe4%22%3E%3Ccircle%20cx%3D%2224.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2236.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2276.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2213.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2218.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2225.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2282.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2287.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%222.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%225.7%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2216.1%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2214.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2283.9%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2294.3%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2298.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3C/g%3E%3C/svg%3E">
 </head>
@@ -560,7 +577,7 @@ body.tf-on{overflow:hidden}
    <button data-s="c-tema">Pautas por tema</button>
    <button data-s="c-fis">Fiscalização e comissões</button>
    <button data-s="c-vot">Votações e presença</button>
-   <button data-s="c-cus">Custos, campanha e patrimônio</button>
+   <button data-s="c-cus">Dinheiro e patrimônio</button>
   </div>
  </div>
 </header>
@@ -803,6 +820,14 @@ body.tf-on{overflow:hidden}
     </ul>
     <div class="src">Fonte: busca nas notícias do site da Câmara. Pedidos de audiência pública aparecem em requerimentos de Cláudio Ávila, Anna Beatriz (6 cada), Alex Peixe, Alison Silva, Paulo Silveira (4 cada) e Vitalina (3), mas o sistema não liga o pedido à audiência realizada.</div>
   </div>
+  <div class="card">
+      <h2>O que não existe em Gravataí</h2>
+      <ul class="clean">
+        <li><b>Cota parlamentar ou verba indenizatória:</b> não há. O portal informa que a Câmara não paga cota para o exercício do mandato.</li>
+        <li><b>Diárias:</b> nenhuma de 2018 a 2025. Em 2026 foram pagas R$ 17,4 mil a cinco vereadores, todas para viagens a Brasília: Alex Peixe e Roger Corrêa (R$ 4.471 cada), Hiago Pacheco (R$ 4.024), Dila e Marcia Becker (R$ 2.235 cada).</li>
+        <li><b>Emendas impositivas:</b> não encontrei previsão na Lei Orgânica nem nos documentos da Câmara. O vereador não tem uma parte do orçamento para indicar; emendas a projetos do prefeito precisam de votação, e 17 das 23 contestadas foram rejeitadas.</li>
+      </ul>
+    </div>
 </section></div>
   <div class="sub" id="c-vot" hidden><div id="vt-vot"></div><section class="panel"><div class="card" id="vts-list"></div></section><section class="panel">
   <div class="card">
@@ -820,7 +845,7 @@ body.tf-on{overflow:hidden}
   </div>
 </section></div>
   <div class="sub" id="c-cus" hidden><section class="panel">
-  <div class="grid2">
+  <div class="sec-h"><span>1</span><div><h3>Quanto custa a Câmara</h3><p>O orçamento da Casa, a folha, o custo de cada mandato e de cada lei.</p></div></div><div class="grid2">
 <div class="card" id="orc-cam">
       <h2>Orçamento da Câmara</h2>
       <p class="lead" id="orc-lead"></p>
@@ -838,25 +863,6 @@ body.tf-on{overflow:hidden}
       </ul>
     </div>
 </div>
-  <div class="card" id="pat-card">
-    <h2>Patrimônio declarado ao TSE</h2>
-    <p class="lead">Bens que cada vereador declarou à Justiça Eleitoral ao se candidatar, de 2008 a 2024. A variação compara a primeira e a última declaração acima de zero, já descontada a inflação (IPCA). Clique no título de uma coluna para ordenar; passe o mouse sobre um valor para ver os tipos de bem.</p>
-    <div class="infx-f" role="group" aria-label="Quais vereadores"><button type="button" data-patm="at" aria-pressed="true">Mandato atual</button><button type="button" data-patm="all" aria-pressed="false">Todos desde 2009</button></div>
-    <div id="pat-v"></div>
-    <p class="note">* Valores declarados pelo próprio candidato, em geral pelo preço de compra, não pelo valor de mercado. "R$ 0" significa que a pessoa não declarou bens; bens em nome do cônjuge ou de empresas podem não aparecer. <sup>P</sup> e <sup>V</sup>: declaração feita como candidato a prefeito ou vice. Na legislatura de 2009–12 a Câmara tinha 14 vereadores.</p>
-    <div class="src">Fonte: TSE, DivulgaCandContas (bens declarados nas eleições de 2008, 2012, 2016, 2020 e 2024). Inflação: IPCA (IBGE).</div>
-  </div>
-  <div class="card" id="camp-card">
-    <h2>Quem financiou a campanha</h2>
-    <p class="lead">De onde veio o dinheiro de cada candidato eleito: do partido (inclui fundo eleitoral e fundo partidário), de pessoas físicas, do próprio bolso ou de outras campanhas. Desde 2016 empresas não podem doar. Clique no título de uma coluna para ordenar.</p>
-    <div class="infx-f" role="group" aria-label="Eleição"><button type="button" data-cpy="2024" class="on" aria-pressed="true">2024</button><button type="button" data-cpy="2020" aria-pressed="false">2020</button><button type="button" data-cpy="2016" aria-pressed="false">2016</button></div>
-    <div class="cp-leg"><span><i style="background:var(--pb)"></i>Partido</span><span><i style="background:var(--pp)"></i>Pessoas físicas</span><span><i style="background:var(--pg)"></i>Próprio candidato</span><span><i style="background:var(--pl)"></i>Outras campanhas</span></div>
-    <div id="camp-v"></div>
-    <p class="note">Valores declarados à Justiça Eleitoral na prestação de contas, corrigidos pela inflação até 2025 quando indicado. Doação de outra campanha costuma ser material de campanha compartilhado (santinhos com o candidato a prefeito). Doações não indicam irregularidade.</p>
-    <div class="src">Fonte: TSE, DivulgaCandContas (prestação de contas de 2016, 2020 e 2024). Atualizado em 18/11/2026.</div>
-  </div>
-  
-  
   <div class="card">
     <h2>Quanto custa por mês cada mandato</h2>
     <p class="lead">Subsídio do vereador mais a folha bruta dos assessores e estagiários do gabinete, na média de quatro meses de 2025–26 (2021–24: média de dois meses de 2024). Não inclui encargos patronais.</p>
@@ -870,24 +876,30 @@ body.tf-on{overflow:hidden}
     <p class="lead">Custo do mandato no período do recorte (custo mensal de cada mandato × 12 × anos) dividido pelas leis normativas e declaratórias aprovadas. É uma medida grosseira: o vereador também fiscaliza e relata, mas ajuda a comparar.</p>
     <div class="tbl"><table id="tb-custo2"><thead><tr><th>Vereador</th><th>Mandato</th><th>Custo mensal</th><th>Custo no período</th><th>Leis com impacto</th><th>R$ por lei com impacto</th></tr></thead><tbody></tbody></table></div>
   </div>
-  <div class="grid2">
-    <div class="card">
-      <h2>O que não existe em Gravataí</h2>
-      <ul class="clean">
-        <li><b>Cota parlamentar ou verba indenizatória:</b> não há. O portal informa que a Câmara não paga cota para o exercício do mandato.</li>
-        <li><b>Diárias:</b> nenhuma de 2018 a 2025. Em 2026 foram pagas R$ 17,4 mil a cinco vereadores, todas para viagens a Brasília: Alex Peixe e Roger Corrêa (R$ 4.471 cada), Hiago Pacheco (R$ 4.024), Dila e Marcia Becker (R$ 2.235 cada).</li>
-        <li><b>Emendas impositivas:</b> não encontrei previsão na Lei Orgânica nem nos documentos da Câmara. O vereador não tem uma parte do orçamento para indicar; emendas a projetos do prefeito precisam de votação, e 17 das 23 contestadas foram rejeitadas.</li>
-      </ul>
-    </div>
-    
-    
-  </div>
-  <div class="card">
+  <div class="sec-h"><span>2</span><div><h3>As campanhas</h3><p>Quanto cada eleito gastou para se eleger e de onde veio o dinheiro.</p></div></div><div class="card">
     <h2>Quanto custou se eleger</h2>
     <p class="lead">Despesas contratadas na campanha, segundo a prestação de contas no TSE. Custo por voto = despesa ÷ votos na eleição.</p>
     <div class="tbl"><table id="tb-camp"><thead><tr><th>Vereador</th><th>Despesa 2020</th><th>Despesa 2024</th><th>Votos 2024</th><th>R$ por voto</th><th>Dinheiro público*</th><th>Maior gasto</th></tr></thead><tbody></tbody></table></div>
     <div class="src">* Fundo Especial de Financiamento de Campanha (FEFC) recebido na última eleição disputada. Fonte: DivulgaCandContas/TSE. Limite de gastos para vereador em Gravataí: R$ 51.635 (2020) e R$ 67.063 (2024).</div>
   </div>
+  <div class="card" id="camp-card">
+    <h2>Quem financiou a campanha</h2>
+    <p class="lead">De onde veio o dinheiro de cada candidato eleito: do partido (inclui fundo eleitoral e fundo partidário), de pessoas físicas, do próprio bolso ou de outras campanhas. Desde 2016 empresas não podem doar. Clique no título de uma coluna para ordenar.</p>
+    <div class="infx-f" role="group" aria-label="Eleição"><button type="button" data-cpy="2024" class="on" aria-pressed="true">2024</button><button type="button" data-cpy="2020" aria-pressed="false">2020</button><button type="button" data-cpy="2016" aria-pressed="false">2016</button></div>
+    <div class="cp-leg"><span><i style="background:var(--pb)"></i>Partido</span><span><i style="background:var(--pp)"></i>Pessoas físicas</span><span><i style="background:var(--pg)"></i>Próprio candidato</span><span><i style="background:var(--pl)"></i>Outras campanhas</span></div>
+    <div id="camp-v"></div>
+    <p class="note">Valores declarados à Justiça Eleitoral na prestação de contas, corrigidos pela inflação até 2025 quando indicado. Doação de outra campanha costuma ser material de campanha compartilhado (santinhos com o candidato a prefeito). Doações não indicam irregularidade.</p>
+    <div class="src">Fonte: TSE, DivulgaCandContas (prestação de contas de 2016, 2020 e 2024). Atualizado em 18/11/2026.</div>
+  </div>
+  <div class="sec-h"><span>3</span><div><h3>O patrimônio</h3><p>O que cada vereador declarou ter à Justiça Eleitoral.</p></div></div><div class="card" id="pat-card">
+    <h2>Patrimônio declarado ao TSE</h2>
+    <p class="lead">Bens que cada vereador declarou à Justiça Eleitoral ao se candidatar, de 2008 a 2024. A variação compara a primeira e a última declaração acima de zero, já descontada a inflação (IPCA). Clique no título de uma coluna para ordenar; passe o mouse sobre um valor para ver os tipos de bem.</p>
+    <div class="infx-f" role="group" aria-label="Quais vereadores"><button type="button" data-patm="at" aria-pressed="true">Mandato atual</button><button type="button" data-patm="all" aria-pressed="false">Todos desde 2009</button></div>
+    <div id="pat-v"></div>
+    <p class="note">* Valores declarados pelo próprio candidato, em geral pelo preço de compra, não pelo valor de mercado. "R$ 0" significa que a pessoa não declarou bens; bens em nome do cônjuge ou de empresas podem não aparecer. <sup>P</sup> e <sup>V</sup>: declaração feita como candidato a prefeito ou vice. Na legislatura de 2009–12 a Câmara tinha 14 vereadores.</p>
+    <div class="src">Fonte: TSE, DivulgaCandContas (bens declarados nas eleições de 2008, 2012, 2016, 2020 e 2024). Inflação: IPCA (IBGE).</div>
+  </div>
+  
 </section></div>
  </div>
  <div class="page" id="g-prefeitura" hidden>
@@ -2467,6 +2479,58 @@ s+=`<line x1="${l}" x2="${W-l}" y1="${b}" y2="${b}" stroke="var(--muted)" stroke
 const r21=O[0][1]*dflY(2021),inf=ipcaAc(2021,2025);
 document.getElementById('orc-lead').innerHTML=`O orçamento aprovado da Câmara foi de <b>R$ 26,5 milhões em 2025</b> para <b>R$ 40,7 milhões em 2026</b>: +R$ 14,2 milhões (+54%), o maior salto da série. Entre 2021 e 2025 tinha subido 36%, para uma inflação de ${pctS(inf)} no período (os R$ 19,5 milhões de 2021 valem R$ ${f(r21)} milhões em reais de 2025). Até agosto de 2026, a Câmara gastou R$ 16,8 milhões, 41% do previsto. Valores em R$ milhões.`;}
 R.push(draw);draw();})();
+</script>
+<script>
+/* ---- selo "não muda com os filtros" ---- */
+(function(){const FX=['Só Dimas Costa','A única CPI','Quem mexeu no orçamento','Participação social','Orçamento da Câmara','A Câmara inteira','Patrimônio declarado ao TSE','Quem financiou a campanha','O que não existe em Gravataí'];
+document.querySelectorAll('#g-camara h2').forEach(h=>{if(FX.some(t=>h.textContent.startsWith(t))&&!(h.nextElementSibling&&h.nextElementSibling.classList.contains('fixo'))){const s=document.createElement('span');s.className='fixo';s.textContent='Não muda com os filtros do topo';h.after(s);}});})();
+/* ---- indicadores: grupos por tema e total x por habitante ---- */
+(function(){const G=[['Educação',['Ideb · anos iniciais','Ideb · anos finais','Crianças e jovens na escola','Escolas da rede municipal','Creches: rede municipal','Alunos na rede municipal','Fila da creche']],
+['Saúde',['Mortalidade infantil','Unidades de saúde','Unidades básicas de saúde por 10 mil','Urgência: SAMU','SAMU: ambulâncias','Leitos de internação','Leitos SUS por mil','Gasto com saúde por habitante','Espera por consultas']],
+['Segurança',['Homicídios']],['Mobilidade',['Tarifa de ônibus']],['Meio ambiente',['Meio ambiente','Gasto com gestão ambiental']],
+['Contas da prefeitura',['Dívida consolidada','Despesa com pessoal','Vínculos na folha','Despesa de capital']]];
+const PAIR=[['Unidades de saúde','Unidades básicas de saúde por 10 mil'],['Urgência: SAMU','SAMU: ambulâncias'],['Leitos de internação','Leitos SUS por mil']];
+const T=c=>{const h=c.querySelector('h2');return h?h.textContent:''};
+function run(){const g=document.getElementById('indgrid');if(!g)return;const cards=[...g.children].filter(c=>c.classList.contains('card'));if(!cards.length)return;
+ g.querySelectorAll('.ind-grp').forEach(x=>x.remove());const used=new Set();const frag=[];
+ G.forEach(([nm,keys])=>{const cs=[];keys.forEach(k=>cards.forEach(c=>{if(!used.has(c)&&T(c).startsWith(k)){cs.push(c);used.add(c)}}));if(!cs.length)return;const h=document.createElement('h3');h.className='ind-grp';h.textContent=nm;frag.push(h,...cs);});
+ cards.filter(c=>!used.has(c)).forEach(c=>frag.push(c));frag.forEach(x=>g.appendChild(x));
+ PAIR.forEach(([a,b])=>{const A=cards.find(c=>T(c).startsWith(a)),B=cards.find(c=>T(c).startsWith(b));if(!A||!B)return;
+  const st=g.dataset['p'+a.length]||'tot';const show=m=>{A.hidden=m!=='tot';B.hidden=m==='tot';g.dataset['p'+a.length]=m;[A,B].forEach(c=>c.querySelectorAll('.tgl button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.m===m)))};
+  [A,B].forEach(c=>{if(c.querySelector('.tgl'))return;const d=document.createElement('div');d.className='tgl';d.setAttribute('role','group');d.setAttribute('aria-label','Mostrar');d.innerHTML='<button type="button" data-m="tot">Total</button><button type="button" data-m="pc">Por habitante, com RS e Brasil</button>';d.querySelectorAll('button').forEach(x=>x.onclick=()=>show(x.dataset.m));c.querySelector('h2').after(d);});show(st);});}
+R.push(run);setTimeout(run,0);})();
+/* ---- glossário ---- */
+(function(){const D=[
+[/\b(RCL|receita corrente líquida)\b/i,'Receita corrente líquida (RCL)','Tudo o que a prefeitura arrecada de forma regular (impostos, taxas e repasses), menos o que é obrigada a repassar. É a base dos limites da Lei de Responsabilidade Fiscal.'],
+[/\bdívida consolidada líquida\b/i,'Dívida consolidada líquida','Dívidas de longo prazo menos o dinheiro em caixa. O limite legal para municípios é 120% da RCL.'],
+[/\blimite prudencial\b/i,'Limite prudencial','Teto de alerta da Lei de Responsabilidade Fiscal para gasto com pessoal: 51,3% da RCL. Acima dele, a prefeitura fica proibida de dar reajustes e contratar.'],
+[/\bdotaç(ão|ões)\b/i,'Dotação','Valor que o orçamento aprovado autoriza gastar em cada área.'],
+[/\bempenhad[ao]s?\b/i,'Despesa empenhada','O dinheiro já foi reservado para um gasto contratado, mas o serviço ainda pode não ter sido entregue.'],
+[/\bliquidad[ao]s?\b/i,'Despesa liquidada','O serviço ou a compra foi entregue e conferido. Falta só pagar. É a melhor medida do que foi gasto.'],
+[/\bintra-?orçamentári[ao]s?\b/i,'Despesa intraorçamentária','Pagamento entre órgãos do próprio município, como a contribuição ao instituto de previdência dos servidores.'],
+[/\bamortizaç(ão|ões)\b/i,'Amortização','Pagamento do valor principal de uma dívida, sem contar os juros.'],
+[/\bIPCA\b/,'IPCA','Índice oficial de inflação, calculado pelo IBGE. O painel usa o IPCA para corrigir valores antigos e comparar com hoje.'],
+[/\bINPC\b/,'INPC','Índice de inflação do IBGE para famílias com renda de até 5 salários mínimos.'],
+[/\bIdeb\b/,'Ideb','Índice de Desenvolvimento da Educação Básica, de 0 a 10. Junta a taxa de aprovação com a nota dos alunos na prova nacional (Saeb).'],
+[/\bFUNDEB\b/i,'FUNDEB','Fundo que junta parte dos impostos do estado e dos municípios e redistribui conforme o número de matrículas na rede pública.'],
+[/\bsubsídios?\b/i,'Subsídio','Nome legal do salário de prefeito, vice, secretários e vereadores. É fixado por lei.'],
+[/\bquociente eleitoral\b/i,'Quociente eleitoral','Votos válidos divididos pelo número de vagas. Define quantas cadeiras cada partido ou federação conquista.'],
+[/\bveto(s)?\b/i,'Veto','Recusa do prefeito, total ou parcial, a um projeto aprovado pela Câmara. A Câmara pode derrubar o veto em votação.'],
+[/\bsuplentes?\b/i,'Suplente','Candidato não eleito que assume a vaga quando um vereador se licencia ou sai.'],
+[/\bSICONFI\b/i,'SICONFI','Sistema do Tesouro Nacional onde estados e municípios declaram suas contas.'],
+[/\bCNES\b/,'CNES','Cadastro Nacional de Estabelecimentos de Saúde, do Ministério da Saúde.'],
+[/\bLei de Acesso à Informação|\bLAI\b/,'Lei de Acesso à Informação (LAI)','Lei 12.527/2011. Qualquer pessoa pode pedir dados públicos, sem justificar, e o órgão tem 20 dias para responder.'],
+[/\bPPA\b/,'PPA','Plano Plurianual: o planejamento de gastos da prefeitura para quatro anos.'],
+[/\bLDO\b/,'LDO','Lei de Diretrizes Orçamentárias: define metas e regras para o orçamento do ano seguinte.'],
+[/\bLOA\b/,'LOA','Lei Orçamentária Anual: o orçamento da prefeitura para o ano.']];
+let pop=null;function close(){if(pop){pop.remove();pop=null}}
+document.addEventListener('click',e=>{const b=e.target.closest('.gl');if(!b){if(!e.target.closest('#gl-pop'))close();return}e.preventDefault();e.stopPropagation();const same=pop&&pop.dataset.k===b.dataset.k&&pop._b===b;close();if(same)return;const d=D[+b.dataset.k];pop=document.createElement('div');pop.id='gl-pop';pop.dataset.k=b.dataset.k;pop._b=b;pop.setAttribute('role','tooltip');pop.innerHTML=`<b>${d[1]}</b>${d[2]}`;document.body.appendChild(pop);const r=b.getBoundingClientRect();const w=pop.offsetWidth;pop.style.left=Math.max(8,Math.min(innerWidth-w-8,r.left-w/2))+'px';const t=r.bottom+8;pop.style.top=(t+pop.offsetHeight>innerHeight?r.top-pop.offsetHeight-8:t)+'px';},true);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});addEventListener('scroll',close,{passive:true});
+const SEL='.lead, .card > p, .card li, .note, .ph p, .card td:not(.num)';
+function apply(root){root.querySelectorAll('.card, .ph').forEach(card=>{const done=new Set([...card.querySelectorAll('.gl')].map(x=>x.dataset.k));card.querySelectorAll(SEL).forEach(el=>{if(el.closest('button,select,svg,a,.tgl,#gl-pop'))return;const tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const nodes=[];while(tw.nextNode())nodes.push(tw.currentNode);
+ nodes.forEach(n=>{if(!n.parentElement||n.parentElement.closest('button,a,svg,.gl'))return;for(let k=0;k<D.length;k++){if(done.has(String(k)))continue;const m=n.nodeValue.match(D[k][0]);if(!m)continue;const after=n.splitText(m.index+m[0].length);const b=document.createElement('button');b.type='button';b.className='gl';b.dataset.k=k;b.textContent='?';b.setAttribute('aria-label','O que é '+D[k][1]+'?');after.parentNode.insertBefore(b,after);done.add(String(k));n=after;}});});});}
+let t=null,busy=false;const mo=new MutationObserver(()=>{if(busy)return;clearTimeout(t);t=setTimeout(()=>{busy=true;mo.disconnect();try{apply(document.querySelector('main'))}finally{mo.observe(document.querySelector('main'),{childList:true,subtree:true});busy=false}},250)});
+const m=document.querySelector('main');if(m){apply(m);mo.observe(m,{childList:true,subtree:true});}})();
 </script>
 </body>
 </html>
