@@ -491,6 +491,17 @@ td.num{font-family:var(--f-body);font-variant-numeric:tabular-nums}
 
 .av-ghost{overflow:hidden;color:var(--muted)}
 .av-ghost svg{width:100%;height:100%;display:block;fill:currentColor;opacity:.45;transform:translateY(8%)}
+
+.tf{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);display:flex;align-items:center;justify-content:center;padding:16px}
+.tf[hidden]{display:none}
+.tf-box{background:var(--bg);color:var(--ink);width:min(680px,100%);max-height:92vh;border-radius:16px;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.tf-h{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--line)}
+.tf-h b{font:800 16px var(--f-disp)}
+.tf-x{width:44px;height:44px;border:0;background:transparent;color:var(--ink);font-size:26px;cursor:pointer;border-radius:10px}
+.tf-x:hover{background:var(--surface-2)}
+#tf-if{border:0;width:100%;height:70vh;background:#fff}
+.tf-f{margin:0;padding:8px 16px 12px;font:400 12px var(--f-body);color:var(--muted)}
+body.tf-on{overflow:hidden}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%231d1e1a%22/%3E%3Cg%20transform%3D%22translate%2810%2024%29%22%20fill%3D%22%23ecebe4%22%3E%3Ccircle%20cx%3D%2224.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2236.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2276.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2213.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2218.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2225.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2282.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2287.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%222.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%225.7%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2216.1%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2214.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2283.9%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2294.3%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2298.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3C/g%3E%3C/svg%3E">
 </head>
@@ -551,7 +562,7 @@ td.num{font-family:var(--f-body);font-variant-numeric:tabular-nums}
    <p>São 30 segundos, e só o bairro é obrigatório. As respostas mostram quem usa o site e o que cada bairro precisa. Ninguém vai te mandar mensagem, e nenhuma resposta individual é divulgada.</p>
    <div class="qs"><span>Nome (opcional)</span><span class="hl">Bairro</span><span>Idade</span><span>Campo político</span><span>Filiação</span><span>Temas que interessam</span><span>Como chegou aqui</span><span>Sugestão</span><span class="hl">O que seu bairro mais precisa</span></div>
    <div class="row"><a class="btn-p" href="https://tally.so/r/M1DgV8" target="_blank" rel="noopener">Responder agora</a><button type="button" class="btn-g" data-man>Como usar o site</button></div>
-   <details><summary>Por que pedimos e como os dados são tratados (LGPD)</summary><p class="lgpd">Opinião política e filiação partidária são dados sensíveis pela Lei Geral de Proteção de Dados: só informe se quiser. As respostas servem apenas para conhecer o público da plataforma, de forma agregada, e você pode pedir a exclusão a qualquer momento pelo próprio formulário. O formulário fica no Tally, fora deste site.</p></details>
+   <details><summary>Por que pedimos e como os dados são tratados (LGPD)</summary><p class="lgpd">Opinião política e filiação partidária são dados sensíveis pela Lei Geral de Proteção de Dados: só informe se quiser. As respostas servem apenas para conhecer o público da plataforma, de forma agregada, e você pode pedir a exclusão a qualquer momento pelo próprio formulário. O formulário abre aqui mesmo, numa janela do site; as respostas ficam guardadas no Tally, serviço usado para recebê-las.</p></details>
   </section>
 
   <div class="sec" id="ult"><h2 class="sec-t">Últimas de Gravataí</h2>
@@ -2318,6 +2329,18 @@ $('#f-clear').onclick=()=>setF({M:'all',B:'all',V:null});
 renderAll();
 showG(G);
 
+</script>
+<div id="tf" class="tf" hidden role="dialog" aria-modal="true" aria-label="Questionário Gravataí em dados"><div class="tf-box"><div class="tf-h"><b>Quem é você?</b><button type="button" class="tf-x" id="tf-x" aria-label="Fechar">×</button></div><iframe id="tf-if" title="Questionário Gravataí em dados" loading="lazy"></iframe><p class="tf-f">Não carregou? <a href="https://tally.so/r/M1DgV8" target="_blank" rel="noopener">Abrir o questionário em outra aba</a>.</p></div></div>
+<script>
+(function(){const U='https://tally.so/embed/M1DgV8?alignLeft=1&hideTitle=1&transparentBackground=0';const tf=document.getElementById('tf'),fr=document.getElementById('tf-if');if(!tf)return;
+function open(e){if(e)e.preventDefault();if(!fr.src)fr.src=U;tf.hidden=false;document.body.classList.add('tf-on');try{const w=document.getElementById('wl');if(w&&!w.hidden)w.hidden=true;}catch(x){}setTimeout(()=>document.getElementById('tf-x').focus(),50);}
+function close(){tf.hidden=true;document.body.classList.remove('tf-on');}
+window.tfOpen=open;
+document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href*="tally.so/r/M1DgV8"]');if(a&&!a.closest('.tf-f'))open(e);},true);
+const op=document.getElementById('op-open');if(op)op.onclick=e=>open(e);
+document.getElementById('tf-x').onclick=close;tf.addEventListener('click',e=>{if(e.target===tf)close();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!tf.hidden)close();});
+window.addEventListener('message',e=>{try{const d=typeof e.data==='string'?e.data:JSON.stringify(e.data);if(/Tally\.FormSubmitted/.test(d)){try{localStorage.setItem('gv-wl','ok')}catch(x){}setTimeout(close,2500);}}catch(x){}});})();
 </script>
 </body>
 </html>
