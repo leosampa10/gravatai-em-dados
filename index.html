@@ -905,7 +905,7 @@ body.tf-on{overflow:hidden}
  <div class="page" id="g-prefeitura" hidden>
   <div class="ph"><h1>Prefeitura de Gravataí</h1><p class="upd-p" data-upd="prefeitura"></p><p>Indicadores da cidade ao longo das gestões, para onde foi o dinheiro, o que foi prometido e entregue, e o histórico desde 1997. As faixas nos gráficos marcam cada gestão.</p></div>
   <div class="bar2 pfbar" id="pfbar"></div>
-  <div class="snav" id="psnav"><button data-s="p-gov" aria-pressed="true">Quem governa</button><button data-s="p-ind">Indicadores</button><button data-s="p-fin">Finanças e governos</button><button data-s="p-proj">Projeção 2027</button><button data-s="p-fed">Quem paga o quê</button><button data-s="p-gas">Gastos e Educação</button><button data-s="p-pro">Promessas e demandas</button><button data-s="p-his">Histórico das gestões</button></div>
+  <div class="snav" id="psnav"><button data-s="p-gov" aria-pressed="true">Quem governa</button><button data-s="p-ind">Indicadores</button><button data-s="p-fin">Finanças</button><button data-s="p-proj">Projeção 2027</button><button data-s="p-pro">Promessas e demandas</button><button data-s="p-his">Histórico das gestões</button></div>
   <div class="sub" id="p-gov"><p class="sec-l" id="gov-lead"></p>
 <div id="gov-list"></div>
 <div class="sec"><h2 class="sec-t">Patrimônio declarado: prefeitos e vices</h2>
@@ -921,22 +921,156 @@ body.tf-on{overflow:hidden}
 <p class="src">Prefeitos e vices: Wikipédia (biografias e eleições municipais de Gravataí), MDB-RS (2012), 2M Notícias (galeria de prefeitos e vices), Giro de Gravataí (2020), Jornal do Comércio (eleição suplementar de 2017). Fotos: TSE.</p>
 </div>
   <div class="sub" id="p-ind" hidden><div class="grid3" id="indgrid"></div><p class="src">Faixas: Bordignon (1997–2004), Stasinski (2005–08), Rita Sanco/Acimar (2009–12), Marco Alba (2013–20), Zaffalon (2021–). Linhas pontilhadas: RS e Brasil.</p></div>
-  <div class="sub" id="p-fin" hidden>
-   <section class="panel">
-    <div class="card" id="cmp-pes"></div>
-    <div class="card" id="cmp-inv"></div>
-    <div class="card"><span class="pill">Folha × receita</span><h2>Quanto da receita vai para o pessoal</h2><p class="lead" id="pesrec-sum"></p>
+  <div class="sub" id="p-fin" hidden><section class="panel">
+<div class="sec-h"><span>1</span><div><h3>Quanto entra e de onde vem</h3><p>A arrecadação própria, o que vem do Estado e da União e quanto chega por morador.</p></div></div>
+<div class="kpis" id="fed-kpis"></div>
+<div class="card"><span class="pill">De onde vem o dinheiro</span><h2>Quanto da receita é arrecadação de Gravataí e quanto vem do Estado e da União</h2>
+     <p class="lead" id="fed-lead"></p>
+     <div class="lg" id="lg-origem"></div>
+     <div class="chart" id="ch-origem"></div>
+     <p class="note">Valores em <span id="origem-unit"></span>. "Repasses obrigatórios" são a parte que a Constituição garante ao município nos impostos do Estado (ICMS e IPVA) e da União (Fundo de Participação, o FPM): o dinheiro é livre e não depende de favor político. "Programas" são recursos carimbados: SUS, merenda, transporte escolar, salário-educação, assistência social e convênios. Do FUNDEB, conta só o ganho líquido: a diferença entre o que o fundo devolve pelas matrículas e os 20% que o município deposita nele. 2018: ganho do FUNDEB estimado (dedução não publicada).</p>
+     <div class="src">Tesouro Nacional/SICONFI, Declaração de Contas Anuais (DCA, Anexo I-C), receitas brutas realizadas 2015–2025.</div></div>
+<div class="card" id="cmp-inv"></div>
+<div class="card"><span class="pill">Fora do orçamento</span><h2>O que a União e o Estado gastam direto em Gravataí</h2>
+     <p class="lead">Em 2025 a União pagou <b>R$ 254 milhões</b> em benefícios a moradores de Gravataí sem passar pelo caixa da prefeitura, o equivalente a 19% do orçamento municipal. Só o Bolsa Família chegou a 19,7 mil famílias.</p>
+     <div class="chart" id="ch-benef"></div>
+     <div class="tbl"><table><thead><tr><th>Obra ou programa</th><th>Quem paga</th><th class="num">Valor</th><th>Situação</th></tr></thead><tbody>
+      <tr><td><b>Recuperação da ERS-020</b> (Gravataí–Taquara, 64 km)</td><td>Estado (Funrigs)</td><td class="num">R$ 218 mi</td><td>Confirmada em mai/2025; o trecho vai além de Gravataí</td></tr>
+      <tr><td><b>Escola estadual Breno Garcia</b> (modelo Escola+, 1,2 mil vagas do 6º ano ao técnico)</td><td>Estado</td><td class="num">R$ 37,4 mi</td><td>Obra autorizada em fev/2026, entrega prevista no 2º semestre de 2026</td></tr>
+      <tr><td><b>Urbanização e saneamento do Arroio Barnabé</b> (PAC)</td><td>União (Cidades)</td><td class="num">R$ 35,2 mi</td><td>Assinado em 2007, concluído em 2026; liberados R$ 27,8 mi</td></tr>
+      <tr><td><b>Escola municipal em tempo integral Sonia Marisa</b> (Breno Garcia)</td><td>União (MEC)</td><td class="num">R$ 11,7 mi</td><td>Em execução até 2028; só R$ 1,7 mi liberados até agora</td></tr>
+      <tr><td><b>Limpeza e desobstrução da drenagem</b> (35 km de redes)</td><td>Estado (Funrigs)</td><td class="num">R$ 11,4 mi</td><td>Aprovado em out/2025, repassado à prefeitura em duas parcelas</td></tr>
+      <tr><td><b>Emergência SUS do Hospital Dom João Becker</b> (fase 2, 36 leitos ao final)</td><td>Estado</td><td class="num">~R$ 9 mi</td><td>Anunciado em jan/2025</td></tr>
+      <tr><td><b>Socorro e restabelecimento nas cheias</b> (2023 e 2024)</td><td>União (Integração)</td><td class="num">R$ 4,5 mi</td><td>Cinco repasses, todos com contas em dia</td></tr>
+      <tr><td><b>Diques do Rio Gravataí</b></td><td>União (Novo PAC) e Estado</td><td class="num">—</td><td>Estudos licitados em ago/2026; obras previstas para 2028–2031</td></tr>
+     </tbody></table></div>
+     <p class="note"><b>Dinheiro federal perdido:</b> nove convênios da União com a prefeitura foram anulados ou excluídos sem liberar recursos, somando R$ 6 milhões: pavimentação urbana (2021, R$ 1,2 mi), duas etapas da estrada Artur Soares (R$ 1,8 mi), os ginásios Aldeião e Morungava (R$ 1,1 mi), um CREAS (R$ 0,45 mi), estradas vicinais, habitação de baixa renda e um galpão para catadores. Outros dois, de requalificação de corredores de ônibus e pavimentação (2013), liberaram de 1% a 5% do valor.</p>
+     <div class="src">Portal da Transparência (CGU): benefícios ao cidadão e convênios por município, consulta em 21/10/2026; Governo do RS (ERS-020, Escola Breno Garcia, Funrigs drenagem); Jornal do Comércio (Hospital Dom João Becker, jan/2025).</div></div>
+<div class="card"><span class="pill">Competências</span><h2>O que deveria ser da prefeitura e não é, e o contrário</h2>
+     <p class="lead">A Constituição divide as tarefas: ao município cabem creche, pré-escola e ensino fundamental, atenção básica de saúde, transporte coletivo urbano, saneamento e uso do solo. Ao Estado, ensino médio, polícias e rodovias estaduais. Em Gravataí, a divisão real é outra em pelo menos sete áreas.</p>
+     <div class="tbl"><table class="comp"><thead><tr><th>Área</th><th>De quem é a tarefa</th><th>O que acontece em Gravataí</th><th>Dado</th></tr></thead><tbody>
+      <tr class="g-sub"><td colspan="4">É da prefeitura, mas ela faz pouco ou repassa</td></tr>
+      <tr><td><b>Água e esgoto</b></td><td>Município é o titular do serviço (Lei 11.445/2007 e novo marco de 2020)</td><td>Concedido à Corsan, privatizada para a Aegea em 2023. A prefeitura não gasta e fiscaliza pouco: a CPI da Câmara apontou 965 interrupções de água em 2025–26 e 42,97% de perdas na rede.</td><td>R$ 0 em saneamento em 2024 e 2025; esgoto adequado em 79,5% dos domicílios (Censo 2022), abaixo dos 83,5% de 2010</td></tr>
+      <tr><td><b>Creche</b></td><td>Dever do município (CF, art. 208 e 211)</td><td>A rede municipal tem só 725 matrículas em creche; outras 1.948 estão em escolas privadas, boa parte conveniadas. A cobertura de 0 a 3 anos é de cerca de 23%, contra a meta de 50% do Plano Nacional de Educação.</td><td>Creche municipal: 424 (2015) → 725 (2025); privada: 752 → 1.948</td></tr>
+      <tr><td><b>Habitação popular</b></td><td>Competência comum de União, Estado e município (CF, art. 23)</td><td>A prefeitura praticamente não tem política própria e depende do Minha Casa Minha Vida. Um convênio federal para moradias de baixa renda (2006) foi excluído depois de liberar metade do valor.</td><td>R$ 10 mil em habitação em 2024 e 2025</td></tr>
+      <tr><td><b>Drenagem e cheias</b></td><td>Drenagem urbana é saneamento municipal; Defesa Civil é de todos</td><td>As obras grandes dependem do PAC (Arroio Barnabé levou 19 anos; diques só em 2028–31) e do fundo estadual de reconstrução, que pagou até a limpeza das redes. O Plano Municipal de Drenagem segue em estudo.</td><td>Defesa Civil municipal: R$ 1,9 mi em 2025</td></tr>
+      <tr><td><b>Ensino fundamental</b></td><td>Compartilhado, com prioridade municipal (CF, art. 211)</td><td>O Estado ainda mantém 6 mil alunos do fundamental em Gravataí, quase um terço dos anos finais. Em 2015 eram 9,8 mil.</td><td>Rede estadual: 2.334 nos anos iniciais e 3.713 nos finais (2025)</td></tr>
+      <tr class="g-sub"><td colspan="4">É do Estado ou da União, mas a prefeitura assume</td></tr>
+      <tr><td><b>Segurança pública</b></td><td>Polícias Militar e Civil são do Estado (CF, art. 144)</td><td>A prefeitura mantém Guarda Municipal, videomonitoramento e apoio a órgãos estaduais. O gasto subiu 75% acima da inflação em dez anos.</td><td>R$ 9 mi (2015) → R$ 25,9 mi (2025); em reais de 2025, R$ 14,8 mi → R$ 25,9 mi</td></tr>
+      <tr><td><b>Hospital</b></td><td>Média e alta complexidade: financiamento sobretudo da União e do Estado</td><td>A prefeitura gasta com hospital e ambulatório mais que o dobro do que gasta com atenção básica, sua tarefa principal, e cobre com recursos próprios cerca de 60% de toda a saúde.</td><td>Assistência hospitalar R$ 189 mi × atenção básica R$ 86 mi (2025)</td></tr>
+      <tr><td><b>Ensino médio</b></td><td>Do Estado (CF, art. 211)</td><td>A rede municipal chegou a ter 902 alunos de ensino médio em 2015 e saiu dessa etapa até 2025, o que libera recursos para creche.</td><td>902 (2015) → 338 (2020) → 0 (2025)</td></tr>
+     </tbody></table></div>
+     <div class="src">Constituição Federal (arts. 23, 30, 144, 208, 211); Lei 11.445/2007 e Lei 14.026/2020; SICONFI (despesa por função e subfunção); QEdu/Inep (Censo Escolar 2015, 2020, 2025); IBGE (Censos 2010 e 2022); relatório da CPI da Aegea/Corsan na Câmara de Gravataí (2026).</div></div>
+<div class="sec-h"><span>2</span><div><h3>Para onde vai o dinheiro</h3><p>O gasto por área, ano a ano, e no mandato atual.</p></div></div>
+<div class="kpis" style="margin:0" id="k-gas"></div>
+<div class="card">
+    <span class="pill">Desde 1997</span>
+    <h2>Para onde foi o dinheiro, ano a ano</h2>
+    <p class="lead">Despesa total da Prefeitura dividida pelas maiores áreas. Mude o período no topo da página para comparar gestões.</p>
+    <div class="legend" id="lg-fun-hist"></div>
+    <div class="chart" id="ch-fun-hist"></div>
+    <p class="note" id="funhist-unit"></p>
+    <div class="src">Fonte: Finbra/SICONFI via Ipeadata (1997–2019) e SICONFI (2020–2025), despesa por função. Agrupamentos: educação inclui cultura; saúde inclui saneamento; urbanismo inclui habitação.</div>
+  </div>
+<div class="card">
+    <h2>O mandato atual em detalhe: para onde foi o dinheiro, 2021–2025</h2>
+    <p class="lead"><span id="fun-lead"></span> Habitação, saneamento, cultura e esporte somam menos de 0,5%.</p>
+    <div class="chart" id="ch-fun"></div>
+    <div class="src">Fonte: Tesouro Nacional, SICONFI, RREO Anexo 2, 6º bimestre de cada ano (despesas exceto intraorçamentárias). Valores na base escolhida no topo da página; IPCA para a correção e população estimada do IBGE para o valor por habitante.</div>
+  </div>
+<div class="card">
+    <h2>Como cada área mudou</h2>
+    <p class="lead" id="tbfun-lead"></p>
+    <div class="tbl"><table id="tb-fun"><thead><tr><th>Função</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2025 × 2020</th></tr></thead><tbody></tbody></table></div>
+    <div class="src">Urbanismo (pavimentação, iluminação, limpeza) teve pico em 2020, ano eleitoral, e em 2024, também eleitoral. Encargos especiais incluem juros e amortização da dívida.</div>
+  </div>
+<div class="sec-h"><span>3</span><div><h3>Pessoal e dívida</h3><p>Quanto da receita vai para a folha, como Gravataí se compara e quanto o investimento depende de empréstimo.</p></div></div>
+<div class="card"><span class="pill">Folha × receita</span><h2>Quanto da receita vai para o pessoal</h2><p class="lead" id="pesrec-sum"></p>
      <p class="unit">Painel de cima: <span id="pesrec-unit"></span>.</p><div class="chart" id="ch-pesrec"></div>
      <p class="note">Em cima: receita corrente e gasto com pessoal, em reais de 2025 (IPCA). A faixa clara entre as linhas é o que sobra para custeio, investimento e dívida. Embaixo: o pessoal como fatia da receita corrente bruta, por ano, na cor de cada gestão; a linha tracejada é o critério da Lei de Responsabilidade Fiscal (pessoal sobre a receita corrente líquida, publicado desde 2015), cujo limite é 54%. Antes de 2002 os dados do Finbra são menos consistentes (o pico de 2001, por exemplo, pode refletir mudança de classificação), e a receita de 1997–99 é anterior à chegada da GM.</p>
      <div id="nx-fin"></div><div class="src">Receita e pessoal: Finbra/SICONFI via Ipeadata (receita corrente bruta e despesa com pessoal e encargos); RGF/SICONFI para o % da RCL; IPCA/IBGE.</div></div>
-    <div class="card"><span class="pill">Comparar governos</span><h2>Os governos no mesmo gráfico</h2>
+<div class="card" id="cmp-pes"></div>
+<div class="card">
+      <h2>Investimento depende de empréstimo</h2>
+      <p class="lead"><span class="vb-unit"></span>. Em 2021–2024 os empréstimos equivaleram a 69% do que foi investido. Em 2025, primeiro ano do segundo mandato, o investimento caiu ao menor nível da série.</p>
+      <div class="legend"><span><i style="background:var(--accent)"></i>Investimentos liquidados</span><span><i style="background:var(--opo)"></i>Operações de crédito recebidas</span></div>
+      <div class="chart" id="ch-inv"></div>
+      <div class="src">Fonte: SICONFI, RREO Anexo 1. Operações de crédito de 2025 não informadas no demonstrativo.</div>
+    </div>
+<div class="sec-h"><span>4</span><div><h3>Investimento</h3><p>Quanto foi investido, em quê, onde, e o que era urgente.</p></div></div>
+<div class="card" id="inv-card">
+    <span class="pill">Investimento</span>
+    <h2>Investimento: quanto, em quê e onde</h2>
+    <p class="lead" id="inv2-lead"></p>
+    <div class="legend" id="lg-inv2"></div>
+    <div class="chart" id="ch-inv2"></div>
+    <p class="note" id="inv2-unit"></p>
+    <h3 style="margin-top:22px">Onde o investimento acontecia e onde acontece agora</h3>
+    <div class="legend" id="lg-inv-onde"></div>
+    <div class="chart" id="ch-inv-onde"></div>
+    <p class="note" id="onde-unit"></p>
+    <h3 style="margin-top:22px">Os maiores destinos, ano a ano</h3>
+    <p class="note">R$ milhões de 2025 (IPCA). Quanto mais azul, maior o valor.</p>
+    <div class="tbl"><table id="tb-inv-sub"><thead><tr></tr></thead><tbody></tbody></table></div>
+    <div class="src">Fonte: Tesouro Nacional/SICONFI. 2019–2025: Matriz de Saldos Contábeis de dezembro (despesa liquidada por função, subfunção e elemento; o total confere com o RREO). 2014–2018: DCA Anexo I-D (por tipo; sem abertura por área). 2026: RREO Anexo 1, 4º bimestre (até agosto), sem correção. "Repasses a entidades" são auxílios para obras e equipamentos de terceiros (ex.: hospital).</div>
+  </div>
+<div class="card">
+      <h2>O que era urgente e o que foi feito</h2>
+      <ul class="clean">
+        <li><b>Enchente de maio de 2024:</b> o Estado aprovou R$ 11,4 mi para o sistema de proteção contra cheias; a revisão da Lei Orgânica prevê R$ 132 mi em obras de cheia e parque linear na Estância Província de São Pedro, área que perdeu a proteção ambiental.</li>
+        <li><b>Emergência do Dom João Becker:</b> fase 1 entregue em dez/2023 (R$ 4,2 mi do Estado); fase 2 com R$ 9 mi do Estado, 36 leitos no total. Promessa de 2020 era 22 leitos e mais 100 de internação.</li>
+        <li><b>Transporte coletivo:</b> tarifa a R$ 8,50 em maio/2026 e 81 itinerários alterados; a nova modelagem prometida não apareceu.</li>
+        <li><b>Folha e previdência:</b> pessoal passou de R$ 379 mi (2020) para R$ 599 mi (2025), +58% em valores da época ou +19% acima da inflação; reforma da previdência aprovada em 2021.</li>
+        <li><b>Viário:</b> elevada da ERS-118 (R$ 28 mi) e trincheira da Av. Brasil são obras do Estado.</li>
+        <li><b>Centro administrativo:</b> compra do campus da Ulbra por R$ 21,7 mi (2023), para deixar de pagar R$ 2 mi/ano de aluguel.</li>
+      </ul>
+    </div>
+<div class="sec-h"><span>5</span><div><h3>Educação e saúde</h3><p>As duas maiores áreas: quanto recebem, de onde vem o dinheiro e se batem com o que a população pede.</p></div></div>
+<div class="card">
+    <span class="pill">Desde 1997</span>
+    <h2>Educação e saúde ao longo das gestões</h2>
+    <div class="chart" id="ch-edu-hist"></div>
+    <p class="note" id="eduhist-unit"></p>
+    <div class="src">Fonte: Finbra/SICONFI (despesa por função, liquidada). Correção pelo IPCA.</div>
+  </div>
+<div class="card">
+    <h2>Educação por dentro: para onde foi o dinheiro</h2>
+    <p class="lead"><span id="edu-lead"></span> Quase todo o aumento é folha: o piso nacional do magistério subiu 33% em 2022 e 15% em 2023, e o Fundeb exige 70% em salários. A maior alta proporcional foi na educação especial (monitores para alunos com deficiência).</p>
+    <div class="legend"><span><i style="background:var(--grey)"></i>2020 (gestão anterior)</span><span><i style="background:var(--accent)"></i>2025</span></div>
+    <div class="chart" id="ch-edu"></div>
+    <div class="src">Fonte: SICONFI, RREO Anexo 2, subfunções da Educação. Monitores escolares: R$ 8,8 mi em 2025 e R$ 14,6 mi previstos em 2026 (prefeitura).</div>
+  </div>
+<div class="card"><span class="pill">Saúde e educação</span><h2>Quanto da saúde e da educação a prefeitura paga com dinheiro próprio</h2>
+     <p class="lead" id="se-lead"></p>
+     <div class="grid2"><div><h3 class="h4">Saúde</h3><div class="chart" id="ch-saude-orig"></div></div><div><h3 class="h4">Educação</h3><div class="chart" id="ch-edu-orig"></div></div></div>
+     <div class="lg" id="lg-se"></div>
+     <p class="note">Aproximação: despesa liquidada na função menos o que entrou no ano carimbado para ela (SUS da União e do Estado na saúde; ganho do FUNDEB e FNDE na educação). Na educação, a parte "própria" inclui os 20% de impostos que o município deposita no FUNDEB e recebe de volta.</p>
+     <div class="src">SICONFI: RREO Anexo 2 (despesa por função) e DCA Anexo I-C (receitas).</div></div>
+<div class="sec-h"><span>6</span><div><h3>Os governos comparados</h3><p>Cada gestão no mesmo gráfico.</p></div></div>
+<div class="card"><span class="pill">Comparar governos</span><h2>Os governos no mesmo gráfico</h2>
      <div class="govctl"><label class="vsel"><span>Indicador</span><select id="gov-m"></select></label>
       <div class="seg" id="gov-mode" role="group" aria-label="Eixo"><span>Eixo</span><button type="button" data-v="mand">Ano de governo</button><button type="button" data-v="cal">Linha do tempo</button></div>
       <label class="chk"><input type="checkbox" id="gov-idx"> Variação desde o 1º ano</label></div>
      <p class="unit" id="gov-unit"></p><div class="chart" id="ch-gov"></div><div class="tbl" id="gov-tb"></div>
      <p class="note">"Ano de governo" alinha os mandatos pelo 1º, 2º, 3º ano… para comparar trajetórias. Marco Alba e Bordignon tiveram oito anos; Stasinski e Rita Sanco/Acimar, quatro; Zaffalon está no 5º. A média considera só os anos dentro do período escolhido acima.</p></div>
-   </section>
-  </div>
+<div class="grid2">
+<div class="card">
+      <h2>É o que a população pede?</h2>
+      <ul class="clean">
+        <li><b>Creche: a maior demanda, e a menos atendida.</b> São cerca de 11.800 crianças de 0 a 3 anos (Censo 2022) e 2.673 matrículas em creche em 2025 (725 na rede municipal e 1.948 em escolas privadas e comunitárias conveniadas): cobertura de cerca de 23%. Em 2020 eram 1.604 (14%). O plano de 2020 prometia 50% até 2024. A prefeitura não publica o tamanho da fila.</li>
+        <li><b>Pré-escola (4 e 5 anos), que é obrigatória:</b> 5.958 matrículas para cerca de 6.800 crianças, ou 88%.</li>
+        <li><b>Qualidade:</b> no Ideb de 2025, a rede municipal tirou 5,9 nos anos iniciais (RS e Brasil: 6,3) e 4,8 nos anos finais (RS 5,4; Brasil 5,3). Depois do salto de 2021, o resultado caiu em 2023 e só parcialmente se recuperou.</li>
+        <li><b>Inclusão:</b> o gasto com educação especial foi multiplicado por oito (R$ 1,8 mi para R$ 14,6 mi), em resposta a uma cobrança forte de famílias de crianças autistas.</li>
+        <li><b>Decisões sem consulta:</b> a nova Lei Orgânica (out/2025) acabou com a eleição direta de diretores, contra a posição do sindicato dos professores.</li>
+      </ul>
+    </div>
+<div class="card">
+      <h2>Leitura</h2>
+      <p>O dinheiro da Educação cresceu, mas por obrigação: piso salarial, Fundeb e o mínimo constitucional de 25% explicam a maior parte. As escolhas que dependiam do prefeito, como abrir vagas de creche e melhorar a aprendizagem, andaram devagar. A escola de tempo integral do Rincão da Madalena (R$ 40 mi) é do Estado e fica para 2027.</p>
+      <p class="note">Fontes: QEdu/Inep (Censo Escolar e Ideb 2025), IBGE (Censo 2022), Fipe/prefeitura.</p>
+    </div>
+</div>
+</section></div>
   <div class="sub" id="p-proj" hidden><div class="card">
  <h2>Receita corrente: o que já entrou, a previsão de 2026 e três cenários para 2027</h2>
  <p class="lead" id="pj-lead"></p><div id="nx-proj"></div>
@@ -968,144 +1102,8 @@ body.tf-on{overflow:hidden}
  <p class="src">Rateio de cerca de R$ 10 bi entre os municípios gaúchos em 2026 (Governo do RS), peso de 65% do valor adicionado no índice. A conta do ICMS é uma regra de três sobre esses números, não uma previsão de valor. Fontes: Seguinte (17/07/2026), POA24horas (14/10/2026), Jornal do Comércio (2020), O Repórter (04/09/2026), Emenda Constitucional 132/2023.</p>
 </div>
 </div>
-  <div class="sub" id="p-fed" hidden>   <section class="panel">
-    <div class="kpis" id="fed-kpis"></div>
-    <div class="card"><span class="pill">De onde vem o dinheiro</span><h2>Quanto da receita é arrecadação de Gravataí e quanto vem do Estado e da União</h2>
-     <p class="lead" id="fed-lead"></p>
-     <div class="lg" id="lg-origem"></div>
-     <div class="chart" id="ch-origem"></div>
-     <p class="note">Valores em <span id="origem-unit"></span>. "Repasses obrigatórios" são a parte que a Constituição garante ao município nos impostos do Estado (ICMS e IPVA) e da União (Fundo de Participação, o FPM): o dinheiro é livre e não depende de favor político. "Programas" são recursos carimbados: SUS, merenda, transporte escolar, salário-educação, assistência social e convênios. Do FUNDEB, conta só o ganho líquido: a diferença entre o que o fundo devolve pelas matrículas e os 20% que o município deposita nele. 2018: ganho do FUNDEB estimado (dedução não publicada).</p>
-     <div class="src">Tesouro Nacional/SICONFI, Declaração de Contas Anuais (DCA, Anexo I-C), receitas brutas realizadas 2015–2025.</div></div>
-    <div class="card"><span class="pill">Saúde e educação</span><h2>Quanto da saúde e da educação a prefeitura paga com dinheiro próprio</h2>
-     <p class="lead" id="se-lead"></p>
-     <div class="grid2"><div><h3 class="h4">Saúde</h3><div class="chart" id="ch-saude-orig"></div></div><div><h3 class="h4">Educação</h3><div class="chart" id="ch-edu-orig"></div></div></div>
-     <div class="lg" id="lg-se"></div>
-     <p class="note">Aproximação: despesa liquidada na função menos o que entrou no ano carimbado para ela (SUS da União e do Estado na saúde; ganho do FUNDEB e FNDE na educação). Na educação, a parte "própria" inclui os 20% de impostos que o município deposita no FUNDEB e recebe de volta.</p>
-     <div class="src">SICONFI: RREO Anexo 2 (despesa por função) e DCA Anexo I-C (receitas).</div></div>
-    <div class="card"><span class="pill">Fora do orçamento</span><h2>O que a União e o Estado gastam direto em Gravataí</h2>
-     <p class="lead">Em 2025 a União pagou <b>R$ 254 milhões</b> em benefícios a moradores de Gravataí sem passar pelo caixa da prefeitura, o equivalente a 19% do orçamento municipal. Só o Bolsa Família chegou a 19,7 mil famílias.</p>
-     <div class="chart" id="ch-benef"></div>
-     <div class="tbl"><table><thead><tr><th>Obra ou programa</th><th>Quem paga</th><th class="num">Valor</th><th>Situação</th></tr></thead><tbody>
-      <tr><td><b>Recuperação da ERS-020</b> (Gravataí–Taquara, 64 km)</td><td>Estado (Funrigs)</td><td class="num">R$ 218 mi</td><td>Confirmada em mai/2025; o trecho vai além de Gravataí</td></tr>
-      <tr><td><b>Escola estadual Breno Garcia</b> (modelo Escola+, 1,2 mil vagas do 6º ano ao técnico)</td><td>Estado</td><td class="num">R$ 37,4 mi</td><td>Obra autorizada em fev/2026, entrega prevista no 2º semestre de 2026</td></tr>
-      <tr><td><b>Urbanização e saneamento do Arroio Barnabé</b> (PAC)</td><td>União (Cidades)</td><td class="num">R$ 35,2 mi</td><td>Assinado em 2007, concluído em 2026; liberados R$ 27,8 mi</td></tr>
-      <tr><td><b>Escola municipal em tempo integral Sonia Marisa</b> (Breno Garcia)</td><td>União (MEC)</td><td class="num">R$ 11,7 mi</td><td>Em execução até 2028; só R$ 1,7 mi liberados até agora</td></tr>
-      <tr><td><b>Limpeza e desobstrução da drenagem</b> (35 km de redes)</td><td>Estado (Funrigs)</td><td class="num">R$ 11,4 mi</td><td>Aprovado em out/2025, repassado à prefeitura em duas parcelas</td></tr>
-      <tr><td><b>Emergência SUS do Hospital Dom João Becker</b> (fase 2, 36 leitos ao final)</td><td>Estado</td><td class="num">~R$ 9 mi</td><td>Anunciado em jan/2025</td></tr>
-      <tr><td><b>Socorro e restabelecimento nas cheias</b> (2023 e 2024)</td><td>União (Integração)</td><td class="num">R$ 4,5 mi</td><td>Cinco repasses, todos com contas em dia</td></tr>
-      <tr><td><b>Diques do Rio Gravataí</b></td><td>União (Novo PAC) e Estado</td><td class="num">—</td><td>Estudos licitados em ago/2026; obras previstas para 2028–2031</td></tr>
-     </tbody></table></div>
-     <p class="note"><b>Dinheiro federal perdido:</b> nove convênios da União com a prefeitura foram anulados ou excluídos sem liberar recursos, somando R$ 6 milhões: pavimentação urbana (2021, R$ 1,2 mi), duas etapas da estrada Artur Soares (R$ 1,8 mi), os ginásios Aldeião e Morungava (R$ 1,1 mi), um CREAS (R$ 0,45 mi), estradas vicinais, habitação de baixa renda e um galpão para catadores. Outros dois, de requalificação de corredores de ônibus e pavimentação (2013), liberaram de 1% a 5% do valor.</p>
-     <div class="src">Portal da Transparência (CGU): benefícios ao cidadão e convênios por município, consulta em 21/10/2026; Governo do RS (ERS-020, Escola Breno Garcia, Funrigs drenagem); Jornal do Comércio (Hospital Dom João Becker, jan/2025).</div></div>
-    <div class="card"><span class="pill">Competências</span><h2>O que deveria ser da prefeitura e não é, e o contrário</h2>
-     <p class="lead">A Constituição divide as tarefas: ao município cabem creche, pré-escola e ensino fundamental, atenção básica de saúde, transporte coletivo urbano, saneamento e uso do solo. Ao Estado, ensino médio, polícias e rodovias estaduais. Em Gravataí, a divisão real é outra em pelo menos sete áreas.</p>
-     <div class="tbl"><table class="comp"><thead><tr><th>Área</th><th>De quem é a tarefa</th><th>O que acontece em Gravataí</th><th>Dado</th></tr></thead><tbody>
-      <tr class="g-sub"><td colspan="4">É da prefeitura, mas ela faz pouco ou repassa</td></tr>
-      <tr><td><b>Água e esgoto</b></td><td>Município é o titular do serviço (Lei 11.445/2007 e novo marco de 2020)</td><td>Concedido à Corsan, privatizada para a Aegea em 2023. A prefeitura não gasta e fiscaliza pouco: a CPI da Câmara apontou 965 interrupções de água em 2025–26 e 42,97% de perdas na rede.</td><td>R$ 0 em saneamento em 2024 e 2025; esgoto adequado em 79,5% dos domicílios (Censo 2022), abaixo dos 83,5% de 2010</td></tr>
-      <tr><td><b>Creche</b></td><td>Dever do município (CF, art. 208 e 211)</td><td>A rede municipal tem só 725 matrículas em creche; outras 1.948 estão em escolas privadas, boa parte conveniadas. A cobertura de 0 a 3 anos é de cerca de 23%, contra a meta de 50% do Plano Nacional de Educação.</td><td>Creche municipal: 424 (2015) → 725 (2025); privada: 752 → 1.948</td></tr>
-      <tr><td><b>Habitação popular</b></td><td>Competência comum de União, Estado e município (CF, art. 23)</td><td>A prefeitura praticamente não tem política própria e depende do Minha Casa Minha Vida. Um convênio federal para moradias de baixa renda (2006) foi excluído depois de liberar metade do valor.</td><td>R$ 10 mil em habitação em 2024 e 2025</td></tr>
-      <tr><td><b>Drenagem e cheias</b></td><td>Drenagem urbana é saneamento municipal; Defesa Civil é de todos</td><td>As obras grandes dependem do PAC (Arroio Barnabé levou 19 anos; diques só em 2028–31) e do fundo estadual de reconstrução, que pagou até a limpeza das redes. O Plano Municipal de Drenagem segue em estudo.</td><td>Defesa Civil municipal: R$ 1,9 mi em 2025</td></tr>
-      <tr><td><b>Ensino fundamental</b></td><td>Compartilhado, com prioridade municipal (CF, art. 211)</td><td>O Estado ainda mantém 6 mil alunos do fundamental em Gravataí, quase um terço dos anos finais. Em 2015 eram 9,8 mil.</td><td>Rede estadual: 2.334 nos anos iniciais e 3.713 nos finais (2025)</td></tr>
-      <tr class="g-sub"><td colspan="4">É do Estado ou da União, mas a prefeitura assume</td></tr>
-      <tr><td><b>Segurança pública</b></td><td>Polícias Militar e Civil são do Estado (CF, art. 144)</td><td>A prefeitura mantém Guarda Municipal, videomonitoramento e apoio a órgãos estaduais. O gasto subiu 75% acima da inflação em dez anos.</td><td>R$ 9 mi (2015) → R$ 25,9 mi (2025); em reais de 2025, R$ 14,8 mi → R$ 25,9 mi</td></tr>
-      <tr><td><b>Hospital</b></td><td>Média e alta complexidade: financiamento sobretudo da União e do Estado</td><td>A prefeitura gasta com hospital e ambulatório mais que o dobro do que gasta com atenção básica, sua tarefa principal, e cobre com recursos próprios cerca de 60% de toda a saúde.</td><td>Assistência hospitalar R$ 189 mi × atenção básica R$ 86 mi (2025)</td></tr>
-      <tr><td><b>Ensino médio</b></td><td>Do Estado (CF, art. 211)</td><td>A rede municipal chegou a ter 902 alunos de ensino médio em 2015 e saiu dessa etapa até 2025, o que libera recursos para creche.</td><td>902 (2015) → 338 (2020) → 0 (2025)</td></tr>
-     </tbody></table></div>
-     <div class="src">Constituição Federal (arts. 23, 30, 144, 208, 211); Lei 11.445/2007 e Lei 14.026/2020; SICONFI (despesa por função e subfunção); QEdu/Inep (Censo Escolar 2015, 2020, 2025); IBGE (Censos 2010 e 2022); relatório da CPI da Aegea/Corsan na Câmara de Gravataí (2026).</div></div>
-   </section>
-</div>
-  <div class="sub" id="p-gas" hidden><section class="panel">
-  <div class="kpis" style="margin:0" id="k-gas"></div>
-  <div class="card">
-    <span class="pill">Desde 1997</span>
-    <h2>Para onde foi o dinheiro, ano a ano</h2>
-    <p class="lead">Despesa total da Prefeitura dividida pelas maiores áreas. Mude o período no topo da página para comparar gestões.</p>
-    <div class="legend" id="lg-fun-hist"></div>
-    <div class="chart" id="ch-fun-hist"></div>
-    <p class="note" id="funhist-unit"></p>
-    <div class="src">Fonte: Finbra/SICONFI via Ipeadata (1997–2019) e SICONFI (2020–2025), despesa por função. Agrupamentos: educação inclui cultura; saúde inclui saneamento; urbanismo inclui habitação.</div>
-  </div>
-  <div class="card" id="inv-card">
-    <span class="pill">Investimento</span>
-    <h2>Investimento: quanto, em quê e onde</h2>
-    <p class="lead" id="inv2-lead"></p>
-    <div class="legend" id="lg-inv2"></div>
-    <div class="chart" id="ch-inv2"></div>
-    <p class="note" id="inv2-unit"></p>
-    <h3 style="margin-top:22px">Onde o investimento acontecia e onde acontece agora</h3>
-    <div class="legend" id="lg-inv-onde"></div>
-    <div class="chart" id="ch-inv-onde"></div>
-    <p class="note" id="onde-unit"></p>
-    <h3 style="margin-top:22px">Os maiores destinos, ano a ano</h3>
-    <p class="note">R$ milhões de 2025 (IPCA). Quanto mais azul, maior o valor.</p>
-    <div class="tbl"><table id="tb-inv-sub"><thead><tr></tr></thead><tbody></tbody></table></div>
-    <div class="src">Fonte: Tesouro Nacional/SICONFI. 2019–2025: Matriz de Saldos Contábeis de dezembro (despesa liquidada por função, subfunção e elemento; o total confere com o RREO). 2014–2018: DCA Anexo I-D (por tipo; sem abertura por área). 2026: RREO Anexo 1, 4º bimestre (até agosto), sem correção. "Repasses a entidades" são auxílios para obras e equipamentos de terceiros (ex.: hospital).</div>
-  </div>
-
-  <div class="card">
-    <h2>O mandato atual em detalhe: para onde foi o dinheiro, 2021–2025</h2>
-    <p class="lead"><span id="fun-lead"></span> Habitação, saneamento, cultura e esporte somam menos de 0,5%.</p>
-    <div class="chart" id="ch-fun"></div>
-    <div class="src">Fonte: Tesouro Nacional, SICONFI, RREO Anexo 2, 6º bimestre de cada ano (despesas exceto intraorçamentárias). Valores na base escolhida no topo da página; IPCA para a correção e população estimada do IBGE para o valor por habitante.</div>
-  </div>
-  <div class="card">
-    <h2>Como cada área mudou</h2>
-    <p class="lead" id="tbfun-lead"></p>
-    <div class="tbl"><table id="tb-fun"><thead><tr><th>Função</th><th>2020</th><th>2021</th><th>2022</th><th>2023</th><th>2024</th><th>2025</th><th>2025 × 2020</th></tr></thead><tbody></tbody></table></div>
-    <div class="src">Urbanismo (pavimentação, iluminação, limpeza) teve pico em 2020, ano eleitoral, e em 2024, também eleitoral. Encargos especiais incluem juros e amortização da dívida.</div>
-  </div>
-  <div class="grid2">
-    <div class="card">
-      <h2>Investimento depende de empréstimo</h2>
-      <p class="lead"><span class="vb-unit"></span>. Em 2021–2024 os empréstimos equivaleram a 69% do que foi investido. Em 2025, primeiro ano do segundo mandato, o investimento caiu ao menor nível da série.</p>
-      <div class="legend"><span><i style="background:var(--accent)"></i>Investimentos liquidados</span><span><i style="background:var(--opo)"></i>Operações de crédito recebidas</span></div>
-      <div class="chart" id="ch-inv"></div>
-      <div class="src">Fonte: SICONFI, RREO Anexo 1. Operações de crédito de 2025 não informadas no demonstrativo.</div>
-    </div>
-    <div class="card">
-      <h2>O que era urgente e o que foi feito</h2>
-      <ul class="clean">
-        <li><b>Enchente de maio de 2024:</b> o Estado aprovou R$ 11,4 mi para o sistema de proteção contra cheias; a revisão da Lei Orgânica prevê R$ 132 mi em obras de cheia e parque linear na Estância Província de São Pedro, área que perdeu a proteção ambiental.</li>
-        <li><b>Emergência do Dom João Becker:</b> fase 1 entregue em dez/2023 (R$ 4,2 mi do Estado); fase 2 com R$ 9 mi do Estado, 36 leitos no total. Promessa de 2020 era 22 leitos e mais 100 de internação.</li>
-        <li><b>Transporte coletivo:</b> tarifa a R$ 8,50 em maio/2026 e 81 itinerários alterados; a nova modelagem prometida não apareceu.</li>
-        <li><b>Folha e previdência:</b> pessoal passou de R$ 379 mi (2020) para R$ 599 mi (2025), +58% em valores da época ou +19% acima da inflação; reforma da previdência aprovada em 2021.</li>
-        <li><b>Viário:</b> elevada da ERS-118 (R$ 28 mi) e trincheira da Av. Brasil são obras do Estado.</li>
-        <li><b>Centro administrativo:</b> compra do campus da Ulbra por R$ 21,7 mi (2023), para deixar de pagar R$ 2 mi/ano de aluguel.</li>
-      </ul>
-    </div>
-  </div>
-  <div class="card">
-    <span class="pill">Desde 1997</span>
-    <h2>Educação e saúde ao longo das gestões</h2>
-    <div class="chart" id="ch-edu-hist"></div>
-    <p class="note" id="eduhist-unit"></p>
-    <div class="src">Fonte: Finbra/SICONFI (despesa por função, liquidada). Correção pelo IPCA.</div>
-  </div>
-<div class="card">
-    <h2>Educação por dentro: para onde foi o dinheiro</h2>
-    <p class="lead"><span id="edu-lead"></span> Quase todo o aumento é folha: o piso nacional do magistério subiu 33% em 2022 e 15% em 2023, e o Fundeb exige 70% em salários. A maior alta proporcional foi na educação especial (monitores para alunos com deficiência).</p>
-    <div class="legend"><span><i style="background:var(--grey)"></i>2020 (gestão anterior)</span><span><i style="background:var(--accent)"></i>2025</span></div>
-    <div class="chart" id="ch-edu"></div>
-    <div class="src">Fonte: SICONFI, RREO Anexo 2, subfunções da Educação. Monitores escolares: R$ 8,8 mi em 2025 e R$ 14,6 mi previstos em 2026 (prefeitura).</div>
-  </div>
-  <div class="grid2">
-    <div class="card">
-      <h2>É o que a população pede?</h2>
-      <ul class="clean">
-        <li><b>Creche: a maior demanda, e a menos atendida.</b> São cerca de 11.800 crianças de 0 a 3 anos (Censo 2022) e 2.673 matrículas em creche em 2025 (725 na rede municipal e 1.948 em escolas privadas e comunitárias conveniadas): cobertura de cerca de 23%. Em 2020 eram 1.604 (14%). O plano de 2020 prometia 50% até 2024. A prefeitura não publica o tamanho da fila.</li>
-        <li><b>Pré-escola (4 e 5 anos), que é obrigatória:</b> 5.958 matrículas para cerca de 6.800 crianças, ou 88%.</li>
-        <li><b>Qualidade:</b> no Ideb de 2025, a rede municipal tirou 5,9 nos anos iniciais (RS e Brasil: 6,3) e 4,8 nos anos finais (RS 5,4; Brasil 5,3). Depois do salto de 2021, o resultado caiu em 2023 e só parcialmente se recuperou.</li>
-        <li><b>Inclusão:</b> o gasto com educação especial foi multiplicado por oito (R$ 1,8 mi para R$ 14,6 mi), em resposta a uma cobrança forte de famílias de crianças autistas.</li>
-        <li><b>Decisões sem consulta:</b> a nova Lei Orgânica (out/2025) acabou com a eleição direta de diretores, contra a posição do sindicato dos professores.</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Leitura</h2>
-      <p>O dinheiro da Educação cresceu, mas por obrigação: piso salarial, Fundeb e o mínimo constitucional de 25% explicam a maior parte. As escolhas que dependiam do prefeito, como abrir vagas de creche e melhorar a aprendizagem, andaram devagar. A escola de tempo integral do Rincão da Madalena (R$ 40 mi) é do Estado e fica para 2027.</p>
-      <p class="note">Fontes: QEdu/Inep (Censo Escolar e Ideb 2025), IBGE (Censo 2022), Fipe/prefeitura.</p>
-    </div>
-  </div>
-  </section></div>
+  
+  
   <div class="sub" id="p-pro" hidden><section class="panel"><div class="card">
     <h2>O que a cidade cobrou e o que a prefeitura fez</h2>
     <p class="lead">Para cada grande demanda: o que o orçamento mostra, a justificativa oficial e a nossa leitura.</p>
@@ -1765,7 +1763,7 @@ R.push(function(){const g=$('#vgrid');if(!g)return;const keep=Object.assign({},F
   return `<div class="vcard" role="button" tabindex="0" data-v="${id}"><span class="ph">${av(id)}</span><span class="nm">${v.nome}</span><span class="pt">${v.pat}</span>${HV==='nota'&&n!=null?`<span class="score">${f1(n)}<small>de 10</small></span><span class="bar"><i style="width:${n*10}%"></i></span>`:''}<span class="facts">${facts}</span><a class="share" href="https://wa.me/?text=${txt}" target="_blank" rel="noopener">Compartilhar</a></div>`}).join('');
  if(!window.VGALL&&ids.length>6){[...g.children].slice(6).forEach(c=>c.hidden=true);g.insertAdjacentHTML('beforeend',`<button type="button" class="go vg-all">Ver os ${ids.length} vereadores</button>`);g.querySelector('.vg-all').onclick=()=>{window.VGALL=1;renderAll();};}
  g.querySelectorAll('.vcard').forEach(b=>{const go=e=>{if(e.target.closest('a'))return;setF({M:'L2',V:b.dataset.v});goto('camara:c-dos');};b.onclick=go;b.onkeydown=e=>{if(e.key==='Enter')go(e)};});});
-function goto(t){const [g,s]=t.split(':');showG(g);if(s){const nav=g==='camara'?'#snav':g==='prefeitura'?'#psnav':'#lsnav';const b=document.querySelector(`${nav} [data-s="${s}"]`);if(b)b.click();}window.scrollTo({top:0});}
+function goto(t){let [g,s]=t.split(':');s=({'p-gas':'p-fin','p-fed':'p-fin'})[s]||s;showG(g);if(s){const nav=g==='camara'?'#snav':g==='prefeitura'?'#psnav':'#lsnav';const b=document.querySelector(`${nav} [data-s="${s}"]`);if(b)b.click();}window.scrollTo({top:0});}
 document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>goto(b.dataset.goto)));
 
 (function(){const h=$('#hero-img');if(h&&DATA.hero)h.style.backgroundImage=`url(${DATA.hero})`;})();
