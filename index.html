@@ -509,6 +509,12 @@ body.tf-on{overflow:hidden}
 .pm{border-top:1px solid var(--line);padding:12px 0}.pm-h{display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}.pm-h b{font:700 16px var(--f-disp)}.pm-h span{color:var(--muted);font-size:13px}
 .pm-d{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}.pm-c{background:var(--surface-2);border-radius:10px;padding:8px 12px;display:flex;flex-direction:column;flex:0 1 160px;min-width:130px}.pm-c span{font-size:12px;color:var(--muted)}.pm-c b{font:700 17px var(--f-data)}.pm-c small{font-size:11px;color:var(--muted)}
 .pm-va{display:inline-block;margin-top:8px;font-size:13px;font-weight:600}.pm-va.up{color:var(--pg)}.pm-va.dn{color:var(--pr)}
+
+#kdyn{grid-template-columns:repeat(6,minmax(0,1fr))}
+#kdyn .kpi:first-child{border-left:0;padding-left:0}
+@media (max-width:900px){#kdyn{grid-template-columns:repeat(3,minmax(0,1fr))}#kdyn .kpi:nth-child(3n+1){border-left:0;padding-left:0}}
+@media (max-width:520px){#kdyn{grid-template-columns:repeat(2,minmax(0,1fr))}#kdyn .kpi{border-left:1px solid var(--line);padding-left:18px}#kdyn .kpi:nth-child(odd){border-left:0;padding-left:0}#kdyn .kpi:nth-child(even){border-left:1px solid var(--line);padding-left:18px}}
+#kdyn .kpi b{font-size:clamp(24px,2.3vw,34px);white-space:nowrap}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%231d1e1a%22/%3E%3Cg%20transform%3D%22translate%2810%2024%29%22%20fill%3D%22%23ecebe4%22%3E%3Ccircle%20cx%3D%2224.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2236.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2276.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2213.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2218.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2225.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2282.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2287.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%222.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%225.7%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2216.1%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2214.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2283.9%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2294.3%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2298.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3C/g%3E%3C/svg%3E">
 </head>
@@ -2380,6 +2386,10 @@ document.querySelectorAll('[data-patm]').forEach(b=>b.addEventListener('click',(
 function drawM(){const box=document.getElementById('pat-m');if(!box)return;box.innerHTML=P.MAJ.map(([n,papel,ds])=>{const v=ds.filter(d=>d[2]>0);let va='';if(v.length>1){const a=v[0],b=v[v.length-1];const x=real(b[2],b[0])/real(a[2],a[0])-1;va=`<span class="pm-va ${x>=0?'up':'dn'}">${pct(x)} acima da inflação de ${a[0]} a ${b[0]}</span>`.replace('acima da inflação',x>=0?'acima da inflação':'em valores reais');}
  return `<div class="pm"><div class="pm-h"><b>${n}</b><span>${papel}</span></div><div class="pm-d">${ds.map(d=>`<div class="pm-c"><span>${d[0]} · ${d[1]}</span><b>${fm(d[2])}</b><small>${fm(real(d[2],d[0]))} em valores de 2025</small></div>`).join('')}</div>${va}</div>`}).join('');}
 R.push(drawV);R.push(drawM);drawV();drawM();})();
+</script>
+<script>
+(function(){const KT=['c-pan','c-dos'];function kv(){const k=document.getElementById('kdyn'),nb=document.getElementById('na-box');const cur=[...document.querySelectorAll('#snav button')].find(b=>b.getAttribute('aria-pressed')==='true');const on=!cur||KT.includes(cur.dataset.s);if(k)k.style.display=on?'':'none';}
+document.querySelectorAll('#snav button').forEach(b=>b.addEventListener('click',()=>setTimeout(kv,0)));setTimeout(kv,0);})();
 </script>
 </body>
 </html>
