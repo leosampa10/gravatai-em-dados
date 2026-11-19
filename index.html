@@ -584,10 +584,9 @@ body.tf-on{overflow:hidden}
 <main class="wrap">
  <script defer src="https://cloud.umami.is/script.js" data-website-id="98e39668-c97a-4bc5-97b5-14e83f55da8f" data-domains="gravataiemdados.com.br,www.gravataiemdados.com.br"></script>
 <p class="upd" id="upd">Dados atualizados em 18/11/2026 às 19h40</p>
-<p class="upd" id="vis" hidden></p>
 <script>
-/* acessos ao vivo (Umami, link público de leitura); só no domínio */
-(function(){if(!/(^|\.)gravataiemdados\.com\.br$/.test(location.hostname))return;const G='https://gateway-eu.umami.is/api',S='kaEYxIbIGGnMe9AO',T0=1795057200000;let H=null,W=null;const el=document.getElementById('vis');const nf=n=>Number(n||0).toLocaleString('pt-BR');async function j(u){const r=await fetch(u,{headers:H});if(!r.ok)throw r.status;return r.json();}async function ini(){const s=await (await fetch(G+'/share/'+S)).json();H={'x-umami-share-token':s.token,'x-umami-share-context':'1'};W=G+'/websites/'+s.websiteId;}async function up(){try{if(!H)await ini();const now=Date.now(),d=new Date();d.setHours(0,0,0,0);const [a,t,o]=await Promise.all([j(W+'/stats?startAt='+T0+'&endAt='+now),j(W+'/stats?startAt='+d.getTime()+'&endAt='+now),j(W+'/active')]);el.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#2e9e5b;margin-right:5px;vertical-align:1px"></span>'+nf(o.visitors)+' no site agora · '+nf(t.visits)+(t.visits==1?' visita':' visitas')+' hoje · '+nf(a.visits)+(a.visits==1?' visita':' visitas')+' no total';el.hidden=false;}catch(e){H=null;}}up();setInterval(up,60000);})();
+/* acessos ao vivo (Umami, link público de leitura); só no domínio. Número grande só a partir de VMIN pessoas */
+(function(){if(!/(^|\.)gravataiemdados\.com\.br$/.test(location.hostname))return;const G='https://gateway-eu.umami.is/api',S='kaEYxIbIGGnMe9AO',T0=1795057200000,VMIN=1000;let H=null,W=null;const $i=id=>document.getElementById(id);const nf=n=>Number(n||0).toLocaleString('pt-BR');async function j(u){const r=await fetch(u,{headers:H});if(!r.ok)throw r.status;return r.json();}async function ini(){const s=await (await fetch(G+'/share/'+S)).json();H={'x-umami-share-token':s.token,'x-umami-share-context':'1'};W=G+'/websites/'+s.websiteId;}async function up(){const vc=$i('vc');if(!vc)return;try{if(!H)await ini();const now=Date.now(),d=new Date();d.setHours(0,0,0,0);const [a,t,o]=await Promise.all([j(W+'/stats?startAt='+T0+'&endAt='+now),j(W+'/stats?startAt='+d.getTime()+'&endAt='+now),j(W+'/active')]);const big=a.visitors>=VMIN;$i('vc-big').hidden=!big;if(big){$i('vc-n').textContent=nf(a.visitors);$i('vc-h').textContent=nf(t.visits)+(t.visits==1?' visita':' visitas')+' hoje';}$i('vc-on').textContent=nf(o.visitors)+' no site agora';vc.hidden=false;}catch(e){H=null;}}const go=()=>{up();setInterval(up,60000);};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();})();
 </script>
 
  <div class="page" id="g-inicio">
@@ -599,6 +598,10 @@ body.tf-on{overflow:hidden}
      <h1>O que faz quem você elegeu</h1>
     </div>
     <p class="lede">O voto dura um dia; o mandato, quatro anos. Aqui estão os projetos, os votos, as faltas e os gastos da Câmara e da Prefeitura de Gravataí, sem recomendar voto em ninguém.</p>
+    <div class="vc" id="vc" hidden style="margin:0">
+     <div id="vc-big" hidden><div id="vc-n" style="font:800 clamp(52px,9vw,104px)/.9 var(--f-disp);letter-spacing:-.05em;color:var(--ink)"></div><p style="margin:6px 0 0;font:400 16px var(--f-body);color:var(--muted)">pessoas já usaram o Gravataí em dados · <span id="vc-h"></span></p></div>
+     <span style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 14px var(--f-body);color:var(--ink)"><span style="width:9px;height:9px;border-radius:50%;background:#2e9e5b;box-shadow:0 0 0 3px rgba(46,158,91,.18)"></span><span id="vc-on"></span></span>
+    </div>
     <div class="cta"><button type="button" class="go" data-man>Como usar em 1 minuto</button><button type="button" class="go" data-scroll="ult">Últimas notícias</button></div>
    </div>
    <div class="ph-img" id="hero-img" role="img" aria-label="Sede da Prefeitura de Gravataí, no antigo campus da Ulbra"><span class="credit">Sede da Prefeitura de Gravataí, no antigo campus da Ulbra.</span></div>
