@@ -584,6 +584,12 @@ body.tf-on{overflow:hidden}
 <main class="wrap">
  <script defer src="https://cloud.umami.is/script.js" data-website-id="98e39668-c97a-4bc5-97b5-14e83f55da8f" data-domains="gravataiemdados.com.br,www.gravataiemdados.com.br"></script>
 <p class="upd" id="upd">Dados atualizados em 18/11/2026 às 19h40</p>
+<p class="upd" id="vis" hidden></p>
+<script>
+/* acessos ao vivo (Umami, link público de leitura); só no domínio */
+(function(){if(!/(^|\.)gravataiemdados\.com\.br$/.test(location.hostname))return;const G='https://gateway-eu.umami.is/api',S='kaEYxIbIGGnMe9AO',T0=1795057200000;let H=null,W=null;const el=document.getElementById('vis');const nf=n=>Number(n||0).toLocaleString('pt-BR');async function j(u){const r=await fetch(u,{headers:H});if(!r.ok)throw r.status;return r.json();}async function ini(){const s=await (await fetch(G+'/share/'+S)).json();H={'x-umami-share-token':s.token,'x-umami-share-context':'1'};W=G+'/websites/'+s.websiteId;}async function up(){try{if(!H)await ini();const now=Date.now(),d=new Date();d.setHours(0,0,0,0);const [a,t,o]=await Promise.all([j(W+'/stats?startAt='+T0+'&endAt='+now),j(W+'/stats?startAt='+d.getTime()+'&endAt='+now),j(W+'/active')]);el.innerHTML='<span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:#2e9e5b;margin-right:5px;vertical-align:1px"></span>'+nf(o.visitors)+' no site agora · '+nf(t.visits)+(t.visits==1?' visita':' visitas')+' hoje · '+nf(a.visits)+(a.visits==1?' visita':' visitas')+' no total';el.hidden=false;}catch(e){H=null;}}up();setInterval(up,60000);})();
+</script>
+
  <div class="page" id="g-inicio">
   <div class="hero">
    <div class="txt">
