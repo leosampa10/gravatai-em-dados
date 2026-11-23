@@ -3,7 +3,7 @@ const {chromium}=require('playwright');const fs=require('fs');
 const [,,specf,out]=process.argv;const S=JSON.parse(fs.readFileSync(specf));fs.mkdirSync(out,{recursive:true});
 (async()=>{const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:390,height:844},deviceScaleFactor:3});
 const p=await ctx.newPage();await p.addInitScript(()=>{localStorage.setItem('gv-wl','skip');});
-await p.goto('file:///home/claude/gravatai-em-dados/index.html');await p.waitForTimeout(1200);
+await p.goto('file://'+require('path').resolve(__dirname,'../../index.html'));await p.waitForTimeout(1200);
 await p.click('#tt');await p.waitForTimeout(300);
 await p.evaluate(g=>goto(g),S.goto);await p.waitForTimeout(700);
 await p.addStyleTag({content:'.chart svg{min-width:0!important;width:100%!important}'+(S.view?'':'*{transition-duration:0s!important;animation-duration:0s!important}html,body{scroll-behavior:auto!important}')});
