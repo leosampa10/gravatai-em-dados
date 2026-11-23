@@ -316,7 +316,8 @@ td.num{font-family:var(--f-body);font-variant-numeric:tabular-nums}
 .mnc{display:grid;grid-template-columns:1fr 1fr;gap:10px 36px;margin:4px 0 10px}.mn h3{font:800 20px var(--f-disp);text-transform:uppercase;letter-spacing:-.03em;margin:0 0 6px;border-bottom:2px solid var(--ink);padding-bottom:6px}.mn h3 a{color:var(--ink);text-decoration:none}
 .mn ul{list-style:none;margin:0;padding:0}.mn li{border-bottom:1px solid var(--line);padding:10px 0}.mn li a{display:block;font:600 15px/1.35 var(--f-body);color:var(--ink);text-decoration:none}.mn li a:hover{text-decoration:underline}.mn li span{display:block;font:400 12px var(--f-body);color:var(--muted);margin-top:3px}
 .mn-more{display:inline-block;margin-top:8px;font:600 13px var(--f-body);color:var(--ink)}
-@media(max-width:760px){.mnc{grid-template-columns:1fr}}
+@media(max-width:760px){.mnc{grid-template-columns:1fr}#mn-home .mn li:nth-child(n+4){display:none}}
+#mn-home{grid-template-columns:1fr}
 .wl{position:fixed;inset:0;z-index:100;background:rgba(29,30,26,.55);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:24px 12px}.wl[hidden]{display:none}body.wl-on{overflow:hidden}
 .wl-box{position:relative;background:var(--bg);color:var(--ink);max-width:560px;width:100%;border-radius:18px;padding:26px 24px 22px;box-shadow:0 20px 60px rgba(0,0,0,.3);display:grid;gap:12px;box-sizing:border-box}
 .wl-k{font:600 11px var(--f-body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0}.wl-box h2{font:800 28px/1.05 var(--f-disp);text-transform:uppercase;letter-spacing:-.04em;margin:0}.wl-l{font:300 14.5px/1.5 var(--f-body);margin:0}
@@ -605,7 +606,7 @@ body.tf-on{overflow:hidden}
      <div id="vc-big" hidden><div id="vc-n" style="font:800 clamp(52px,9vw,104px)/.9 var(--f-disp);letter-spacing:-.05em;color:var(--ink)"></div><p style="margin:6px 0 0;font:400 16px var(--f-body);color:var(--muted)">pessoas já usaram o Gravataí em dados · <span id="vc-h"></span></p></div>
      <span style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font:600 14px var(--f-body);color:var(--ink)"><span style="width:9px;height:9px;border-radius:50%;background:#2e9e5b;box-shadow:0 0 0 3px rgba(46,158,91,.18)"></span><span id="vc-on"></span></span>
     </div>
-    <div class="cta"><button type="button" class="go" data-man>Como usar em 1 minuto</button><button type="button" class="go" data-scroll="ult">Últimas notícias</button></div>
+    <div class="cta"><button type="button" class="go" data-man>Como usar em 1 minuto</button><button type="button" class="go" data-goto="noticias">Últimas notícias</button></div>
    </div>
    <div class="ph-img" id="hero-img" role="img" aria-label="Sede da Prefeitura de Gravataí, no antigo campus da Ulbra"><span class="credit">Sede da Prefeitura de Gravataí, no antigo campus da Ulbra.</span></div>
   </div>
@@ -620,9 +621,9 @@ body.tf-on{overflow:hidden}
   </section>
 
   <div class="sec" id="ult"><h2 class="sec-t">Últimas de Gravataí</h2>
-   <p class="sec-l">As manchetes mais recentes dos portais da cidade. Toque para ler a matéria completa no site original. <span id="mn-asof"></span></p></div>
+   <p class="sec-l">As manchetes mais recentes do SobVigia. Toque para ler a matéria completa no site original. <span id="mn-asof"></span></p></div>
   <div class="mnc" id="mn-home"></div>
-  <p><button class="go" data-goto="noticias">Todas as manchetes</button></p>
+  <p><button class="go" data-goto="noticias">Giro de Gravataí, Seguinte e mais manchetes</button></p>
 
   <div class="sec"><span class="dots" style="--dw:130px;--dh:48px;right:0;top:0"></span>
    <h2 class="sec-t">Composição da Câmara</h2>
@@ -2123,7 +2124,7 @@ function wlClose(v){try{localStorage.setItem('gv-wl',v||'skip');}catch(e){}$('#w
 /* manchetes */
 function mnList(src,n){if(src.dest){const it=src.itens.slice(0,n);return `<div class="mn mn-dest"><span class="pill">Fonte principal</span><h3><a href="${src.home}" target="_blank" rel="noopener">${src.nm}</a></h3><p class="note">${src.desc||''}</p>${it.length?`<ul>${it.map(i=>`<li><a href="${i.u}" target="_blank" rel="noopener">${i.t}</a><span>${i.ed||''}${i.d?' · '+i.d.split('-').reverse().slice(0,2).join('/'):''}</span></li>`).join('')}</ul>`:''}<div class="mn-sec">${(src.sec||[]).map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l} →</a>`).join('')}</div></div>`;}
  return `<div class="mn"><h3><a href="${src.home}" target="_blank" rel="noopener">${src.nm}</a></h3><ul>${src.itens.slice(0,n).map(i=>`<li><a href="${i.u}" target="_blank" rel="noopener">${i.t}</a><span>${i.ed}${i.d?' · '+i.d.split('-').reverse().slice(0,2).join('/'):''}</span></li>`).join('')}</ul><a class="mn-more" href="${src.home}" target="_blank" rel="noopener">Mais no ${src.nm} →</a></div>`;}
-R.push(function(){const M=DATA.manchetes;if(!M)return;const h=$('#mn-home');if(h)h.innerHTML=M.fontes.map(s=>mnList(s,5)).join('');const a=$('#mn-all');if(a)a.innerHTML=M.fontes.map(s=>mnList(s,40)).join('');
+R.push(function(){const M=DATA.manchetes;if(!M)return;const h=$('#mn-home');if(h){const d=M.fontes.find(s=>s.dest)||M.fontes[0];h.innerHTML=mnList(d,5);}const a=$('#mn-all');if(a)a.innerHTML=M.fontes.map(s=>mnList(s,40)).join('');
  document.querySelectorAll('#mn-asof,#mn-asof2').forEach(x=>x.textContent=`Atualizado em ${M.asof}.`);});
 
 
