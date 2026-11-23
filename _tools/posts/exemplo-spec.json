@@ -1,7 +1,7 @@
 {
- "slug": "20261123-agua",
- "date": "23/11/2026",
- "title": "Faltou água, e o esgoto?",
+ "slug": "AAAAMMDD-pauta",
+ "date": "dd/mm/aaaa",
+ "title": "Nome da pauta",
  "cap": {
   "k": "Água e esgoto em Gravataí",
   "t": "Faltou água.<br><span style=\"color:#D9895A\">E o esgoto?</span>",
@@ -61,13 +61,13 @@
   }
  ],
  "cob": {
-  "title": "Conta em dia,<br>serviço em dia.",
+  "title": "TÍTULO DA COBRANÇA",
   "qs": [
-   "Quantas horas cada bairro ficou sem água? A Prefeitura vai cobrar a Corsan?",
-   "Qual é a meta de esgoto do contrato para Gravataí?",
-   "Por que o esgotamento adequado caiu de 83,5% para 79,5%?"
+   "Pergunta 1",
+   "Pergunta 2",
+   "Pergunta 3"
   ],
-  "who": "O contrato com a Corsan é da Prefeitura (governo Zaffa). Os 21 vereadores podem convocar e fiscalizar.",
-  "src": "Opinião do perfil. Dados: IBGE; O Repórter; Lei 11.445/2007."
+  "who": "Quem decide (fato, com fonte).",
+  "src": "Fontes."
  }
 }
