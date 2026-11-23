@@ -2212,7 +2212,7 @@ R.push(function(){const g=$('#indgrid');if(!g)return;g.className='ind2';g.innerH
     tipOn(e,`<b>${ys[bj]}</b><br>`+vis.map(q=>`<span style="color:${colv(q.k)}">●</span> ${q.n}: <b>${fv(q.v[bj])}</b>`).join('<br>'));};
    ov.addEventListener('mousemove',mv);ov.addEventListener('touchstart',e=>mv(e.touches[0]),{passive:true});ov.addEventListener('mouseleave',()=>{tipOff();cross.setAttribute('opacity',0)});
    c.querySelector('.chart').appendChild(s);
-   c.querySelectorAll('.tg button').forEach(bt=>bt.addEventListener('click',()=>{const k=+bt.dataset.k;if(k===0)return;st.on[k]=!st.on[k];render();}));
+   c.querySelectorAll('.tg button').forEach(bt=>bt.addEventListener('click',()=>{const k=+bt.dataset.k;if(k===0&&ser.some(q=>q.n==='RS'))return;if(st.on[k]&&st.on.filter(Boolean).length<=1)return;st.on[k]=!st.on[k];render();}));
    const rg=c.querySelector('input[type=range]');rg.addEventListener('input',()=>{st.a=+rg.value;render();});};
   render();});});
 /* ---- mapa de votos ---- */
