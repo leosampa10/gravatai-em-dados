@@ -16,4 +16,4 @@ Tipos de cena (scene): {"goto":"grupo:aba","title":"^regex do h2","clipTo":".cha
 - anim {"type":"clicks","steps":[{"sel":"...","hold":n}]} — toques em botões do card
 - anim {"type":"none"} — print parado
 - modo tela inteira: {"goto":..,"view":true,"anchor":"seletor","off":px,"vh":px,"steps":[{"sel":"...","inline":true}]} — grava a tela do celular (ex.: tocar numa votação e o site rolar até ela).
-Atenção: os botões de série (Gravataí/RS/Brasil, data-k) só funcionam nos cards de Ideb; no resto use scrub/slider/toggle.
+- botões de série (data-k) ligam e desligam linhas em todos os cards; em Gravataí × RS × Brasil a linha de Gravataí (k=0) fica fixa.
