@@ -31,7 +31,7 @@ def compose(base,fr,touch,scale_w=SLOT_W,y0=SLOT_Y,crop=None):
         d.ellipse([tx-14,ty-14,tx+14,ty+14],fill=(217,137,90,255))
     return im
 def scene(spec,outdir):
-    json.dump(spec,open(outdir+'.json','w'))
+    os.makedirs(os.path.dirname(outdir),exist_ok=True); json.dump(spec,open(outdir+'.json','w'))
     if os.path.exists(outdir): shutil.rmtree(outdir)
     subprocess.check_call(['node','capture.js',outdir+'.json',outdir],env=ENV)
     return json.load(open(outdir+'/meta.json'))
