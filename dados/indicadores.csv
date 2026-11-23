@@ -1,0 +1,708 @@
+﻿codigo;indicador;unidade;local;ano;valor;fonte
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2007;4.4;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2009;4.5;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2011;5.0;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2013;4.9;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2015;5.2;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2017;5.4;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2019;5.7;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2021;5.9;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2023;5.6;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Gravataí;2025;5.9;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2007;4.6;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2009;4.9;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2011;5.1;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2013;5.6;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2015;5.7;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2017;5.8;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2019;6.0;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2021;6.0;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2023;6.0;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;RS;2025;6.3;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2007;4.2;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2009;4.6;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2011;5.0;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2013;5.2;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2015;5.5;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2017;5.8;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2019;5.9;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2021;5.8;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2023;6.0;Inep/QEdu, Ideb 2025
+ideb_ai;Ideb · anos iniciais (rede municipal);nota;Brasil;2025;6.3;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2007;3.6;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2009;3.7;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2011;3.7;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2013;3.6;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2015;3.9;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2017;4.0;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2019;4.6;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2021;5.3;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2023;4.4;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Gravataí;2025;4.8;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2007;3.9;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2009;4.1;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2011;4.1;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2013;4.2;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2015;4.3;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2017;4.6;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2019;4.8;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2021;5.2;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2023;4.9;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;RS;2025;5.4;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2007;3.8;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2009;4.0;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2011;4.1;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2013;4.2;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2015;4.5;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2017;4.7;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2019;4.9;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2021;5.1;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2023;5.0;Inep/QEdu, Ideb 2025
+ideb_af;Ideb · anos finais (rede municipal);nota;Brasil;2025;5.3;Inep/QEdu, Ideb 2025
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2008;64;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2009;64;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2010;64;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2011;65;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2012;65;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2013;65;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2014;65;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2015;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2016;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2017;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2018;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2019;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2020;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2021;63;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2022;63;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2023;63;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2024;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos iniciais;2025;62;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2008;42;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2009;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2010;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2011;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2012;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2013;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2014;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2015;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2016;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2017;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2018;41;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2019;41;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2020;42;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2021;42;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2022;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2023;44;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2024;44;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Anos finais;2025;42;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2008;33;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2009;41;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2010;43;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2011;41;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2012;46;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2013;47;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2014;55;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2015;58;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2016;66;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2017;67;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2018;69;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2019;69;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2020;69;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2021;68;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2022;67;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2023;69;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2024;68;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Pré-escola;2025;68;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2008;9;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2009;9;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2010;9;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2011;10;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2012;10;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2013;10;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2014;11;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2015;11;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2016;11;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2017;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2018;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2019;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2020;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2021;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2022;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2023;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2024;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+esc;Escolas da rede municipal, por etapa;escolas com anos iniciais;Creche;2025;12;INEP, Censo Escolar, via IBGE Cidades (API de pesquisas, código 13)
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2008;9;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2009;9;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2010;9;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2011;10;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2012;10;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2013;10;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2014;11;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2015;11;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2016;11;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2017;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2018;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2019;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2020;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2021;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2022;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2023;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2024;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Municipais;2025;12;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2008;29;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2009;29;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2010;26;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2011;39;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2012;39;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2013;40;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2014;40;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2015;40;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2016;43;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2017;68;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2018;70;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2019;68;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2020;52;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2021;67;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2022;71;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2023;70;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2024;69;INEP, Censo Escolar, via IBGE Cidades
+creche;Creches: rede municipal e total da cidade;creches municipais;Todas (inclui privadas e conveniadas);2025;69;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2008;23701;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2009;23245;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2010;23250;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2011;23200;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2012;22766;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2013;22362;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2014;21692;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2015;21403;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2016;21176;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2017;21056;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2018;20916;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2019;20901;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2020;21204;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2021;21841;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2022;21919;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2023;21931;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2024;21930;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Ensino fundamental;2025;21645;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2008;1051;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2009;1109;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2010;1174;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2011;1111;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2012;1150;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2013;1273;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2014;1576;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2015;1680;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2016;2361;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2017;2671;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2018;3032;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2019;3236;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2020;3309;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2021;2979;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2022;3190;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2023;3387;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2024;3427;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Pré-escola;2025;3417;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2008;267;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2009;231;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2010;267;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2011;267;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2012;295;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2013;381;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2014;422;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2015;424;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2016;503;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2017;643;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2018;616;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2019;619;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2020;566;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2021;582;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2022;680;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2023;683;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2024;744;INEP, Censo Escolar, via IBGE Cidades
+mat;Alunos na rede municipal;alunos no fundamental;Creche;2025;725;INEP, Censo Escolar, via IBGE Cidades
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2006;15.33;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2007;12.01;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2008;9.43;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2009;9.36;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2010;10.96;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2011;8.49;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2012;6.45;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2013;7.8;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2014;7.53;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2015;6.96;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2016;8.36;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2017;11.45;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2018;7.61;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2019;11.74;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2020;9.73;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2021;6.26;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2022;9.41;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2023;7.77;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2024;12.34;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Gravataí;2025;6.68;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2006;13.13;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2007;12.75;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2008;12.76;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2009;11.54;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2010;11.2;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2011;11.48;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2012;10.8;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2013;10.57;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2014;10.67;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2015;10.12;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2016;10.18;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2017;10.07;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2018;9.8;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2019;10.62;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2020;8.64;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2021;9.59;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2022;10.49;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2023;9.68;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;RS;2024;10.15;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2006;16.41;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2007;15.69;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2008;15.03;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2009;14.8;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2010;13.93;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2011;13.63;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2012;13.46;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2013;13.42;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2014;12.9;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2015;12.43;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2016;12.72;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2017;12.39;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2018;12.18;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2019;12.39;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2020;11.52;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2021;11.9;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2022;12.59;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2023;12.62;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+mort;Mortalidade infantil;óbitos por mil nascidos vivos;Brasil;2024;12.56;"IBGE Cidades (DATASUS) para Gravataí; RS e Brasil: DATASUS/SIM e SINASC (óbitos de menores de 1 ano por mil nascidos vivos)"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2008;25;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2009;24;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2010;27;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2011;27;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2012;28;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2013;28;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2014;28;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2015;29;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2016;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2017;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2018;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2019;31;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2020;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2021;29;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2022;29;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2023;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2024;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2025;30;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;UBS e postos de saúde;2026;29;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2008;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2009;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2010;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2011;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2012;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2013;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2014;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2015;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2016;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2017;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2018;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2019;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2020;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2021;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2022;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2023;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2024;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2025;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;CAPS (saúde mental);2026;3;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2008;6;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2009;6;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2010;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2011;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2012;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2013;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2014;4;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2015;5;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2016;6;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2017;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2018;8;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2019;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2020;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2021;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2022;8;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2023;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2024;8;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2025;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs;Unidades de saúde: UBS, CAPS e policlínicas;UBS e postos;Policlínicas;2026;7;"CNES/DATASUS (Tabnet, estabelecimentos por tipo), dezembro de cada ano; 2026: outubro"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2008;0.94;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2009;0.89;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2010;1.06;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2011;1.05;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2012;1.08;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2013;1.04;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2014;1.03;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2015;1.07;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2016;1.1;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2017;1.09;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2018;1.07;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2019;1.1;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2020;1.06;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2021;1.02;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2022;1.09;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2023;1.11;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2024;1.09;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2025;1.09;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Gravataí;2026;1.05;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2008;2.35;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2009;2.33;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2010;2.36;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2011;2.41;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2012;2.49;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2013;2.41;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2014;2.34;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2015;2.31;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2016;2.31;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2017;2.3;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2018;2.29;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2019;2.28;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2020;2.32;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2021;2.32;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2022;2.44;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2023;2.4;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2024;2.37;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2025;2.35;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;RS;2026;2.34;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2008;2.19;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2009;2.18;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2010;2.2;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2011;2.2;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2012;2.25;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2013;2.22;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2014;2.25;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2015;2.21;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2016;2.21;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2017;2.21;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2018;2.22;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2019;2.21;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2020;2.25;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2021;2.27;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2022;2.4;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2023;2.37;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2024;2.36;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2025;2.36;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+ubs_pc;Unidades básicas de saúde por 10 mil habitantes;UBS e postos por 10 mil hab.;Brasil;2026;2.38;"CNES/DATASUS (centros de saúde/UBS e postos, dezembro de cada ano; 2026: outubro) e IBGE (população)"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2008;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2009;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2010;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2011;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2012;7;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2013;7;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2014;7;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2015;4;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2016;4;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2017;4;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2018;4;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2019;4;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2020;4;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2021;5;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2022;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2023;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2024;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2025;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Unidades móveis do SAMU;2026;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2008;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2009;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2010;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2011;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2012;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2013;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2014;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2015;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2016;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2017;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2018;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2019;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2020;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2021;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2022;3;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2023;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2024;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2025;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto atendimento (UPA/PA);2026;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2008;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2009;2;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2010;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2011;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2012;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2013;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2014;1;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2015;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2016;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2017;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2018;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2019;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2020;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2021;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2022;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2023;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2024;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2025;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+urg;Urgência: SAMU e pronto atendimento;unidades móveis do SAMU;Pronto-socorro;2026;0;"CNES/DATASUS (Tabnet), dezembro de cada ano; 2026: outubro"
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2008;0.38;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2009;0.37;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2010;0.39;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2011;0.39;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2012;2.7;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2013;2.6;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2014;2.59;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2015;1.47;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2016;1.46;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2017;1.45;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2018;1.43;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2019;1.42;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2020;1.41;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2021;1.75;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2022;1.13;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2023;1.11;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2024;1.09;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2025;1.09;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Gravataí;2026;1.09;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2008;0.09;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2009;0.18;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2010;0.44;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2011;0.66;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2012;1.36;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2013;1.73;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2014;1.94;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2015;2.02;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2016;2.22;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2017;2.25;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2018;2.25;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2019;2.29;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2020;2.42;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2021;2.45;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2022;2.63;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2023;2.65;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2024;2.64;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2025;2.74;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;RS;2026;2.83;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2008;0.18;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2009;0.21;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2010;0.26;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2011;0.34;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2012;1.26;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2013;1.64;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2014;1.85;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2015;1.9;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2016;1.94;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2017;1.96;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2018;2.0;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2019;2.04;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2020;2.16;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2021;2.25;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2022;2.44;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2023;2.47;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2024;2.53;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2025;2.71;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+samu_pc;SAMU: ambulâncias por 100 mil habitantes;unidades móveis por 100 mil hab.;Brasil;2026;2.86;CNES/DATASUS (unidades móveis de nível pré-hospitalar de urgência) e IBGE (população)
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2008;182;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2009;182;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2010;113;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2011;113;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2012;113;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2013;113;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2014;113;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2015;119;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2016;119;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2017;129;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2018;129;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2019;129;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2020;151;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2021;126;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2022;124;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2023;121;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2024;168;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2025;118;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos;Leitos de internação disponíveis ao SUS;leitos;Gravataí;2026;133;"CNES/DATASUS (Tabnet, leitos de internação, quantidade SUS), dezembro de cada ano; 2026: outubro"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2008;0.68;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2009;0.68;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2010;0.44;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2011;0.44;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2012;0.44;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2013;0.42;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2014;0.42;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2015;0.44;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2016;0.43;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2017;0.47;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2018;0.46;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2019;0.46;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2020;0.53;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2021;0.44;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2022;0.47;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2023;0.45;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2024;0.61;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2025;0.43;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Gravataí;2026;0.48;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2009;1.95;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2012;1.95;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2015;1.94;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2018;1.83;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2021;1.74;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2024;1.79;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;RS;2025;1.81;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2009;1.77;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2012;1.68;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2015;1.53;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2018;1.44;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2021;1.46;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2024;1.48;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+leitos_pc;Leitos SUS por mil habitantes;leitos SUS por mil hab.;Brasil;2025;1.48;"CNES/DATASUS (leitos de internação SUS, dezembro) e IBGE (população); RS e Brasil em anos selecionados"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2007;25.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2008;25.9;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2009;20.8;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2010;18.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2011;23.7;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2012;20.5;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2013;23.8;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2014;29.6;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2015;28.3;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2016;27.8;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2017;59.6;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2018;32.2;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2019;22.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2020;19.7;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2021;11.6;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2022;15.5;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2023;13.7;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Gravataí;2024;12.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2007;20.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2008;21.9;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2009;20.5;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2010;19.3;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2011;19.2;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2012;22.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2013;20.7;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2014;24.2;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2015;26.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2016;28.2;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2017;29.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2018;23.5;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2019;19.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2020;18.3;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2021;16.3;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2022;18.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2023;17.9;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;RS;2024;15.1;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2007;25.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2008;26.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2009;26.9;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2010;27.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2011;27.1;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2012;29.1;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2013;28.3;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2014;29.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2015;28.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2016;29.7;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2017;30.7;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2018;26.8;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2019;21.0;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2020;22.5;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2021;21.4;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2022;21.8;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2023;20.9;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+hom;Homicídios por 100 mil habitantes;por 100 mil hab.;Brasil;2024;18.8;"DATASUS/SIM (óbitos por agressão, CID X85–Y09, por município de residência) e IBGE (população); 2023–24 preliminares"
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2015;54.4;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2016;48.0;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2017;38.0;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2018;31.5;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2019;31.4;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2020;33.8;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2021;43.7;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2022;48.5;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2023;54.0;Tesouro/SICONFI, RGF 3º quadrimestre
+dcl;Dívida consolidada líquida;% da receita corrente líquida;Gravataí;2024;64.0;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2015;51.67;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2016;45.68;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2017;47.34;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2018;44.65;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2019;44.49;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2020;37.49;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2021;39.08;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2022;40.22;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2023;41.85;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2024;40.11;Tesouro/SICONFI, RGF 3º quadrimestre
+pes;Despesa com pessoal;% da receita corrente líquida;Gravataí;2025;44.61;Tesouro/SICONFI, RGF 3º quadrimestre
+serv;Vínculos na folha da prefeitura;pessoas (inclui inativos e PDV);Gravataí;2016;5619;"Portal da Transparência (dez de cada ano; 2026: set)"
+serv;Vínculos na folha da prefeitura;pessoas (inclui inativos e PDV);Gravataí;2020;5486;"Portal da Transparência (dez de cada ano; 2026: set)"
+serv;Vínculos na folha da prefeitura;pessoas (inclui inativos e PDV);Gravataí;2024;6351;"Portal da Transparência (dez de cada ano; 2026: set)"
+serv;Vínculos na folha da prefeitura;pessoas (inclui inativos e PDV);Gravataí;2026;6315;"Portal da Transparência (dez de cada ano; 2026: set)"
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2005;60.7;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2006;74.2;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2007;64.0;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2008;124.4;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2009;64.0;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2010;80.4;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2011;75.5;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2012;83.2;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2013;79.3;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2014;69.9;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2015;55.4;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2016;82.6;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2017;76.5;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2018;69.9;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2019;82.4;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2020;178.2;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2021;134.8;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2022;122.8;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2023;172.8;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2024;138.7;Finbra/SICONFI via Ipeadata, IPCA
+inv;Despesa de capital (investimentos e amortização);R$ milhões de 2025;Gravataí;2025;76.0;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2005;309;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2006;566;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2007;688;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2008;807;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2009;833;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2010;748;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2011;843;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2012;979;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2013;1131;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2014;1238;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2015;1098;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2016;1117;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2017;1151;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2018;1209;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2019;1266;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2020;1197;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2021;1312;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2022;1255;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2023;1364;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2024;1280;Finbra/SICONFI via Ipeadata, IPCA
+saude_pc;Gasto com saúde por habitante;R$ de 2025;Gravataí;2025;1246;Finbra/SICONFI via Ipeadata, IPCA
+amb;Meio ambiente: arborização e esgoto;% dos domicílios;Vias arborizadas;2010;89.4;IBGE, Censos 2010 e 2022
+amb;Meio ambiente: arborização e esgoto;% dos domicílios;Vias arborizadas;2022;77.5;IBGE, Censos 2010 e 2022
+amb;Meio ambiente: arborização e esgoto;% dos domicílios;Esgotamento adequado;2010;83.5;IBGE, Censos 2010 e 2022
+amb;Meio ambiente: arborização e esgoto;% dos domicílios;Esgotamento adequado;2022;79.5;IBGE, Censos 2010 e 2022
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2015;3.6;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2016;4.2;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2017;4.6;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2018;4.6;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2019;4.8;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2020;6.1;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2021;4.7;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2022;5.2;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2023;5.6;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2024;7.1;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Gestão ambiental;2025;7.5;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2015;0.3;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2016;0.9;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2017;0.6;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2018;0.7;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2019;1.4;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2020;0.4;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2021;0.7;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2022;0.4;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2023;0.5;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2024;1.5;SICONFI, RREO Anexo 2 (despesa liquidada)
+gamb;Gasto com gestão ambiental e Defesa Civil;R$ milhões;Defesa Civil;2025;1.9;SICONFI, RREO Anexo 2 (despesa liquidada)

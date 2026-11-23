@@ -1,0 +1,47 @@
+﻿id;nome;partido_2020;partido_atual;bloco;legislaturas;votos_2020;votos_2024;situacao_2020;situacao_2024;projetos_2021_24;projetos_2025_28;viraram_lei_2021_24;viraram_lei_2025_28;pedidos_info_2021_24;pedidos_info_2025_28;requerimentos_2021_24;requerimentos_2025_28
+airton;Tio Airton;MDB;MDB;Oposição (MDB);LA/L2;1287;1464;Suplente;Eleito;1;0;1;0;0;0;0;0
+alan;Alan Vieira;MDB;MDB;Base (L1);LB/LA/L1;2121;;Eleito;Não concorreu;10;0;6;0;3;0;186;0
+alex;Alex Peixe;PTB;PSDB;Base;LB/LA/L1/L2;1157;2222;Eleito;Eleito;36;6;23;5;1;0;18;0
+alison;Alison Silva;MDB;MDB;Oposição (MDB), fora do plenário desde 2025;L1/L2;1858;2183;Eleito;Eleito;25;1;16;0;18;5;422;98
+anna;Anna Beatriz;PSD;PSD;Base (era oposição em 2021-24);L1/L2;1402;1901;Eleito;Eleito;19;12;12;10;51;0;828;0
+beto;Beto Bacamarte;—;MDB;Oposição (MDB);L2;;1249;—;Suplente em exercício;0;3;0;0;0;3;0;123
+bino;Bino Lunardi;PDT;PSDB;Base;L1/L2;1228;2751;Eleito;Eleito;6;0;3;0;0;0;133;0
+bombeiro;Bombeiro Batista;PSD;Republicanos;Base (era oposição em 2021-24);LA/L1/L2;2662;3213;Eleito;Eleito;43;20;18;9;84;1;693;5
+carlos;Carlos Fonseca;PSB;PODE;Base;LB/LA/L1/L2;1688;1753;Eleito;Eleito;69;39;25;25;5;0;350;88
+claudio;Cláudio Ávila;PSD;AVANTE;Base (era oposição em 2021-24);L1/L2;1170;1180;Eleito;Suplente em exercício;66;32;24;13;164;1;1334;62
+clebes;Clebes Mendes;MDB;PSDB;Base;LB/LA/L1/L2;2267;2837;Eleito;Eleito;31;10;19;7;3;1;2435;28
+demetrio;Demétrio Tafras;PSDB;Cidadania;Base (L1);LA/L1;1417;1800;Eleito;Não eleito;75;0;34;0;0;0;180;0
+dila;Dila;PDT;PODE;"Base; presidente da Câmara";LB/LA/L1/L2;957;1793;Eleito;Eleito;15;15;5;10;5;0;35;10
+fabio;Fábio Ávila;Republicanos;Republicanos;Base;LA/L1/L2;1576;1969;Eleito;Eleito;32;14;23;6;0;0;44;37
+fernando;Fernando Deadpool;DEM;União;"Oposição em 2021-24; fora do plenário desde 2025";L1;2162;1339;Eleito;Eleito;20;0;0;0;33;0;494;0
+guarda;Guarda Moisés;—;Republicanos;Base;L2;;1453;—;Eleito;0;10;0;4;0;0;0;2
+hiago;Hiago Pacheco;—;PP;"Base; vice-presidente da Câmara";L2;;1332;—;Eleito;0;19;0;11;0;3;0;58
+marcia;Marcia Becker;MDB;PSDB;"Base; 1ª secretária";L1/L2;2573;2102;Eleito;Eleito;21;16;8;9;0;0;4;3
+mario;Mario Peres;PSDB;PL;Base;LA/L1/L2;1278;1019;Eleito;Eleito;2;2;2;2;2;0;138;21
+paulinho;Paulinho da Farmácia;—;PODE;Base;LB/LA/L2;;1564;—;Eleito;0;13;0;4;0;1;0;4
+paulo;Paulo Silveira;PSB;PSB;Oposição em 2021-24;LB/LA/L1;1351;1517;Eleito;Não eleito;36;0;17;0;55;0;950;0
+coruja;Policial Evandro Coruja;PP;PL;Base;L1/L2;1235;2057;Eleito;Eleito;10;3;8;2;1;0;4;2
+roger;Roger Corrêa;PP;PP;Base;L1/L2;708;2973;Suplente;Eleito;23;28;17;18;5;6;9;6
+claudecir;Claudecir Lemes;MDB;MDB;Oposição (MDB);L1/L2;1486;1781;Eleito;Eleito;25;9;11;5;3;5;200;455
+tedesco;Tedesco;MDB;MDB;Oposição (MDB);LA/L1/L2;1450;2471;Suplente;Eleito;12;5;2;0;2;15;663;1125
+thiago;Thiago De Leon;PDT;PDT;Oposição em 2021-24;L1;1683;;Eleito;Vice de Marco Alba;46;0;9;0;133;0;676;0
+vitalina;Vitalina Gonçalves;—;PT;Oposição (PT);L2;;2632;—;Eleito;0;12;0;10;0;9;0;192
+alextavares;Alex Tavares;—;PMDB;Mandato anterior;LB/LA;;;;;;;;;;;;
+dimas;Dimas Costa;—;PSD;Mandato anterior;LB/LA;;;;;;;;;;;;
+evandro;Evandro Soares;—;DEM;Mandato anterior;LB/LA;;;;;;;;;;;;
+jo;Jô da Farmácia;—;PTB;Mandato anterior;LA;;;;;;;;;;;;
+nadir;Nadir Rocha;—;PMDB;Mandato anterior;LB/LA;;;;;;;;;;;;
+neri;Neri Facin;—;PSDB;Mandato anterior;LA;;;;;;;;;;;;
+roberto;Roberto Andrade;—;PP;Mandato anterior;LB/LA;;;;;;;;;;;;
+rosane;Rosane Bordignon;—;PDT;Mandato anterior;LA;;;;;;;;;;;;
+wagner;Wagner Padilha;—;PSB;Mandato anterior;LA;;;;;;;;;;;;
+diego;Diego Saldanha;—;—;Mandato anterior;LA;;;;;;;;;;;;
+alemao;Alemão da Kipão;—;PT;Mandato anterior;LB;;;;;;;;;;;;
+betopereira;Beto Pereira;—;PP;Mandato anterior;LB;;;;;;;;;;;;
+carlito;Carlito Nicolait;—;PT;Mandato anterior;LB;;;;;;;;;;;;
+frederico;Frederico Pinho;—;DEM;Mandato anterior;LB;;;;;;;;;;;;
+gerson;Gerson Rovisco;—;PV;Mandato anterior;LB;;;;;;;;;;;;
+juarez;Juarez Souza;—;PMDB;Mandato anterior;LB;;;;;;;;;;;;
+marcio;Marcio Souza;—;PV;Mandato anterior;LB;;;;;;;;;;;;
+maribel;Maribel Wagner;—;PC do B;Mandato anterior;LB;;;;;;;;;;;;
+tanrac;Tanrac;—;PRB;Mandato anterior;LB;;;;;;;;;;;;

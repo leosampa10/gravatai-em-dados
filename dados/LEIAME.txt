@@ -1,0 +1,18 @@
+Gravataí em dados — dados abertos
+https://gravataiemdados.com.br
+
+Arquivos CSV separados por ponto e vírgula, codificação UTF-8. Abrem direto no Excel ou no Google Planilhas.
+Gerados automaticamente a partir dos mesmos dados do site, a cada atualização.
+
+vereadores.csv                  Vereadores de 2021 a 2028: partido, bloco, votos e produção legislativa
+votacoes_nominais.csv           Cada voto de cada vereador nas votações nominais da Câmara
+indicadores.csv                 Indicadores de saúde, educação, segurança e finanças: Gravataí, RS e Brasil
+financas_anuais.csv             Receita, pessoal, investimento, educação e saúde (R$ milhões da época; use o deflator para R$ de 2025)
+gasto_bimestral_por_area.csv    Gasto por área a cada bimestre, acumulado (Siconfi, RREO Anexo 2)
+pisos_educacao_saude.csv        Percentual aplicado em educação e saúde (TCE-RS)
+subsidios.csv                   Subsídios de prefeito, vice, secretários e vereadores
+contratos.csv                   Contratos da Prefeitura e órgãos (LAI 7978/2026 + Portal da Transparência)
+contratos_valor_por_ano.csv     Valor movimentado por contrato em cada ano (assinatura + aditivos)
+
+Fontes e método: aba "Fontes e limites" do site. Pode usar e republicar citando "Gravataí em dados" e a fonte original de cada número.
+Encontrou um erro? Use o botão "Mandar sugestão" no site.
