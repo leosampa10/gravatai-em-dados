@@ -1,0 +1,73 @@
+{
+ "slug": "20261123-agua",
+ "date": "23/11/2026",
+ "title": "Faltou água, e o esgoto?",
+ "cap": {
+  "k": "Água e esgoto em Gravataí",
+  "t": "Faltou água.<br><span style=\"color:#D9895A\">E o esgoto?</span>",
+  "src": "Fonte: IBGE, Censos 2010 e 2022.",
+  "scene": {
+   "goto": "prefeitura:p-ind",
+   "title": "^Meio ambiente: arborização",
+   "clipTo": ".chart",
+   "maxH": 330,
+   "anim": {
+    "type": "none"
+   }
+  }
+ },
+ "slides": [
+  {
+   "k": "No site · Prefeitura › Indicadores › Meio ambiente",
+   "t": "Passe o dedo: esgoto<br>adequado caiu de<br><span style=\"color:#4F86C6\">83,5%</span> para <span style=\"color:#D9895A\">79,5%</span>.",
+   "src": "Fonte: IBGE, Censos 2010 e 2022.",
+   "scene": {
+    "goto": "prefeitura:p-ind",
+    "title": "^Meio ambiente: arborização",
+    "clipTo": ".chart",
+    "anim": {
+     "type": "scrub",
+     "steps": 10,
+     "hold": 8
+    }
+   }
+  },
+  {
+   "k": "No site · Prefeitura › Indicadores › Meio ambiente",
+   "t": "E as ruas arborizadas:<br>de <span style=\"color:#4F86C6\">89,4%</span> para <span style=\"color:#D9895A\">77,5%</span>.",
+   "src": "Fonte: IBGE, Censos 2010 e 2022.",
+   "scene": {
+    "goto": "prefeitura:p-ind",
+    "title": "^Meio ambiente: arborização",
+    "clipTo": ".rng",
+    "anim": {
+     "type": "slider",
+     "hold": 20
+    }
+   }
+  },
+  {
+   "k": "No site · Câmara › Fiscalização",
+   "t": "Na Câmara, a única CPI<br>do período <span style=\"color:#D9895A\">investiga a Corsan</span>.",
+   "src": "Fonte: Câmara de Gravataí. No site: Câmara › Fiscalização.",
+   "scene": {
+    "goto": "camara:c-fis",
+    "title": "^A única CPI",
+    "maxH": 560,
+    "anim": {
+     "type": "none"
+    }
+   }
+  }
+ ],
+ "cob": {
+  "title": "Conta em dia,<br>serviço em dia.",
+  "qs": [
+   "Quantas horas cada bairro ficou sem água? A Prefeitura vai cobrar a Corsan?",
+   "Qual é a meta de esgoto do contrato para Gravataí?",
+   "Por que o esgotamento adequado caiu de 83,5% para 79,5%?"
+  ],
+  "who": "O contrato com a Corsan é da Prefeitura (governo Zaffa). Os 21 vereadores podem convocar e fiscalizar.",
+  "src": "Opinião do perfil. Dados: IBGE; O Repórter; Lei 11.445/2007."
+ }
+}
