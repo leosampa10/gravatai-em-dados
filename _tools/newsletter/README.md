@@ -6,3 +6,6 @@
 - `montar.py inscritos.json --desde AAAA-MM-DD` gera um HTML por inscrito com novidades (votações, notícias, contas, correções) desde a data. Quem não tem novidade não recebe nada.
 - Diário: desde o último envio. Semanal (segunda): últimos 7 dias.
 - Envio pelo Gmail do projeto. Nunca salvar e-mails de inscritos no repositório (ele é público).
+
+## Bloco "Em destaque"
+O topo de cada e-mail traz cartões em imagem (os mesmos da prévia de link do site, em `d/<id>/card.png`): as votações mais disputadas do período entre as que interessam ao inscrito e um cartão de dado (dois no resumo semanal), escolhido pelos temas dele (educação/saúde → pisos; servidores → salários; habitação/impostos → calendário do gasto; obras → contratos) ou em rodízio diário. Os cartões vêm de `d/destaques.json`, gerado por `python3 _tools/previas/dados.py`; rode-o antes do montar.py.

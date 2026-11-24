@@ -5,6 +5,7 @@ Uso (na raiz do repositório):
 
 inscritos.json: lista de {email, nome, freq ("diario"|"semanal"), temas[], vereadores[], bairro, contas[]}
 (montada pela tarefa a partir das respostas do formulário Tally GeR76O; NUNCA salve esse arquivo no repositório).
+Usa d/destaques.json (gerado por _tools/previas/dados.py) para o bloco "Em destaque" com os cartões de dados e votações.
 Gera <saida>/<n>.html e <saida>/envios.json ([{email, assunto, arquivo}]) só para quem tem novidade.
 """
 import json, re, sys, os, html, argparse, unicodedata
@@ -53,8 +54,40 @@ def tema_de(txt, temas): return [t for t in temas if t in TEMAS and re.search(TE
 
 vot_novas = [it for it in V['it'] if it[0] >= a.desde]
 manch = [(f['nm'], x) for f in D['manchetes']['fontes'] for x in f['itens'] if (x.get('d') or '') >= a.desde]
-corr = []
 cal = D.get('cal', {})
+try: DEST = json.load(open('d/destaques.json', encoding='utf-8'))
+except Exception: DEST = []
+DID = {x['id']: x for x in DEST}
+# cartão de dado ligado a cada tema (os demais giram dia a dia)
+TEMA_CARD = {'Educação e creches': 'c-piso', 'Saúde': 'c-piso', 'Assistência social e habitação': 'c-cal', 'Servidores públicos': 's-quanto-ganham',
+             'Obras, ruas e drenagem': 'ctr-top', 'Impostos e taxas (IPTU, iluminação)': 'c-cal'}
+ROD = [x['id'] for x in DEST if x.get('feat') and x['t'] in ('dest', 'kpi')]
+import datetime
+DIA = (datetime.date.fromisoformat(a.hoje) if a.hoje else datetime.date.today()).toordinal()
+
+def cartao(cid):
+    x = DID.get(cid)
+    if not x: return ''
+    u = f'{SITE}/d/{cid}/'
+    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{u}card.png" width="572" alt="{html.escape(x.get("desc") or x["title"])}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
+            f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">{html.escape(x.get("desc") or x["title"])} <a href="{u}" style="color:#41443a;font-weight:700">Ver no site →</a></p>')
+
+def destaques(p, vots):
+    temas = p.get('temas') or []; contas = p.get('contas') or []
+    ids = []
+    for it in vots[:2]:
+        k = 'vt-' + it[6].split('-')[-1] + '-' + it[0].replace('-', '')
+        if k in DID: ids.append(k)
+    pref = [TEMA_CARD[t] for t in temas if t in TEMA_CARD]
+    if contas: pref.append('c-cal'); pref.append('ctr-top')
+    n = 2 if p.get('freq') == 'semanal' else 1
+    pool = [c for c in pref if c in DID] or ROD
+    for j in range(len(pool)):
+        if n <= 0: break
+        c = pool[(DIA + j) % len(pool)]
+        if c not in ids: ids.append(c); n -= 1
+    if not ids: return ''
+    return '<h2 style="font:700 18px Arial,sans-serif;color:#41443a;margin:24px 0 10px;border-bottom:2px solid #41443a;padding-bottom:4px">Em destaque</h2>' + ''.join(cartao(c) for c in ids)
 
 def bloco(titulo, linhas):
     if not linhas: return ''
@@ -65,7 +98,7 @@ def montar(p):
     bairro = (p.get('bairro') or '').strip(); contas = p.get('contas') or []
     partes = []
     # votações
-    L = []
+    L = []; VS = []
     for it in vot_novas:
         dt, sg, em, au, res = it[:5]; vv = votos(it); tt = tema_de(em, temas)
         sel = list(vv) if todos else [n for n in vers if n in vv]
@@ -75,7 +108,7 @@ def montar(p):
         if sel and not todos: txt += '<br>' + '; '.join(f'{html.escape(n)}: <b>{vv[n]}</b>' for n in sel)
         elif todos and con:
             txt += '<br>Votaram contra: ' + ', '.join(html.escape(n) for n, x in vv.items() if x == 'contra')
-        L.append(txt)
+        L.append(txt); VS.append(it)
     partes.append(bloco('Votações na Câmara', L))
     # notícias
     L = []
@@ -91,8 +124,7 @@ def montar(p):
         for c in D['ctr']['meta']['novos']: L.append(html.escape(c))
     partes.append(bloco('Prefeitura e contas', L))
     if not any(partes): return None
-    partes.append(bloco('Correções no site', [f'{c[0]} · {html.escape(c[1])}: {html.escape(c[2])}' for c in corr]))
-    corpo = ''.join(x for x in partes if x)
+    corpo = destaques(p, sorted(VS, key=lambda it: (sum(1 for x in votos(it).values() if x == 'contra'), it[0]), reverse=True)) + ''.join(x for x in partes if x)
     if not corpo: return None
     ola = f'Olá, {html.escape(p["nome"].split()[0])}!' if p.get('nome') else 'Olá!'
     per = 'da semana' if p.get('freq') == 'semanal' else 'do dia'
