@@ -14,7 +14,7 @@ import json, re, sys, os, html, argparse, unicodedata
 ap = argparse.ArgumentParser()
 ap.add_argument('inscritos'); ap.add_argument('--desde', required=True); ap.add_argument('--saida', default='/tmp/newsletter')
 ap.add_argument('--hoje', default=None)
-ap.add_argument('--imagens', default='anexo', choices=['anexo', 'url'], help='anexo: cartões como imagem embutida (cid:attN), para o conector do Gmail; url: link para o site')
+ap.add_argument('--imagens', default='url', choices=['anexo', 'url'], help='anexo: cartões como imagem embutida (cid:attN), para o conector do Gmail; url: link para o site')
 a = ap.parse_args()
 s = open('index.html', encoding='utf-8').read(); i = s.find('const DATA='); D = json.loads(s[i+11:s.find('\n', i)].rstrip()[:-1])
 SITE = 'https://gravataiemdados.com.br'
@@ -208,6 +208,9 @@ for n, p in enumerate(json.load(open(a.inscritos, encoding='utf-8'))):
     h = montar(p)
     if not h: continue
     f = f'{a.saida}/{n}.html'; open(f, 'w', encoding='utf-8').write(h)
-    envios.append({'email': p['email'], 'assunto': f'Gravataí em dados: seu resumo {"da semana" if p.get("freq")=="semanal" else "do dia"}' + (f' ({hoje})' if hoje else ''), 'arquivo': f, 'anexos': list(ANEXOS)})
+    t = re.sub(r'<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>', lambda m: (re.sub('<[^>]+>', '', m.group(2)) + ' (' + m.group(1) + ')') if re.sub('<[^>]+>', '', m.group(2)).strip() else '', h, flags=re.S)
+    t = re.sub(r'<(br|/p|/h2)>', '\n', t); t = re.sub('<[^>]+>', '', t); t = html.unescape(re.sub(r'\n\s*\n+', '\n\n', t)).strip()
+    ft = f'{a.saida}/{n}.txt'; open(ft, 'w', encoding='utf-8').write(t)
+    envios.append({'email': p['email'], 'assunto': f'Gravataí em dados: seu resumo {"da semana" if p.get("freq")=="semanal" else "do dia"}' + (f' ({hoje})' if hoje else ''), 'arquivo': f, 'texto': ft, 'cancelar': CANCELAR + p['email'], 'anexos': list(ANEXOS)})
 json.dump(envios, open(f'{a.saida}/envios.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(len(envios), 'e-mails montados em', a.saida)
