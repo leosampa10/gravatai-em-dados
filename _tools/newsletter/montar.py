@@ -3,7 +3,8 @@
 Uso (na raiz do repositório):
   python3 _tools/newsletter/montar.py inscritos.json --desde AAAA-MM-DD [--saida pasta]
 
-inscritos.json: lista de {email, nome, freq ("diario"|"semanal"), temas[], vereadores[], bairro, contas[]}
+inscritos.json: lista de {email, nome, freq ("diario"|"semanal"), temas[], vereadores[], bairro, contas[], pedido}
+(pedido = texto do campo "Quer receber alguma informação específica?"; vira um bloco fixo em todo envio quando há novidade sobre o assunto)
 (montada pela tarefa a partir das respostas do formulário Tally GeR76O; NUNCA salve esse arquivo no repositório).
 Usa d/destaques.json (gerado por _tools/previas/dados.py) para o bloco "Em destaque" com os cartões de dados e votações.
 Gera <saida>/<n>.html e <saida>/envios.json ([{email, assunto, arquivo}]) só para quem tem novidade.
@@ -93,6 +94,36 @@ def bloco(titulo, linhas):
     if not linhas: return ''
     return f'<h2 style="font:700 18px Arial,sans-serif;color:#41443a;margin:24px 0 8px;border-bottom:2px solid #41443a;padding-bottom:4px">{html.escape(titulo)}</h2>' + ''.join(f'<p style="font:15px/1.5 Arial,sans-serif;color:#41443a;margin:0 0 12px">{l}</p>' for l in linhas)
 
+STOP = set('sobre quero saber receber gostaria informacao informacoes dados quanto como onde quando qual quais para pelo pela mais menos tambem cidade gravatai prefeitura camara vereador vereadores'.split())
+def chaves(txt): return [w for w in re.findall(r'[a-z0-9]{4,}', norm(txt)) if w not in STOP]
+
+def pauta_quente(ja):
+    # as manchetes mais recentes do período (SobVigia primeiro), mesmo fora dos temas escolhidos
+    L = []
+    rec = sorted(manch, key=lambda fx: (fx[1].get('d') or ''), reverse=True)
+    rec = [fx for fx in rec if fx[0] == 'SobVigia'] + [fx for fx in rec if fx[0] != 'SobVigia']
+    for fonte, x in rec:
+        if x['u'] in ja: continue
+        L.append(f'<a href="{html.escape(x["u"])}" style="color:#41443a;font-weight:700">{html.escape(x["t"])}</a><br><span style="color:#77796f">{html.escape(fonte)} · {br(x.get("d"))}</span>')
+        if len(L) == 3: break
+    return bloco('A pauta da cidade', L)
+
+def pedido(p):
+    ks = chaves(p.get('pedido') or '')
+    if not ks: return ''
+    hit = lambda t: any(k in norm(t) for k in ks)
+    L = []
+    for it in vot_novas:
+        if hit(it[1] + ' ' + it[2]):
+            L.append(f'<b>{html.escape(it[1])}</b> ({br(it[0])}): {html.escape(it[2])} <span style="color:#77796f">Resultado: {html.escape(it[4].lower())}.</span>')
+    for fonte, x in manch:
+        if hit(x['t']): L.append(f'<a href="{html.escape(x["u"])}" style="color:#41443a;font-weight:700">{html.escape(x["t"])}</a><br><span style="color:#77796f">{html.escape(fonte)} · {br(x.get("d"))}</span>')
+    for x in DEST:
+        if x['t'] != 'vot' and hit((x.get('title') or '') + ' ' + (x.get('desc') or '')):
+            L.append(f'{html.escape(x.get("desc") or x["title"])} <a href="{SITE}/d/{x["id"]}/" style="color:#41443a;font-weight:700">Ver no site →</a>')
+        if len(L) >= 6: break
+    return bloco('Sobre o que você pediu: ' + (p.get('pedido') or '')[:80], L[:6])
+
 def montar(p):
     temas = p.get('temas') or []; vers = p.get('vereadores') or []; todos = 'Todos os vereadores' in vers
     bairro = (p.get('bairro') or '').strip(); contas = p.get('contas') or []
@@ -123,8 +154,10 @@ def montar(p):
     if 'Contratos novos e aditivos' in contas and D['ctr']['meta'].get('novos'):
         for c in D['ctr']['meta']['novos']: L.append(html.escape(c))
     partes.append(bloco('Prefeitura e contas', L))
-    if not any(partes): return None
-    corpo = destaques(p, sorted(VS, key=lambda it: (sum(1 for x in votos(it).values() if x == 'contra'), it[0]), reverse=True)) + ''.join(x for x in partes if x)
+    ped = pedido(p)
+    if not any(partes) and not ped: return None
+    ja = set(re.findall(r'href="([^"]+)"', ''.join(partes)))
+    corpo = destaques(p, sorted(VS, key=lambda it: (sum(1 for x in votos(it).values() if x == 'contra'), it[0]), reverse=True)) + ped + pauta_quente(ja) + ''.join(x for x in partes if x)
     if not corpo: return None
     ola = f'Olá, {html.escape(p["nome"].split()[0])}!' if p.get('nome') else 'Olá!'
     per = 'da semana' if p.get('freq') == 'semanal' else 'do dia'
