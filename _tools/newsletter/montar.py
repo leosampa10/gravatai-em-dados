@@ -14,6 +14,7 @@ import json, re, sys, os, html, argparse, unicodedata
 ap = argparse.ArgumentParser()
 ap.add_argument('inscritos'); ap.add_argument('--desde', required=True); ap.add_argument('--saida', default='/tmp/newsletter')
 ap.add_argument('--hoje', default=None)
+ap.add_argument('--imagens', default='anexo', choices=['anexo', 'url'], help='anexo: cartões como imagem embutida (cid:attN), para o conector do Gmail; url: link para o site')
 a = ap.parse_args()
 s = open('index.html', encoding='utf-8').read(); i = s.find('const DATA='); D = json.loads(s[i+11:s.find('\n', i)].rstrip()[:-1])
 SITE = 'https://gravataiemdados.com.br'
@@ -66,11 +67,19 @@ ROD = [x['id'] for x in DEST if x.get('feat') and x['t'] in ('dest', 'kpi')]
 import datetime
 DIA = (datetime.date.fromisoformat(a.hoje) if a.hoje else datetime.date.today()).toordinal()
 
+ANEXOS = []
+import hashlib
+def img(rel, u):
+    # rel = caminho local do PNG (d/<id>/card.png); u = página no site
+    if a.imagens == 'url' or not os.path.exists(rel): return f'{u}card.png'
+    ANEXOS.append({'path': os.path.abspath(rel), 'filename': rel.replace('/', '-'), 'sha256': hashlib.sha256(open(rel, 'rb').read()).hexdigest()})
+    return f'cid:att{len(ANEXOS) - 1}'
+
 def cartao(cid):
     x = DID.get(cid)
     if not x: return ''
     u = f'{SITE}/d/{cid}/'
-    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{u}card.png" width="572" alt="{html.escape(x.get("desc") or x["title"])}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
+    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{img(f"d/{cid}/card.png", u)}" width="572" alt="{html.escape(x.get("desc") or x["title"])}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
             f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">{html.escape(x.get("desc") or x["title"])} <a href="{u}" style="color:#41443a;font-weight:700">Ver no site →</a></p>')
 
 VID = {v['nome']: v['id'] for v in D['ver']}
@@ -78,7 +87,7 @@ def cartao_ver(nome):
     vid = VID.get(nome)
     if not vid or not os.path.exists(f'v/{vid}/card.png'): return ''
     u = f'{SITE}/v/{vid}/'
-    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{u}card.png" width="572" alt="Ficha de {html.escape(nome)}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
+    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{img(f"v/{vid}/card.png", u)}" width="572" alt="Ficha de {html.escape(nome)}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
             f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">A ficha de {html.escape(nome)}: projetos, votos, presença e gastos do mandato. <a href="{u}" style="color:#41443a;font-weight:700">Ver a ficha →</a></p>')
 
 def vers_de(p):
@@ -195,9 +204,10 @@ Mais detalhes em <a href="{SITE}" style="color:#41443a">gravataiemdados.com.br</
 os.makedirs(a.saida, exist_ok=True); envios = []
 hoje = br(a.hoje) if a.hoje else ''
 for n, p in enumerate(json.load(open(a.inscritos, encoding='utf-8'))):
+    ANEXOS.clear()
     h = montar(p)
     if not h: continue
     f = f'{a.saida}/{n}.html'; open(f, 'w', encoding='utf-8').write(h)
-    envios.append({'email': p['email'], 'assunto': f'Gravataí em dados: seu resumo {"da semana" if p.get("freq")=="semanal" else "do dia"}' + (f' ({hoje})' if hoje else ''), 'arquivo': f})
+    envios.append({'email': p['email'], 'assunto': f'Gravataí em dados: seu resumo {"da semana" if p.get("freq")=="semanal" else "do dia"}' + (f' ({hoje})' if hoje else ''), 'arquivo': f, 'anexos': list(ANEXOS)})
 json.dump(envios, open(f'{a.saida}/envios.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 print(len(envios), 'e-mails montados em', a.saida)
