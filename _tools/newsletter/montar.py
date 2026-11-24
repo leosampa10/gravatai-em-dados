@@ -73,8 +73,25 @@ def cartao(cid):
     return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{u}card.png" width="572" alt="{html.escape(x.get("desc") or x["title"])}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
             f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">{html.escape(x.get("desc") or x["title"])} <a href="{u}" style="color:#41443a;font-weight:700">Ver no site →</a></p>')
 
+VID = {v['nome']: v['id'] for v in D['ver']}
+def cartao_ver(nome):
+    vid = VID.get(nome)
+    if not vid or not os.path.exists(f'v/{vid}/card.png'): return ''
+    u = f'{SITE}/v/{vid}/'
+    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{u}card.png" width="572" alt="Ficha de {html.escape(nome)}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
+            f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">A ficha de {html.escape(nome)}: projetos, votos, presença e gastos do mandato. <a href="{u}" style="color:#41443a;font-weight:700">Ver a ficha →</a></p>')
+
+def vers_de(p):
+    vs = [n for n in (p.get('vereadores') or []) if n in VID]
+    ped = norm(p.get('pedido') or '')
+    for n in VID:
+        if n not in vs and ped and (norm(n) in ped or (len(n.split()) > 1 and norm(n.split()[-1]) in ped.split()) or norm(n.split()[0]) in ped.split()):
+            vs.append(n)
+    return vs[:3]
+
 def destaques(p, vots):
     temas = p.get('temas') or []; contas = p.get('contas') or []
+    fichas = ''.join(cartao_ver(n) for n in vers_de(p))
     ids = []
     for it in vots[:2]:
         k = 'vt-' + it[6].split('-')[-1] + '-' + it[0].replace('-', '')
@@ -87,8 +104,8 @@ def destaques(p, vots):
         if n <= 0: break
         c = pool[(DIA + j) % len(pool)]
         if c not in ids: ids.append(c); n -= 1
-    if not ids: return ''
-    return '<h2 style="font:700 18px Arial,sans-serif;color:#41443a;margin:24px 0 10px;border-bottom:2px solid #41443a;padding-bottom:4px">Em destaque</h2>' + ''.join(cartao(c) for c in ids)
+    if not ids and not fichas: return ''
+    return '<h2 style="font:700 18px Arial,sans-serif;color:#41443a;margin:24px 0 10px;border-bottom:2px solid #41443a;padding-bottom:4px">Em destaque</h2>' + fichas + ''.join(cartao(c) for c in ids)
 
 def bloco(titulo, linhas):
     if not linhas: return ''
@@ -113,6 +130,12 @@ def pedido(p):
     if not ks: return ''
     hit = lambda t: any(k in norm(t) for k in ks)
     L = []
+    for n in vers_de({'pedido': p.get('pedido')}):
+        vid = VID[n]; v = next(x for x in D['ver'] if x['id'] == vid)
+        L.append(f'<b>{html.escape(n)}</b> ({html.escape(v.get("pat") or "")}, {html.escape(v.get("bloco") or "")}): veja como votou em cada projeto do período logo abaixo, e a ficha completa em <a href="{SITE}/v/{vid}/" style="color:#41443a;font-weight:700">gravataiemdados.com.br/v/{vid}</a>.')
+        for it in vot_novas:
+            vv = votos(it); x = vv.get(n)
+            if x and x != 'a favor': L.append(f'Em {br(it[0])}, no {html.escape(it[1])} ({html.escape(it[2])}), {html.escape(n.split()[0])} <b>{html.escape(x)}</b>.')
     for it in vot_novas:
         if hit(it[1] + ' ' + it[2]):
             L.append(f'<b>{html.escape(it[1])}</b> ({br(it[0])}): {html.escape(it[2])} <span style="color:#77796f">Resultado: {html.escape(it[4].lower())}.</span>')
