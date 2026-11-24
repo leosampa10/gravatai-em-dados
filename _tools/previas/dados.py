@@ -48,7 +48,9 @@ def bars(x):
 def card(x):
     if x['t'] == 'dest':
         sz = '' if len(x['big']) <= 6 else (' m' if len(x['big']) <= 9 else ' s')
-        mid = f'<div class="g2"><div><div class="big{sz}">{E(x["big"])}</div><div class="tx">{x["txt"]}</div></div>{bars(x)}</div>'
+        tx = ' style="font-size:24px"' if len(x['txt']) > 150 else ''
+        mid = (f'<div class="g2"><div><div class="big{sz}">{E(x["big"])}</div><div class="tx"{tx}>{x["txt"]}</div></div>{bars(x)}</div>' if x.get('bars')
+               else f'<div><div class="big{sz}">{E(x["big"])}</div><div class="tx"{tx} style="max-width:34ch">{x["txt"]}</div></div>')
         return HEAD + TOP(x['tag']) + mid + f'<div class="f">{E(x["fonte"])} · gravataiemdados.com.br</div></div></body></html>'
     if x['t'] == 'kpi':
         ks = x['kpis'][:4]

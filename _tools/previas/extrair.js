@@ -61,6 +61,19 @@
     D['s-onde-cada-vereador-teve-votos'] = { t: 'dest', tag: 'Eleição de 2024 · Mapa de votos', big: ord[0][1] + ' bairros', txt: `em que <i>${c0[0]}</i> (${c0[1]}) foi o eleito mais votado. Veja no mapa onde cada vereador teve votos.`,
       bt: 'Mais votado em quantos bairros', bars: ord.slice(0, 4).map(([i, n], j) => ({ l: V.c[V.k[i]][0], v: String(n), w: n / ord[0][1], hl: j ? 0 : 2 })), fonte: 'Fonte: boletins de urna (TSE)', desc: `${c0[0]} foi o eleito mais votado em ${ord[0][1]} bairros na eleição de 2024.` };
   } catch (e) { }
+  try { // indicadores da Prefeitura
+    (DATA.ind || []).forEach(I => {
+      const id = 'ind-' + String(I.k).toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const last = arr => { for (let i = arr.length - 1; i >= 0; i--) if (arr[i] != null) return [arr[i], I.years[i]]; return [null, null]; };
+      const [v0, y0] = last(I.s[0][1]); if (v0 == null) return;
+      const pc = /^%/.test(I.u || '') ? '%' : ''; const fm = v => pc ? nf(v, Number.isInteger(v) ? 0 : 1) + '%' : Math.abs(v) >= 1e6 ? 'R$ ' + nf(v / 1e6, 1) + ' mi' : (Math.abs(v) >= 100 ? nf(Math.round(v)) : nf(v, Number.isInteger(v) ? 0 : (Math.abs(v) < 10 ? 1 : 1)));
+      const first = (I.note || '').split(/(?<=\.)\s/)[0];
+      const bs = I.s.map(([n, a]) => { const [v] = last(a); return v == null ? null : { l: n, v: fm(v), w: v }; }).filter(Boolean).slice(0, 4);
+      const mx = Math.max(...bs.map(b => Math.abs(b.w))) || 1; bs.forEach((b, i) => { b.w = Math.abs(b.w) / mx; b.hl = i ? 0 : 2; });
+      D[id] = { t: 'dest', tag: 'Prefeitura · Indicadores', big: fm(v0), txt: `<i>${I.t}</i>: ${I.s[0][0]}, ${y0}${I.u && !/^R\$/.test(I.u) ? ' (' + I.u + ')' : ''}. ${first}`.slice(0, 230),
+        bt: `Último dado de cada série`, bars: bs.length > 1 ? bs : [], fonte: 'Fonte: ' + (I.src || ''), desc: `${I.t}: ${fm(v0)} (${I.s[0][0]}, ${y0}). ${first}` };
+    });
+  } catch (e) { }
   const kpiOf = el => { const ks = []; el.querySelectorAll('*').forEach(e => { if (e.children.length || ks.length >= 4) return; const t = T(e); if (!t || t.length > 12 || !/\d/.test(t)) return; if (parseFloat(getComputedStyle(e).fontSize) < 26) return; let lab = e.nextElementSibling ? T(e.nextElementSibling) : ''; if (!lab && e.parentElement.nextElementSibling) lab = T(e.parentElement.nextElementSibling); ks.push({ b: t, l: lab.slice(0, 70) }); }); return ks; };
 
   // todos os cards
