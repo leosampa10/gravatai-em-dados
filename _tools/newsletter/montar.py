@@ -192,7 +192,7 @@ def montar(p):
     ola = f'Olá, {html.escape(p["nome"].split()[0])}!' if p.get('nome') else 'Olá!'
     per = 'da semana' if p.get('freq') == 'semanal' else 'do dia'
     return f'''<div style="max-width:620px;margin:0 auto;background:#f8f8f6;padding:24px">
-<p style="font:800 13px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#41443a;margin:0">Gravataí em dados</p>
+<a href="{SITE}" style="display:inline-block;text-decoration:none"><img src="{SITE}/img/logo-email.png" width="163" height="36" alt="Gravataí em dados" style="display:block;border:0"></a>
 <p style="font:15px Arial,sans-serif;color:#41443a">{ola} Este é o seu resumo {per}, com o que você escolheu acompanhar. Tudo com fonte oficial; sem recomendação de voto.</p>
 {corpo}
 <p style="font:13px/1.5 Arial,sans-serif;color:#77796f;margin-top:28px;border-top:1px solid #dcdcd5;padding-top:12px">
