@@ -79,16 +79,14 @@ def cartao(cid):
     x = DID.get(cid)
     if not x: return ''
     u = f'{SITE}/d/{cid}/'
-    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{img(f"d/{cid}/card.png", u)}" width="572" alt="{html.escape(x.get("desc") or x["title"])}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
-            f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">{html.escape(x.get("desc") or x["title"])} <a href="{u}" style="color:#41443a;font-weight:700">Ver no site →</a></p>')
+    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 14px"><img src="{img(f"d/{cid}/card.png", u)}" width="572" alt="{html.escape(x.get("desc") or x["title"])}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>')
 
 VID = {v['nome']: v['id'] for v in D['ver']}
 def cartao_ver(nome):
     vid = VID.get(nome)
     if not vid or not os.path.exists(f'v/{vid}/card.png'): return ''
     u = f'{SITE}/v/{vid}/'
-    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 6px"><img src="{img(f"v/{vid}/card.png", u)}" width="572" alt="Ficha de {html.escape(nome)}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>'
-            f'<p style="font:14px/1.45 Arial,sans-serif;color:#41443a;margin:0 0 18px">A ficha de {html.escape(nome)}: projetos, votos, presença e gastos do mandato. <a href="{u}" style="color:#41443a;font-weight:700">Ver a ficha →</a></p>')
+    return (f'<a href="{u}" style="display:block;text-decoration:none;margin:0 0 14px"><img src="{img(f"v/{vid}/card.png", u)}" width="572" alt="Ficha de {html.escape(nome)}" style="display:block;width:100%;height:auto;border:1px solid #dcdcd5;border-radius:10px"></a>')
 
 def vers_de(p):
     vs = [n for n in (p.get('vereadores') or []) if n in VID]
@@ -208,7 +206,13 @@ for n, p in enumerate(json.load(open(a.inscritos, encoding='utf-8'))):
     h = montar(p)
     if not h: continue
     f = f'{a.saida}/{n}.html'; open(f, 'w', encoding='utf-8').write(h)
-    t = re.sub(r'<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>', lambda m: (re.sub('<[^>]+>', '', m.group(2)) + ' (' + m.group(1) + ')') if re.sub('<[^>]+>', '', m.group(2)).strip() else '', h, flags=re.S)
+    def _ln(m):
+        tx = re.sub('<[^>]+>', '', m.group(2)).strip()
+        if not tx:
+            al = re.search(r'alt="([^"]*)"', m.group(2)); tx = '• ' + (al.group(1) if al else '')
+            return tx + ' ' + m.group(1) + '<br>'
+        return tx + ' (' + m.group(1) + ')'
+    t = re.sub(r'<a [^>]*href="([^"]+)"[^>]*>(.*?)</a>', _ln, h, flags=re.S)
     t = re.sub(r'<(br|/p|/h2)>', '\n', t); t = re.sub('<[^>]+>', '', t); t = html.unescape(re.sub(r'\n\s*\n+', '\n\n', t)).strip()
     ft = f'{a.saida}/{n}.txt'; open(ft, 'w', encoding='utf-8').write(t)
     envios.append({'email': p['email'], 'assunto': f'Gravataí em dados: seu resumo {"da semana" if p.get("freq")=="semanal" else "do dia"}' + (f' ({hoje})' if hoje else ''), 'arquivo': f, 'texto': ft, 'cancelar': CANCELAR + p['email'], 'anexos': list(ANEXOS)})
