@@ -53,7 +53,7 @@ def tema_de(txt, temas): return [t for t in temas if t in TEMAS and re.search(TE
 
 vot_novas = [it for it in V['it'] if it[0] >= a.desde]
 manch = [(f['nm'], x) for f in D['manchetes']['fontes'] for x in f['itens'] if (x.get('d') or '') >= a.desde]
-corr = [c for c in D.get('corr', []) if '-'.join(reversed(c[0].split('/'))) >= a.desde]
+corr = []
 cal = D.get('cal', {})
 
 def bloco(titulo, linhas):
