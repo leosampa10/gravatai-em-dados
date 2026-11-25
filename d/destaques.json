@@ -1215,6 +1215,21 @@
 "big": null
 },
 {
+"id": "c-licitacoes",
+"t": "gen",
+"feat": false,
+"title": "O QUE A PREFEITURA VAI COMPRAR",
+"crumb": "Prefeitura · Contratos",
+"desc": null,
+"date": null,
+"sg": null,
+"res": null,
+"S": null,
+"N": null,
+"tag": null,
+"big": null
+},
+{
 "id": "ctr-top",
 "t": "dest",
 "feat": true,
@@ -1605,6 +1620,21 @@
 "big": null
 },
 {
+"id": "c-como-atualizamos",
+"t": "gen",
+"feat": false,
+"title": "COMO ATUALIZAMOS",
+"crumb": "Fontes",
+"desc": null,
+"date": null,
+"sg": null,
+"res": null,
+"S": null,
+"N": null,
+"tag": null,
+"big": null
+},
+{
 "id": "c-met",
 "t": "gen",
 "feat": false,
@@ -1624,6 +1654,21 @@
 "t": "gen",
 "feat": false,
 "title": "BAIXE OS DADOS",
+"crumb": "Fontes",
+"desc": null,
+"date": null,
+"sg": null,
+"res": null,
+"S": null,
+"N": null,
+"tag": null,
+"big": null
+},
+{
+"id": "c-dicionario",
+"t": "gen",
+"feat": false,
+"title": "PALAVRA DIFÍCIL, EXPLICADA",
 "crumb": "Fontes",
 "desc": null,
 "date": null,

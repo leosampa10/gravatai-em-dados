@@ -34,3 +34,12 @@ Fonte oficial: CGU, API do Portal da Transparência. Exige a chave pessoal do Se
 Fonte: TSE (candidaturas e votação por candidato). Muda só quando há eleição nova ou suplente que assume. Para um vereador novo, abra `https://www.politicometro.org/p/<slug>` e rode o extrator usado na versão 7 (lista `[ano, votos, resultado, cargo, lugar fora de Gravataí, partido]`, ordem crescente). Confira o homônimo: só vale candidatura em Gravataí ou no RS.
 
 Base/oposição de cada mandato vem de `DATA.met[id][L1|L2].opo` (classificação do próprio painel).
+
+## 4. Licitações da Prefeitura (`DATA.lic`) — toda segunda-feira
+
+Fonte oficial: PNCP, API de consulta (sem chave). Domínio liberado no navegador do app: `pncp.gov.br`.
+
+1. Abra `https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao?dataInicial=AAAA0101&dataFinal=AAAAMMDD&codigoModalidadeContratacao=6&codigoMunicipioIbge=4309209&pagina=1&tamanhoPagina=10`.
+2. No console da aba, percorra as modalidades 1 a 13 (`codigoModalidadeContratacao`), `tamanhoPagina=50`, até `totalPaginas` (status 204 = sem dados). A API é lenta (~6 s por página): rode o laço sem `await` no fim e consulte o progresso.
+3. Fique só com `orgaoEntidade.cnpj = 87890992000158`, tire leilões (venda de imóveis) e duplicadas (mesmo objeto e mesmo valor).
+4. Grave `n`, `tot` (soma de `valorTotalEstimado`), `disp` (dispensas e inexigibilidades), `asof`, `top` (12 maiores) e `rec` (12 mais recentes com disputa, valor > R$ 1 mil), cada item `[data AAAA-MM-DD, objeto curto, valor, modalidade, link https://pncp.gov.br/app/editais/<cnpj>/<ano>/<sequencial>]`.
