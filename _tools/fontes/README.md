@@ -20,12 +20,14 @@ const r=await (await fetch('/obrasgov/api/projeto-investimento?idUnico=ID')).jso
 
 ## 2. Emendas federais pagas à Prefeitura (`DATA.emd`) — toda segunda-feira
 
-Fonte oficial: CGU, Portal da Transparência (emendas parlamentares, pagamentos por favorecido). A API da CGU exige chave pessoal (gov.br); até o Sergio cadastrar uma, use o levantamento do Politicômetro, que lê a mesma base:
+Fonte oficial: CGU, API do Portal da Transparência. Exige a chave pessoal do Sergio (cabeçalho `chave-api-dados`), que está só no prompt da tarefa diária. **Nunca grave a chave no repositório nem no site.** Domínio liberado no navegador do app: `api.portaldatransparencia.gov.br`.
 
-1. Abra `https://www.politicometro.org/br?uf=rs&cidade=4309209&assunto=dinheiro`, clique em "Ver todos" na lista "Quem mandou" e leia o texto.
-2. Atualize `per` (período), `tot` (R$ mil), `pc` (R$ por morador), `pm` (Gravataí, média do RS, média do Brasil), `q` ([nome, partido-UF ou casa, tipo, R$ mil]) e `out` ([nº de autores, R$ mil]).
-3. Em `src`, diga a data do levantamento e que a base é a CGU.
-4. Valores da época, sem correção: o bloco compara médias do mesmo período, como explica a nota do card.
+1. Abra uma aba em `https://api.portaldatransparencia.gov.br/swagger-ui/index.html`.
+2. Rode `window.K='<chave>'` e cole o conteúdo de `_tools/fontes/emendas_cgu.js`.
+3. Chame `await emd.passo()` até retornar `"pronto"` (cada chamada dura até ~35 s) e depois `emd.resumo()`.
+   O script lê os pagamentos de 2023 em diante aos CNPJs 87.890.992/0001-58 (Município de Gravataí) e 12.195.662/0001-43 (Fundo Municipal de Saúde), abre o detalhe de cada transferência e soma por autor de emenda. Tipo: ação 0EC2 = "Pix" (transferência especial); autor com código 7xxx = bancada; 5xxx/6xxx = comissão; demais = individual.
+4. Atualize `DATA.emd`: `per`, `tot` (R$ mil), `pc` (tot ÷ população IBGE do ano), `q` ([nome, partido-UF ou casa, tipo, R$ mil]); para autor novo, confira o partido atual na Câmara/Senado. Mantenha `pm` (médias do RS e do Brasil, do Politicômetro) e atualize-as quando o Politicômetro publicar números novos.
+5. Grave a data da consulta em `src`.
 
 ## 3. Trajetória nas urnas (`DATA.traj`) — só depois de eleição ou troca de vereador
 
