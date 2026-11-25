@@ -113,6 +113,8 @@ def main():
     man = [{k: x.get(k) for k in ('id', 't', 'feat', 'title', 'crumb', 'desc', 'date', 'sg', 'res', 'S', 'N', 'tag', 'big')} for x in itens]
     (dest / 'destaques.json').write_text(json.dumps(man, ensure_ascii=False, indent=0), encoding='utf-8')
     print(len(itens), 'prévias;', sum(1 for x in itens if x['feat']), 'com miniresumo')
+    import importlib.util as _u
+    _s = _u.spec_from_file_location('peleia', RAIZ / '_tools/previas/peleia.py'); _m = _u.module_from_spec(_s); _s.loader.exec_module(_m); _m.main()  # prévias da Peleia
 
 
 if __name__ == '__main__':
