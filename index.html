@@ -11,7 +11,7 @@
 :root,:root[data-theme="light"]{
   --bg:#f8f8f6;--surface:#f8f8f6;--surface-2:#ebebe6;--line:#dcdcd5;--ink:#41443a;--muted:#77796f;--navy:#41443a;
   --accent:#41443a;--accent-ink:#f8f8f6;--accent-soft:#e6e7df;--link:#41443a;--frame:#41443a;--frame-2:#41443a;--bg-band:#efefea;
-  --opo:#b5562f;--opo-soft:#f2e1d8;--ok:#5f7a43;--grey:#a9aba2;--g1:#2f78c4;--g2:#c2455a;--g3:#b07a12;--g4:#7a5ccc;--g5:#2e8f6d;
+  --opo:#b5562f;--opo-soft:#f2e1d8;--ok:#5f7a43;--grey:#a9aba2;--g1:#7d9cc0;--g2:#c08e95;--g3:#bda673;--g4:#9a92bf;--g5:#7fa898;
   --c-norm:#2e8f6d;--c-decl:#2f6fd0;--c-int:#a86b16;--c-via:#7a5bd0;--c-simb:#bfc1b8;--c-no:#e8e8e3;
   --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--s4:#eda100;--s5:#e87ba4;--s6:#008300;--s7:#6250d6;
   --f-body:"Poppins","Segoe UI",system-ui,sans-serif;--f-disp:"Poppins","Segoe UI",system-ui,sans-serif;--f-data:"Poppins","Segoe UI",system-ui,sans-serif;
@@ -19,7 +19,7 @@
 :root[data-theme="dark"]{
   --bg:#1d1e1a;--surface:#1d1e1a;--surface-2:#2b2c27;--line:#3a3b35;--ink:#ecebe4;--muted:#a3a49b;--navy:#ecebe4;
   --accent:#ecebe4;--accent-ink:#1d1e1a;--accent-soft:#2f302a;--link:#ecebe4;--frame:#ecebe4;--frame-2:#ecebe4;--bg-band:#24251f;
-  --opo:#e08a5f;--opo-soft:rgba(224,138,95,.16);--ok:#9bb87a;--grey:#6c6d65;--g1:#4a94dd;--g2:#d4606b;--g3:#b98a1f;--g4:#8f76d3;--g5:#33997a;
+  --opo:#e08a5f;--opo-soft:rgba(224,138,95,.16);--ok:#9bb87a;--grey:#6c6d65;--g1:#7f9ec4;--g2:#c4939a;--g3:#bfa877;--g4:#a29ac6;--g5:#86ad9e;
   --c-norm:#3fb8a9;--c-decl:#5b9cf5;--c-int:#c48b3a;--c-via:#a28bf0;--c-simb:#5b5d55;--c-no:#2a2b26;
   --s1:#3987e5;--s2:#d95926;--s3:#199e70;--s4:#c98500;--s5:#d55181;--s6:#2b9b2b;--s7:#9085e9;
   color-scheme:dark}
@@ -741,7 +741,33 @@ body.tf-on{overflow:hidden}
  .gv-sheet .vpk-g{width:100%}
 }
 
-@media (min-width:760px){.top.mini .pf-inf,.top.mini .pf-rg-y,.top.mini .pf-rg-l,.top.mini .fgrp>.fl{display:none!important}.top.mini .pf-rg{height:30px}.top.mini .bar2{padding:4px 0 6px!important;gap:10px!important}}
+@media (min-width:760px){.top.mini .pf-rg-y,.top.mini .pf-rg-l,.top.mini .fgrp>.fl{display:none!important}.top.mini .pf-rg{height:30px}.top.mini .bar2{padding:4px 0 6px!important;gap:10px!important}}
+
+/* v6.1: barra de filtros compacta no computador */
+@media (min-width:760px){
+ .top .bar2{flex-wrap:nowrap!important;align-items:center!important;gap:10px!important;padding:6px 0 6px!important}
+ .top .fgrp>.fl,.top .pf-rg-l,.top .pf-rg-y{display:none!important}
+ .top .fgrp{flex-direction:row;align-items:center}
+ .top .bar2 .seg button{padding:6px 11px!important;font-size:12.5px!important}
+ .top .vpk-b{min-height:34px;min-width:180px;padding:2px 12px 2px 2px}
+ .top .vpk-b .av{width:28px;height:28px}
+ .top .pf-rg-w{flex:1 1 200px;min-width:180px}
+ .top .pf-rg{height:30px;border-radius:999px}
+ .top .pf-rg-sel{border-radius:999px;border-width:2px}
+ .top .pf-all{align-self:center;padding:6px 12px}
+ .top #pfbar .vsel{padding:2px 6px}
+ .top #pfbar .vsel select{font-size:12px}
+ .top #vbseg button{padding:6px 9px!important;font-size:12px!important}
+ .top .pf-inf{display:inline-flex!important;order:2;font:500 12px var(--f-body);padding:4px 10px}
+ .top #pfbar .ctx{order:1}
+ .top #pfbar>*:not(.ctx):not(.pf-inf){order:3}
+ .top .ctx b{font-size:16px!important}
+ .top .snav{padding:2px 0 8px!important}
+ .top .snav button{padding:5px 12px!important;font-size:12.5px!important}
+}
+.pf-rg button span{color:#1d1e1a!important;text-shadow:none!important;font-weight:700}
+
+@media (min-width:760px){.top #pfbar .ctx{display:none!important}.top #pfbar .vsel>span{display:none}.top .pf-rg-w{flex:1 1 300px;min-width:270px}.top #pfbar{gap:8px!important}.top #vbseg button{padding:6px 8px!important}}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%231d1e1a%22/%3E%3Cg%20transform%3D%22translate%2810%2024%29%22%20fill%3D%22%23ecebe4%22%3E%3Ccircle%20cx%3D%2224.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2236.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2276.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2213.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2218.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2225.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2282.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2287.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%222.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%225.7%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2216.1%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2214.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2283.9%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2294.3%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2298.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3C/g%3E%3C/svg%3E">
 </head>
