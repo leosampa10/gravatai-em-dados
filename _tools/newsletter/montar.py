@@ -152,7 +152,7 @@ def pedido(p):
         if x['t'] != 'vot' and hit((x.get('title') or '') + ' ' + (x.get('desc') or '')):
             L.append(f'{html.escape(x.get("desc") or x["title"])} <a href="{SITE}/d/{x["id"]}/" style="color:#41443a;font-weight:700">Ver no site →</a>')
         if len(L) >= 6: break
-    return bloco('Sobre o que você pediu: ' + (p.get('pedido') or '')[:80], L[:6])
+    return bloco('Sobre o que tu pediu: ' + (p.get('pedido') or '')[:80], L[:6])
 
 def montar(p):
     temas = p.get('temas') or []; vers = p.get('vereadores') or []; todos = 'Todos os vereadores' in vers
@@ -189,14 +189,14 @@ def montar(p):
     ja = set(re.findall(r'href="([^"]+)"', ''.join(partes)))
     corpo = destaques(p, sorted(VS, key=lambda it: (sum(1 for x in votos(it).values() if x == 'contra'), it[0]), reverse=True)) + ped + pauta_quente(ja) + ''.join(x for x in partes if x)
     if not corpo: return None
-    ola = f'Olá, {html.escape(p["nome"].split()[0])}!' if p.get('nome') else 'Olá!'
+    ola = f'Buenas, {html.escape(p["nome"].split()[0])}!' if p.get('nome') else 'Buenas!'
     per = 'da semana' if p.get('freq') == 'semanal' else 'do dia'
     return f'''<div style="max-width:620px;margin:0 auto;background:#f8f8f6;padding:24px">
 <a href="{SITE}" style="display:inline-block;text-decoration:none"><img src="{SITE}/img/logo-email.png" width="163" height="36" alt="Gravataí em dados" style="display:block;border:0"></a>
-<p style="font:15px Arial,sans-serif;color:#41443a">{ola} Este é o seu resumo {per}, com o que você escolheu acompanhar. Tudo com fonte oficial; sem recomendação de voto.</p>
+<p style="font:15px Arial,sans-serif;color:#41443a">{ola} Tá aqui o teu resumo {per}, fresquinho, com o que tu escolheu acompanhar. Tudo com fonte oficial; sem recomendação de voto.</p>
 {corpo}
 <p style="font:13px/1.5 Arial,sans-serif;color:#77796f;margin-top:28px;border-top:1px solid #dcdcd5;padding-top:12px">
-Mais detalhes em <a href="{SITE}" style="color:#41443a">gravataiemdados.com.br</a>. Para mudar o que você recebe, inscreva-se de novo com o mesmo e-mail.<br>
+Quer mais? Tá tudo em <a href="{SITE}" style="color:#41443a">gravataiemdados.com.br</a>. Pra mudar o que tu recebe, é só se inscrever de novo com o mesmo e-mail. Feito em Gravataí, de chimarrão do lado.<br>
 <a href="{CANCELAR}{html.escape(p["email"])}" style="color:#77796f">Cancelar estes e-mails</a></p></div>'''
 
 os.makedirs(a.saida, exist_ok=True); envios = []
