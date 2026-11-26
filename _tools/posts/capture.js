@@ -4,10 +4,11 @@ const [,,specf,out]=process.argv;const S=JSON.parse(fs.readFileSync(specf));fs.m
 (async()=>{const b=await chromium.launch();const ctx=await b.newContext({viewport:{width:390,height:844},deviceScaleFactor:3});
 const p=await ctx.newPage();await p.addInitScript(()=>{localStorage.setItem('gv-wl','skip');});
 await p.goto('file://'+require('path').resolve(__dirname,'../../index.html'));await p.waitForTimeout(1200);
-await p.click('#tt');await p.waitForTimeout(300);
+if(!S.light){await p.click('#tt');await p.waitForTimeout(300);}
 await p.evaluate(g=>goto(g),S.goto);await p.waitForTimeout(700);
 await p.addStyleTag({content:'.chart svg{min-width:0!important;width:100%!important}'+(S.view?'':'*{transition-duration:0s!important;animation-duration:0s!important}html,body{scroll-behavior:auto!important}')});
 await p.waitForTimeout(200);
+if(S.light&&!S.view)await p.evaluate(()=>{document.querySelectorAll('body *').forEach(e=>{const ps=getComputedStyle(e).position;if(ps==='sticky'||ps==='fixed')e.style.setProperty('position','static','important')});document.querySelectorAll('.gv-pel,.gv-dock,.gv-top').forEach(e=>e.style.display='none')});
 if(S.view){const meta={frames:[]};let n=0;const VH=S.vh||560;
  const vshot=async(touch,hold=1)=>{const f=`${out}/f${String(n).padStart(4,'0')}.png`;await p.screenshot({path:f,clip:{x:0,y:0,width:390,height:VH}});meta.frames.push({f,hold,crop:null,touch:touch?{x:touch.x,y:touch.y}:null});n++;};
  const a=p.locator(S.anchor).first();await a.evaluate((e,off)=>{window.scrollTo({top:e.getBoundingClientRect().top+scrollY-off,behavior:'instant'})},S.off||70);await p.waitForTimeout(400);

@@ -59,8 +59,20 @@ def build(P):
     c=P['cob'];pairs.append((tpl_cob(c['title'],c['qs'],c['who'],c['src']),D+'/5.png'))
     render(pairs)
     subprocess.check_call(['node','render.js',os.path.abspath('siga6.html'),os.path.abspath(D+'/6.png')],env=ENV)
-    m=scene(P['cap']['scene'],f'fr/{P["slug"]}-1')
-    f=m['frames'][-1];compose(D+'/b1.png',f['f'],None,y0=P['cap'].get('y0',560),crop=f.get('crop')).save(D+'/1.jpg',quality=92)
+    if P['cap'].get('capa'):  # capa nova (cartaz colorido): card do site em tema claro
+        import capa, datetime, glob
+        c=P['cap']['capa']
+        if not c.get('cor'):  # mescla as cores: muda a cada dia e entre os posts do mesmo dia
+            d=datetime.datetime.strptime(P['date'],'%d/%m/%Y').date()
+            ja=len([x for x in glob.glob('out/'+P['slug'][:8]+'-*') if not x.endswith(P['slug'])])
+            c['cor']=capa.ORDEM[(d.toordinal()*2+ja)%len(capa.ORDEM)]
+        sc=dict(P['cap']['scene'],light=True,anim={'type':'none'})
+        m=scene(sc,f'fr/{P["slug"]}-1')
+        render([(capa.html(P['cap'],m['frames'][-1]['f']),D+'/1.png')])
+        from PIL import Image as _I;_I.open(D+'/1.png').convert('RGB').save(D+'/1.jpg',quality=92);os.remove(D+'/1.png')
+    else:
+        m=scene(P['cap']['scene'],f'fr/{P["slug"]}-1')
+        f=m['frames'][-1];compose(D+'/b1.png',f['f'],None,y0=P['cap'].get('y0',560),crop=f.get('crop')).save(D+'/1.jpg',quality=92)
     for n,sl in enumerate(P['slides'],start=2):
         m=scene(sl['scene'],f'fr/{P["slug"]}-{n}')
         if len(m['frames'])==1 or (not sl['scene'].get('view') and sl['scene'].get('anim',{}).get('type','none')=='none'):
