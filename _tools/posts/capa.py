@@ -24,7 +24,7 @@ def marca(cor):
     cs = re.findall(r'<circle[^>]*>', m)
     return f'<svg viewBox="-4 -4 208 114" width="92" height="51" fill="{cor}">{"".join(c if c.endswith("/>") else c+"</circle>" for c in cs)}</svg>'
 
-def html(cap, img, n_total=6):
+def html(cap, img, n_total=6, off=0):
     c = cap['capa']; bg, ink, mor, rio, tb, tt = PAL.get(c.get('cor', 'azul'), PAL['azul'])
     ita = GEO['ita']
     # só o contorno do morro e o cachorrinho, preenchidos
@@ -52,7 +52,13 @@ h1 i{{font-weight:800;text-transform:none;letter-spacing:-.04em}}
 {morro}{rio_svg}
 <div class="top"><span class="at">@gravataiemdados</span>{marca(ink)}</div>
 <h1>{c['t']}</h1>
-<div class="card"><img src="file://{os.path.abspath(img)}"></div>
+<div class="card"><img id="sh" src="file://{os.path.abspath(img)}"></div>
 <div class="tag">{c['tag']}</div>
 <div class="ft"><span>{c.get('src') or cap.get('src','')}</span><b>gravataiemdados.com.br</b></div>
-</div></body></html>'''
+</div>
+<script>/* card logo abaixo do título; corta o print a partir de "off" (px do site) */
+(function(){{const h=document.querySelector('h1'),c=document.querySelector('.card'),t=document.querySelector('.tag'),im=document.getElementById('sh');
+function lay(){{const top=Math.max({c.get('y',0)},h.offsetTop+h.offsetHeight+46);c.style.top=top+'px';const mh=Math.min({c.get('h',640)},1090-top);c.style.maxHeight=mh+'px';
+ if({off}&&im.naturalWidth)im.style.marginTop=(-{off}*3*im.width/im.naturalWidth+10)+'px';t.style.top=(top+Math.min(mh,c.offsetHeight)-30)+'px';}}
+if(im.complete)lay();else im.onload=lay;document.fonts&&document.fonts.ready.then(lay);}})();</script>
+</body></html>'''

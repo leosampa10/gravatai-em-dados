@@ -6,7 +6,7 @@ const p=await ctx.newPage();await p.addInitScript(()=>{localStorage.setItem('gv-
 await p.goto('file://'+require('path').resolve(__dirname,'../../index.html'));await p.waitForTimeout(1200);
 if(!S.light){await p.click('#tt');await p.waitForTimeout(300);}
 await p.evaluate(g=>goto(g),S.goto);await p.waitForTimeout(700);
-await p.addStyleTag({content:'.chart svg{min-width:0!important;width:100%!important}'+(S.view?'':'*{transition-duration:0s!important;animation-duration:0s!important}html,body{scroll-behavior:auto!important}')});
+await p.addStyleTag({content:'.gv-pel,.gv-top,.gv-tip{display:none!important}'+(S.view?'':'.gv-dock{display:none!important}')+'mark.gr .w{transition:none!important;background-size:100% 78%!important}.chart svg{min-width:0!important;width:100%!important}'+(S.view?'':'*{transition-duration:0s!important;animation-duration:0s!important}html,body{scroll-behavior:auto!important}')});
 await p.waitForTimeout(200);
 if(S.light&&!S.view)await p.evaluate(()=>{document.querySelectorAll('body *').forEach(e=>{const ps=getComputedStyle(e).position;if(ps==='sticky'||ps==='fixed')e.style.setProperty('position','static','important')});document.querySelectorAll('.gv-pel,.gv-dock,.gv-top').forEach(e=>e.style.display='none')});
 if(S.view){const meta={frames:[]};let n=0;const VH=S.vh||560;
@@ -24,6 +24,7 @@ let card=null;if(S.cardId){card=await p.$('#'+S.cardId);}
 const cards=card?[]:await p.$$(S.cardSel||'.card');
 for(const c of cards){const t=await c.evaluate(e=>(e.querySelector('h2,h3')||{}).textContent||'');if(new RegExp(S.title,'i').test(t)&&await c.isVisible()){card=c;break;}}
 if(!card)throw new Error('card not found '+S.title);
+if(S.fill){const el=await card.$(S.fill[0]);await el.fill(S.fill[1]);await p.waitForTimeout(500);}
 for(const a of (S.prep||[])){const el=await card.$(a);if(el){await el.click();await p.waitForTimeout(350);}}
 await card.evaluate(e=>e.scrollIntoView({block:'start'}));await p.evaluate(()=>scrollBy(0,-12));await p.waitForTimeout(300);
 const clipOf=async()=>{const r=await card.evaluate((e,sel)=>{const a=e.getBoundingClientRect();let b=a.bottom;if(sel){const q=e.querySelector(sel);if(q)b=Math.min(a.bottom,q.getBoundingClientRect().bottom+6);}return {x:a.left,y:a.top,width:a.width,height:b-a.top}},S.clipTo||null);r.height=Math.min(r.height,S.maxH||700);return r};
@@ -49,4 +50,5 @@ else if(A.type==='clicks'){await shot(null,16);
    await shot(null,st.hold||30);}
   await shot(null,30);}
 else {await shot(null,90);}
+if(S.from){meta.off=await card.evaluate((e,sel)=>{const q=e.querySelector(sel);return q?q.getBoundingClientRect().top-e.getBoundingClientRect().top:0},S.from);}
 fs.writeFileSync(`${out}/meta.json`,JSON.stringify(meta));await b.close();})().catch(e=>{console.error(e);process.exit(1)});

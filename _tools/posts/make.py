@@ -14,8 +14,9 @@ def render(pairs):
     for h,png in pairs: open(png+'.html','w').write(h); args+=[os.path.abspath(png+'.html'),os.path.abspath(png)]
     subprocess.check_call(['node','render.js']+args,env=ENV)
 SLOT_W=880; SLOT_Y=430; MAXB=1180
-def compose(base,fr,touch,scale_w=SLOT_W,y0=SLOT_Y,crop=None):
+def compose(base,fr,touch,scale_w=SLOT_W,y0=SLOT_Y,crop=None,off=0):
     im=Image.open(base).convert('RGB'); c=Image.open(fr).convert('RGB')
+    if off: c=c.crop((0,max(0,int(off*3)-24),c.width,c.height)); crop=None
     if crop: c=c.crop((0,0,c.width,min(c.height,int(crop*3))))
     k=scale_w/c.width; h=int(c.height*k)
     if y0+h>MAXB: k=(MAXB-y0)/c.height; h=MAXB-y0
@@ -68,7 +69,7 @@ def build(P):
             c['cor']=capa.ORDEM[(d.toordinal()*2+ja)%len(capa.ORDEM)]
         sc=dict(P['cap']['scene'],light=True,anim={'type':'none'})
         m=scene(sc,f'fr/{P["slug"]}-1')
-        render([(capa.html(P['cap'],m['frames'][-1]['f']),D+'/1.png')])
+        render([(capa.html(P['cap'],m['frames'][-1]['f'],off=m.get('off',0)),D+'/1.png')])
         from PIL import Image as _I;_I.open(D+'/1.png').convert('RGB').save(D+'/1.jpg',quality=92);os.remove(D+'/1.png')
     else:
         m=scene(P['cap']['scene'],f'fr/{P["slug"]}-1')
@@ -76,6 +77,6 @@ def build(P):
     for n,sl in enumerate(P['slides'],start=2):
         m=scene(sl['scene'],f'fr/{P["slug"]}-{n}')
         if len(m['frames'])==1 or (not sl['scene'].get('view') and sl['scene'].get('anim',{}).get('type','none')=='none'):
-            f=m['frames'][-1];compose(D+f'/b{n}.png',f['f'],None,crop=f.get('crop')).save(D+f'/{n}.jpg',quality=92)
+            f=m['frames'][-1];compose(D+f'/b{n}.png',f['f'],None,crop=f.get('crop'),off=m.get('off',0)).save(D+f'/{n}.jpg',quality=92)
         else: video(D+f'/b{n}.png',m,D+f'/{n}.mp4')
     print('built',P['slug'])
