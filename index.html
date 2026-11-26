@@ -980,6 +980,16 @@ body.tf-on{overflow:hidden}
 .gv-boat{position:absolute;left:0;top:0;width:22px;height:16px;color:var(--pb);pointer-events:none;will-change:transform}
 .gv-boat svg{display:block;overflow:visible}
 @media (prefers-reduced-motion:reduce){.gv-boat{display:none}}
+/* ===== v11: grifos ===== */
+:root{--hl:rgba(214,163,58,.34)}
+:root[data-theme="dark"]{--hl:rgba(217,164,65,.30)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--hl:rgba(217,164,65,.30)}}
+mark.gr{color:inherit;background:none}
+mark.gr .w{background:linear-gradient(var(--hl),var(--hl)) no-repeat 0 62%/0% 78%;transition-property:background-size;transition-timing-function:linear}
+.gr-on mark.gr .w{background-size:100% 78%}
+b.gr-b{font-weight:700;color:inherit}
+@media (prefers-reduced-motion:reduce){mark.gr .w{transition:none!important}}
+@media print{mark.gr .w{background-size:100% 78%!important}}
 </style>
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20rx%3D%2224%22%20fill%3D%22%231d1e1a%22/%3E%3Cg%20transform%3D%22translate%2810%2024%29%22%20fill%3D%22%23ecebe4%22%3E%3Ccircle%20cx%3D%2224.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2236.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2276.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2213.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2218.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2225.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.5%22%20cy%3D%2230.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2282.0%22%20cy%3D%2243.5%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2287.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%222.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%225.7%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2216.1%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2231.6%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2250.0%22%20cy%3D%2214.0%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2268.4%22%20cy%3D%2217.7%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2283.9%22%20cy%3D%2228.1%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2294.3%22%20cy%3D%2243.6%22%20r%3D%223.75%22/%3E%3Ccircle%20cx%3D%2298.0%22%20cy%3D%2262.0%22%20r%3D%223.75%22/%3E%3C/g%3E%3C/svg%3E">
 </head>
@@ -3796,6 +3806,34 @@ vis();document.querySelectorAll('.page').forEach(p=>new MutationObserver(vis).ob
   const fa=document.createElementNS(ns,'animate');fa.setAttribute('attributeName','opacity');fa.setAttribute('values','0;0;1;1;0');fa.setAttribute('keyTimes','0;0.79;0.8;0.98;1');fa.setAttribute('dur','24s');fa.setAttribute('repeatCount','indefinite');flag.setAttribute('opacity','0');flag.appendChild(fa);
   sv.appendChild(flag);sv.appendChild(g);}
  climb();setTimeout(climb,800);
+})();
+</script>
+<script>
+/* ===================== v11: grifos ao rolar =====================
+   Regra fixa: negrito no primeiro número da frase-resumo; grifo na comparação com a régua
+   (inflação/IPCA, mínimo legal, média, RS, Brasil, "contra X"). Só em parágrafos .lead e .sec-l. */
+(function(){const red=matchMedia('(prefers-reduced-motion:reduce)').matches,SPD=.55;
+ const CMP=/(\bm[ée]dia d[aoe]s?\b|\binfla[çc][ãa]o\b|\bm[íi]nim[oa]\b|\bm[áa]xim[oa]\b|cidades parecidas|\bacima d[aoe]\b|\babaixo d[aoe]\b|\blimite\b|\ba mais (que|do que)\b|\ba menos (que|do que)\b|\bfrente a[o]?\b|\bem rela[çc][ãa]o [aà]\b)/i,CMP2=/(\bdobrou\b|\btriplicou\b|\bde [^,;.]{0,25}?\d[^,;.]{0,25}? para [^,;.]{0,12}\d|\bpassou de\b|\bpassaram de\b|\bsubiu\b|\bcaiu\b|\bcresceu\b|\bde cada\b|\bmaior\b|\bmenor\b)/i,MET=/corrigid|comparad|em reais de|R\$ milh|valores |declarad|m[ée]dia de (dois|tr[êe]s|quatro|cinco) meses/i,VAL=/R\$\s?[\d.,]+|\d+(?:,\d+)?\s?%|\d+º/g;
+ const NOMES=new RegExp('\\b('+[...(DATA.ver||[]).map(v=>v.nome),'Zaffalon','Zaffa','Marco Alba','Bordignon','Stasinski','Rita Sanco','Acimar','Levi Melo'].map(x=>x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|')+')\\b');
+ const NUM=/(R\$\s?[\d.,]+(?:\s?(?:milh[õo]es|bilh[õo]es|mil|mi|bi)\b)?|[+−-]?\d[\d.]*(?:,\d+)?\s?%|\b\d{1,3}(?:\.\d{3})+\b(?!\s?(?:a|e)\s?\d))/;
+ function ranges(t){const out=[];/* 1) "contra <número…>" até a pontuação */
+  const re=/\bcontra\s+(?:R\$\s?)?[\d.,]+[^;:.()]*?(?=[,;:.)]\s|[,;:.)]?$)/gi;let m;while((m=re.exec(t))&&out.length<2)out.push([m.index,m.index+m[0].length]);
+  if(out.length)return out;
+  /* 2) a oração com a régua (separada por ; ou fim de frase) */
+  const cl=/(?:[^.!?]|\.(?=\d)|\.(?!\s))+(?:[.!?](?=\s|$)|$)/g;const C=[];while(m=cl.exec(t)){const s=m[0];const s0=s.replace(/\([^)]*\)/g,'');if(MET.test(s0)||(s.match(VAL)||[]).length<2)continue;const tier=CMP.test(s)?1:CMP2.test(s)?2:0;if(tier)C.push([tier,m.index,s])}C.sort((x,y)=>x[0]-y[0]||x[1]-y[1]);for(const [tier,idx,s] of C){if(out.length>=3)break;m={index:idx};let a=m.index,b=m.index+s.length;while(/\s/.test(t[a]))a++;const pm=t.slice(a,b).match(/\s\([^)]{28,}\)\.?\s*$/);if(pm)b-=pm[0].length;while(b>a&&/[\s;]/.test(t[b-1]))b--;if(b-a>240)continue;if(out.length&&out.reduce((z,[x,y])=>z+y-x,0)+(b-a)>t.trim().length*.8)continue;out.push([a,b])}return out.sort((x,y)=>x[0]-y[0])}
+ function texts(el){const tw=document.createTreeWalker(el,NodeFilter.SHOW_TEXT);const ns=[];let n,o=0;while(n=tw.nextNode()){ns.push([n,o,o+n.nodeValue.length]);o+=n.nodeValue.length}return ns}
+ function wrap(el,a,b,make){texts(el).forEach(([n,s,e])=>{if(e<=a||s>=b)return;if(n.parentElement.closest('button,a,svg,mark.gr'))return;let x=n;const i0=Math.max(a,s)-s,i1=Math.min(b,e)-s;if(i0>0)x=x.splitText(i0);if(i1-i0<x.nodeValue.length)x.splitText(i1-i0);if(!x.nodeValue.trim())return;const w=make(x.nodeValue);x.replaceWith(w)})}
+ function mk(txt){const m=document.createElement('mark');m.className='gr';m.innerHTML=txt.split(/(?<=\s)/).map(w=>`<span class="w">${w.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</span>`).join('');return m}
+ function bold(txt){const b=document.createElement('b');b.className='gr-b';b.textContent=txt;return b}
+ function timing(el){let acc=0;el.querySelectorAll('mark.gr .w').forEach(w=>{const wd=w.getBoundingClientRect().width;w.style.transitionDuration=(wd/SPD)+'ms';w.style.transitionDelay=(250+acc/SPD)+'ms';acc+=wd})}
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;timing(e.target);e.target.classList.add('gr-on');io.unobserve(e.target)}),{rootMargin:'0px 0px -40% 0px'});
+ function run(){document.querySelectorAll('main .lead, main .sec-l, main .infx-s').forEach(el=>{const t=el.textContent;if(el.dataset.grt===t||el.closest('.pel,.mdl,dialog'))return;if(NOMES.test(t)){el.dataset.grt=t;return}
+   if(el.querySelector('mark.gr,b.gr-b')){el.querySelectorAll('mark.gr').forEach(m=>m.replaceWith(document.createTextNode(m.textContent)));el.querySelectorAll('b.gr-b').forEach(m=>m.replaceWith(document.createTextNode(m.textContent)));el.normalize()}
+   el.dataset.grt=t;el.classList.remove('gr-on');const tt=texts(el).map(([n])=>n.parentElement.closest('button')?'\u2063'.repeat(n.nodeValue.length):n.nodeValue).join('');const R=ranges(tt);
+   if(el.querySelectorAll('b,strong').length<2){const re=new RegExp(NUM.source,'g');let m,k=el.querySelectorAll('b,strong').length;const B=[];while((m=re.exec(tt))&&k<2){const a=m.index,b=a+m[0].trim().length;if(R.some(([x,y])=>a<y&&b>x))continue;const sen=tt.slice(Math.max(0,tt.lastIndexOf('. ',a)),a);if(MET.test(sen))continue;B.push([a,b]);k++}B.reverse().forEach(([a,b])=>wrap(el,a,b,bold))}
+   R.slice().reverse().forEach(([a,b])=>wrap(el,a,b,mk));
+   if(el.querySelector('mark.gr')){if(red)el.classList.add('gr-on');else io.observe(el)}})}
+ window.gvGrifos=run;let tm;new MutationObserver(()=>{clearTimeout(tm);tm=setTimeout(run,700)}).observe(document.body,{childList:true,subtree:true,characterData:true});setTimeout(run,900);
 })();
 </script>
 </body></html>
