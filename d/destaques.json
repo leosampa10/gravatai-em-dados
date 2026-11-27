@@ -1680,6 +1680,21 @@
 "big": null
 },
 {
+"id": "vt-369306-20261127",
+"t": "vot",
+"feat": true,
+"title": "Garante o pagamento direto, em parcela única, do 13º de 2026 a servidores com restrição bancária ou inscritos em cadastro de inadimplentes (altera a Lei 5.146/2026).",
+"crumb": "Câmara · Votação nominal",
+"desc": "PL 110/2026 · Aprovado por 20 a 0 em 27/11/2026.",
+"date": "2026-11-27",
+"sg": "PL 110/2026",
+"res": "Aprovado",
+"S": 20,
+"N": 0,
+"tag": null,
+"big": null
+},
+{
 "id": "vt-367774-20261126",
 "t": "vot",
 "feat": true,
@@ -2108,21 +2123,6 @@
 "desc": "PL 86/2026 · Aprovado por 20 a 0 em 22/09/2026.",
 "date": "2026-09-22",
 "sg": "PL 86/2026",
-"res": "Aprovado",
-"S": 20,
-"N": 0,
-"tag": null,
-"big": null
-},
-{
-"id": "vt-366312-20260922",
-"t": "vot",
-"feat": true,
-"title": "Institui o Programa Municipal Permanente de Educação, Conscientização e Respeito no Trânsito – “Trânsito Seguro, Respeito Sempre”, no Município de Gravataí, e dá outras providências.",
-"crumb": "Câmara · Votação nominal",
-"desc": "PL 90/2026 · Aprovado por 20 a 0 em 22/09/2026.",
-"date": "2026-09-22",
-"sg": "PL 90/2026",
 "res": "Aprovado",
 "S": 20,
 "N": 0,
