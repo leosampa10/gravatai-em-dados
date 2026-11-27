@@ -6,6 +6,8 @@ const p=await ctx.newPage();await p.addInitScript(()=>{localStorage.setItem('gv-
 await p.goto('file://'+require('path').resolve(__dirname,'../../index.html'));await p.waitForTimeout(1200);
 if(!S.light){await p.click('#tt');await p.waitForTimeout(300);}
 await p.evaluate(g=>goto(g),S.goto);await p.waitForTimeout(700);
+if(S.js){await p.evaluate(S.js);await p.waitForTimeout(900);}  // ex.: abrir a Peleia
+if(S.css)await p.addStyleTag({content:S.css});
 await p.addStyleTag({content:'.gv-pel,.gv-top,.gv-tip{display:none!important}'+(S.view?'':'.gv-dock{display:none!important}')+'mark.gr .w{transition:none!important;background-size:100% 78%!important}.chart svg{min-width:0!important;width:100%!important}'+(S.view?'':'*{transition-duration:0s!important;animation-duration:0s!important}html,body{scroll-behavior:auto!important}')});
 await p.waitForTimeout(200);
 if(S.light&&!S.view)await p.evaluate(()=>{document.querySelectorAll('body *').forEach(e=>{const ps=getComputedStyle(e).position;if(ps==='sticky'||ps==='fixed')e.style.setProperty('position','static','important')});document.querySelectorAll('.gv-pel,.gv-dock,.gv-top').forEach(e=>e.style.display='none')});
@@ -50,5 +52,6 @@ else if(A.type==='clicks'){await shot(null,16);
    await shot(null,st.hold||30);}
   await shot(null,30);}
 else {await shot(null,90);}
+if(S.offH)meta.offH=S.offH;
 if(S.from){meta.off=await card.evaluate((e,sel)=>{const q=e.querySelector(sel);return q?q.getBoundingClientRect().top-e.getBoundingClientRect().top:0},S.from);}
 fs.writeFileSync(`${out}/meta.json`,JSON.stringify(meta));await b.close();})().catch(e=>{console.error(e);process.exit(1)});

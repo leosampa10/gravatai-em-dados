@@ -24,3 +24,8 @@ Capa (slide 1) no formato cartaz (capa.py): use `cap.capa = {"t": "PERGUNTA CURT
 - Ajustes opcionais: "fs" (tamanho do título, padrão 104; use 88–96 para títulos de 3 linhas), "w" (largura do card, 820), "y" (topo do card, 440), "h" (altura máx. do card, 580), "rot" (inclinação, -2.5), "src" (fonte, padrão = cap.src).
 - O título da capa tem no máximo 3 linhas; a etiqueta, até ~40 caracteres. A cena da capa é capturada em tema claro, sem animação.
 - Os slides 2 a 6 continuam no tema escuro.
+
+Posts de apoio aos reels (desde 27/11/2026): cada reel é seguido de 2 carrosséis sobre o mesmo tema.
+- Slide 5 pode virar "Como usar": `cob.k` (sobretítulo, ex.: "Como usar") e `cob.wl` (rótulo do bloco de baixo, no lugar de "Quem decide").
+- Cena da Peleia: `{"goto":"camara","js":"gvPeleia('v')","css":"<css que solta a janela>","cardSel":".pel","title":"Peleia"}` (ver /home/claude/pq ou o histórico do git para o css). `from` + `offH` mostram só um trecho da janela.
+- `css` em qualquer cena injeta estilo extra (ex.: soltar menus fixos que cobrem o card).

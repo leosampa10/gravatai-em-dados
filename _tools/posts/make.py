@@ -14,9 +14,9 @@ def render(pairs):
     for h,png in pairs: open(png+'.html','w').write(h); args+=[os.path.abspath(png+'.html'),os.path.abspath(png)]
     subprocess.check_call(['node','render.js']+args,env=ENV)
 SLOT_W=880; SLOT_Y=430; MAXB=1180
-def compose(base,fr,touch,scale_w=SLOT_W,y0=SLOT_Y,crop=None,off=0):
+def compose(base,fr,touch,scale_w=SLOT_W,y0=SLOT_Y,crop=None,off=0,offH=None):
     im=Image.open(base).convert('RGB'); c=Image.open(fr).convert('RGB')
-    if off: c=c.crop((0,max(0,int(off*3)-24),c.width,c.height)); crop=None
+    if off: c=c.crop((0,max(0,int(off*3)-24),c.width,c.height if not offH else min(c.height,max(0,int(off*3)-24)+int(offH*3)))); crop=None
     if crop: c=c.crop((0,0,c.width,min(c.height,int(crop*3))))
     k=scale_w/c.width; h=int(c.height*k)
     if y0+h>MAXB: k=(MAXB-y0)/c.height; h=MAXB-y0
@@ -45,10 +45,10 @@ def video(base,meta,out,fps=30):
     subprocess.check_call(['ffmpeg','-loglevel','error','-y','-framerate',str(fps),'-i',f'{tmp}/%05d.jpg','-c:v','libx264','-pix_fmt','yuv420p','-crf','20','-movflags','+faststart',out])
     last.save(out.replace('.mp4','.jpg'),quality=90); shutil.rmtree(tmp)
 
-def tpl_cob(title,qs,who,src):
+def tpl_cob(title,qs,who,src,k='A cobrança · opinião',wl='Quem decide'):
     q=''.join(f'<div style="display:grid;grid-template-columns:76px 1fr;gap:20px;align-items:start"><span style="font-weight:900;font-size:64px;line-height:1;color:#D9895A">{i+1}</span><span style="font-weight:600;font-size:34px;line-height:1.3">{x}</span></div>' for i,x in enumerate(qs))
-    body=f'<div style="margin-top:44px;display:grid;gap:24px">{q}</div><div style="margin-top:44px;border-left:8px solid #4F86C6;padding:6px 0 6px 32px"><div style="font-weight:800;font-size:34px;text-transform:uppercase">Quem decide</div><div style="font-size:29px;line-height:1.35;color:#A3A49B;margin-top:10px">{who}</div></div>'
-    return tpl(5,'A cobrança · opinião',f'<span style="text-transform:uppercase;font-size:76px">{title}</span>',src,body=body)
+    body=f'<div style="margin-top:44px;display:grid;gap:24px">{q}</div><div style="margin-top:44px;border-left:8px solid #4F86C6;padding:6px 0 6px 32px"><div style="font-weight:800;font-size:34px;text-transform:uppercase">{wl}</div><div style="font-size:29px;line-height:1.35;color:#A3A49B;margin-top:10px">{who}</div></div>'
+    return tpl(5,k,f'<span style="text-transform:uppercase;font-size:76px">{title}</span>',src,body=body)
 
 def build(P):
     D='out/'+P['slug'];shutil.rmtree(D,ignore_errors=True);os.makedirs(D)
@@ -57,7 +57,7 @@ def build(P):
     pairs=[(tpl(1,P['cap']['k'],P['cap']['t'],P['cap']['src']),D+'/b1.png')]
     for n,sl in enumerate(P['slides'],start=2):
         pairs.append((tpl(n,sl['k'],sl['t'],sl['src']),D+f'/b{n}.png'))
-    c=P['cob'];pairs.append((tpl_cob(c['title'],c['qs'],c['who'],c['src']),D+'/5.png'))
+    c=P['cob'];pairs.append((tpl_cob(c['title'],c['qs'],c['who'],c['src'],c.get('k','A cobrança · opinião'),c.get('wl','Quem decide')),D+'/5.png'))
     render(pairs)
     subprocess.check_call(['node','render.js',os.path.abspath('siga6.html'),os.path.abspath(D+'/6.png')],env=ENV)
     if P['cap'].get('capa'):  # capa nova (cartaz colorido): card do site em tema claro
@@ -77,6 +77,6 @@ def build(P):
     for n,sl in enumerate(P['slides'],start=2):
         m=scene(sl['scene'],f'fr/{P["slug"]}-{n}')
         if len(m['frames'])==1 or (not sl['scene'].get('view') and sl['scene'].get('anim',{}).get('type','none')=='none'):
-            f=m['frames'][-1];compose(D+f'/b{n}.png',f['f'],None,crop=f.get('crop'),off=m.get('off',0)).save(D+f'/{n}.jpg',quality=92)
+            f=m['frames'][-1];compose(D+f'/b{n}.png',f['f'],None,crop=f.get('crop'),off=m.get('off',0),offH=m.get('offH')).save(D+f'/{n}.jpg',quality=92)
         else: video(D+f'/b{n}.png',m,D+f'/{n}.mp4')
     print('built',P['slug'])
