@@ -25,15 +25,33 @@ ENV = dict(os.environ, NODE_PATH=subprocess.check_output(['npm', 'root', '-g'], 
 def sh(*a): subprocess.check_call(list(a), env=ENV)
 def probe(f): return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',f]).strip())
 
-def speech(f, db=-34, d=0.45):
-    out = subprocess.run(['ffmpeg','-i',f,'-af',f'silencedetect=n={db}dB:d={d}','-f','null','-'],capture_output=True,text=True).stderr
-    st=[float(x) for x in re.findall(r'silence_start: ([\d.]+)',out)]; en=[float(x) for x in re.findall(r'silence_end: ([\d.]+)',out)]
-    T=probe(f); segs=[]; cur=0.0
-    for s,e in zip(st, en+[T]*(len(st)-len(en))):
-        if s-cur>0.15: segs.append((max(0,cur-0.08), min(T,s+0.12)))
-        cur=e
-    if T-cur>0.15: segs.append((max(0,cur-0.08),T))
-    return segs or [(0,T)]
+def speech(f, mind=0.45):
+    """Blocos de fala pelo volume (limiar adaptativo ao ruído do ambiente)."""
+    import numpy as np
+    raw = subprocess.run(['ffmpeg','-v','error','-i',f,'-ac','1','-ar','16000','-f','s16le','-'],capture_output=True).stdout
+    a = np.frombuffer(raw, dtype=np.int16).astype(float)/32768; w=800; n=len(a)//w
+    db = 20*np.log10(np.sqrt((a[:n*w].reshape(n,w)**2).mean(1))+1e-9); thr = np.percentile(db,10)+5
+    sp = db > thr; T = probe(f); dt = w/16000; segs=[]; i=0
+    while i < n:
+        if sp[i]:
+            j=i
+            while j < n and (sp[j] or (j+1 < n and not all(not x for x in sp[j:j+int(mind/dt)]) )): j+=1
+            segs.append((max(0,i*dt-0.10), min(T,j*dt+0.14))); i=j
+        else: i+=1
+    out=[]
+    for s_,e_ in segs:
+        if out and s_-out[-1][1] < 0.05: out[-1]=(out[-1][0],e_)
+        elif e_-s_ > 0.2: out.append((s_,e_))
+    return out or [(0,T)]
+
+def remap(t, segs):
+    """tempo do bruto -> tempo do vídeo cortado"""
+    acc=0
+    for a,b in segs:
+        if t < a: return acc
+        if t <= b: return acc+(t-a)
+        acc += b-a
+    return acc
 
 def chunks(t):
     ws=t.split(); out=[]; cur=[]
@@ -44,8 +62,9 @@ def chunks(t):
     return out
 
 CSS = '''*{box-sizing:border-box}body{margin:0;background:transparent;font-family:Poppins}#r{position:relative;width:1080px;height:1920px}
-.cap{position:absolute;left:40px;right:40px;top:1180px;text-align:center;font:900 76px/1.2 Poppins;color:#fff;text-transform:uppercase;text-shadow:0 3px 12px rgba(0,0,0,.55)}
+.cap{position:absolute;left:40px;right:40px;top:1460px;text-align:center;font:900 76px/1.2 Poppins;color:#fff;text-transform:uppercase;text-shadow:0 3px 12px rgba(0,0,0,.55)}
 .cap.lo{top:1440px}
+.band{position:absolute;left:0;right:0;top:1250px;bottom:0;background:linear-gradient(rgba(14,14,13,0),rgba(14,14,13,1) 130px,rgba(14,14,13,1))}
 .k{padding:2px 16px;border-radius:6px;text-shadow:none}.ky{background:#F2CE6E;color:#1D1E1A}.kb{background:#2F78C4;color:#fff}
 .hook{position:absolute;left:60px;right:60px;top:230px;text-align:center}
 .hook span{display:inline-block;background:#1D1E1A;color:#fff;font:900 86px/1 Poppins;text-transform:uppercase;padding:12px 22px 6px;margin:6px 0;letter-spacing:-.02em}
@@ -80,14 +99,20 @@ def main(specf, raw, out):
     S=json.load(open(specf)); tmp=tempfile.mkdtemp(prefix='reel_'); B=S['beats']
     # 1) cortes secos nos silêncios + enquadramento 1080x1920
     segs=speech(raw)
-    parts=''.join(f"[0:v]trim={a:.3f}:{b:.3f},setpts=PTS-STARTPTS[v{i}];[0:a]atrim={a:.3f}:{b:.3f},asetpts=PTS-STARTPTS[a{i}];" for i,(a,b) in enumerate(segs))
-    parts+=''.join(f'[v{i}][a{i}]' for i in range(len(segs)))+f'concat=n={len(segs)}:v=1:a=1[cv][ca];[cv]scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1[vo]'
-    cut=f'{tmp}/cut.mp4'
-    sh('ffmpeg','-v','error','-y','-i',raw,'-filter_complex',parts,'-map','[vo]','-map','[ca]','-c:v','libx264','-preset','veryfast','-crf','18','-c:a','aac','-b:a','160k',cut)
+    vf=f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1'+(''.join(f',delogo=x={m[0]}:y={m[1]}:w={m[2]}:h={m[3]}' for m in S.get('mask',[])))
+    lst=open(f'{tmp}/cut.txt','w')
+    for k,(a,b) in enumerate(segs):
+        sh('ffmpeg','-v','error','-y','-ss',f'{a:.3f}','-i',raw,'-t',f'{b-a:.3f}','-vf',vf,'-af','aresample=48000','-c:v','libx264','-preset','veryfast','-crf','18','-c:a','aac','-b:a','160k','-ar','48000','-ac','2',f'{tmp}/seg{k:03d}.mp4')
+        lst.write(f"file '{tmp}/seg{k:03d}.mp4'\n")
+    lst.close(); cut=f'{tmp}/cut.mp4'
+    sh('ffmpeg','-v','error','-y','-f','concat','-safe','0','-i',f'{tmp}/cut.txt','-c','copy',cut)
+    segs=[(a,a+probe(f'{tmp}/seg{k:03d}.mp4')) for k,(a,b) in enumerate(segs)]
     T=probe(cut)
     # 2) tempo de cada trecho: um trecho por bloco de fala quando bate; senão, proporcional ao tamanho do texto
     lens=[b-a for a,b in segs]
-    if len(segs)==len(B):
+    if all('a' in b for b in B):
+        tim=[(remap(b['a'],segs),remap(b['b'],segs)) for b in B]
+    elif len(segs)==len(B):
         t0=0;tim=[]
         for L in lens: tim.append((t0,t0+L)); t0+=L
     else:
@@ -96,6 +121,7 @@ def main(specf, raw, out):
     # 3) camadas em PNG
     items=[]; ov=[]  # ov: (png, a, b)
     items.append((f'<div class="hd">{IG}@GRAVATAIEMDADOS</div>', f'{tmp}/hd.png'))
+    if S.get('band'): items.append(('<div class="band"></div>', f'{tmp}/band.png'))
     sites=[]
     for i,(bt,(a,b)) in enumerate(zip(B,tim)):
         color='ky' if i%2==0 else 'kb'; lo=bool(bt.get('site'))
@@ -111,7 +137,7 @@ def main(specf, raw, out):
             if cur: lines.append(('',cur))
             h='<div class="hook">'+'<br>'.join(f'<span class="{c}">{esc(" ".join(l))}</span>' for c,l in lines)+'</div>'
             p=f'{tmp}/b{i}h.png'; items.append((h,p)); ov.append((p,a,b)); continue
-        ch=chunks(bt['t']); cl=[max(len(' '.join(c)),3) for c in ch]; tot=sum(cl); t=a
+        ch=chunks(re.sub(r'\b(eh|âh|ah|hum)\b,?\s*','',bt['t'],flags=re.I)); cl=[max(len(' '.join(c)),3) for c in ch]; tot=sum(cl); t=a
         for j,c in enumerate(ch):
             d=(b-a)*cl[j]/tot; p=f'{tmp}/b{i}c{j}.png'; items.append((cap_html(c,bt.get('key',[]),color,lo),p)); ov.append((p,t,t+d)); t+=d
         if bt.get('card'):
@@ -135,20 +161,18 @@ def main(specf, raw, out):
     sh('node',os.path.join(HERE,'overlays.js'),f'{tmp}/jobs.json')
     # 4) gravação do site (tema claro, tela inteira de celular)
     for i,a,b,st,_ in sites:
-        spec=dict(goto=st['goto'],view=True,light=True,anchor=st.get('anchor','.page:not([hidden]) .card'),off=st.get('off',90),vh=844,steps=st.get('steps',[]))
-        json.dump(spec,open(f'{tmp}/s{i}.json','w')); sh('node',os.path.join(POSTS,'capture.js'),f'{tmp}/s{i}.json',f'{tmp}/s{i}')
-        M=json.load(open(f'{tmp}/s{i}/meta.json'))
-        with open(f'{tmp}/s{i}.txt','w') as fh:
-            for fr in M['frames']: fh.write(f"file '{os.path.abspath(fr['f'])}'\nduration {fr['hold']/FPS:.4f}\n")
-            fh.write(f"file '{os.path.abspath(M['frames'][-1]['f'])}'\n")
-        sh('ffmpeg','-v','error','-y','-f','concat','-safe','0','-i',f'{tmp}/s{i}.txt','-vf',f'scale=544:1176,fps={FPS},tpad=stop_mode=clone:stop_duration={b-a+1:.2f},format=yuv420p','-t',f'{b-a:.3f}','-c:v','libx264','-preset','veryfast','-crf','18',f'{tmp}/s{i}.mp4')
+        png=f'{tmp}/s{i}.png'
+        hh=int(subprocess.check_output(['node',os.path.join(HERE,'sitecap.js'),json.dumps({k:st[k] for k in st if k!='label'}),png],env=ENV,text=True).strip().split()[-1])
+        # tela do celular 544x1176; o print (390 px de largura) vira 544 px e desce devagar
+        sc=544/390; ph=int(hh*sc); pan=max(0,ph-1176); dur=max(b-a,0.5)
+        sh('ffmpeg','-v','error','-y','-loop','1','-framerate',str(FPS),'-t',f'{dur:.3f}','-i',png,'-vf',f"scale=544:{ph},crop=544:1176:0:'min({pan},{pan}*max(0,t-0.6)/{max(dur-1.2,0.5):.3f})',format=yuv420p",'-c:v','libx264','-preset','veryfast','-crf','18',f'{tmp}/s{i}.mp4')
     # 5) composição
     ins=['-i',cut]; fc=[]; lab='[0:v]'; n=1
     def en(a,b): return f"enable='between(t,{a:.3f},{b:.3f})'"
     if sites:
         fc.append(f'[0:v]split=3[base][bl0][fc0]')
         fc.append(f'[bl0]boxblur=24:2,eq=brightness=-0.18[blur]')
-        fc.append(f'[fc0]crop=iw*0.62:iw*0.62:iw*0.19:ih*0.18,scale=250:250,format=yuva420p,geq=lum=\'p(X,Y)\':cb=\'p(X,Y)\':cr=\'p(X,Y)\':a=\'if(lte(hypot(X-125,Y-125),125),255,0)\'[face]')
+        fc.append(f'[fc0]crop=iw*0.56:iw*0.56:iw*0.22:ih*0.24,scale=250:250,format=yuva420p,geq=lum=\'p(X,Y)\':cb=\'p(X,Y)\':cr=\'p(X,Y)\':a=\'if(lte(hypot(X-125,Y-125),125),255,0)\'[face]')
         fc.append('[face]split='+str(len(sites))+''.join(f'[fa{k}]' for k in range(len(sites))))
         fc.append('[blur]split='+str(len(sites))+''.join(f'[bl{k+1}]' for k in range(len(sites))))
         lab='[base]'
@@ -163,6 +187,9 @@ def main(specf, raw, out):
             lab=f'[x{k}]'
     ins+=['-loop','1','-i',f'{tmp}/hd.png']; hv=n; n+=1
     fc.append(f'{lab}[{hv}:v]overlay=0:0:shortest=1[h0]'); lab='[h0]'
+    if S.get('band'):
+        ins+=['-i',f'{tmp}/band.png']; cond='+'.join(f'between(t,{a:.3f},{b:.3f})' for _,a,b,_,_ in sites) or '0'
+        fc.append(f"{lab}[{n}:v]overlay=0:0:enable='not({cond})'[bd]"); lab='[bd]'; n+=1
     for j,(p,a,b) in enumerate(ov):
         ins+=['-i',p]; fc.append(f'{lab}[{n}:v]overlay=0:0:{en(a,b)}[o{j}]'); lab=f'[o{j}]'; n+=1
     fc.append(f"{lab}drawbox=x=0:y=0:w='{W}*t/{T:.3f}':h=10:color=0xF2CE6E:t=fill[vf]")
