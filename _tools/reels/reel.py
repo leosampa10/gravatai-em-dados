@@ -102,7 +102,9 @@ def main(specf, raw, out):
     vf=f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1'+(''.join(f',delogo=x={m[0]}:y={m[1]}:w={m[2]}:h={m[3]}' for m in S.get('mask',[])))
     lst=open(f'{tmp}/cut.txt','w')
     for k,(a,b) in enumerate(segs):
-        sh('ffmpeg','-v','error','-y','-ss',f'{a:.3f}','-i',raw,'-t',f'{b-a:.3f}','-vf',vf,'-af','aresample=48000','-c:v','libx264','-preset','veryfast','-crf','18','-c:a','aac','-b:a','160k','-ar','48000','-ac','2',f'{tmp}/seg{k:03d}.mp4')
+        # 'voz': trilha só de voz (música separada) no lugar do áudio do bruto; os cortes seguem o bruto
+        voz=['-ss',f'{a:.3f}','-i',S['voz'],'-map','0:v','-map','1:a'] if S.get('voz') else []
+        sh('ffmpeg','-v','error','-y','-ss',f'{a:.3f}','-i',raw,*voz,'-t',f'{b-a:.3f}','-vf',vf,'-af','aresample=48000','-c:v','libx264','-preset','veryfast','-crf','18','-c:a','aac','-b:a','160k','-ar','48000','-ac','2',f'{tmp}/seg{k:03d}.mp4')
         lst.write(f"file '{tmp}/seg{k:03d}.mp4'\n")
     lst.close(); cut=f'{tmp}/cut.mp4'
     sh('ffmpeg','-v','error','-y','-f','concat','-safe','0','-i',f'{tmp}/cut.txt','-c','copy',cut)
@@ -197,7 +199,13 @@ def main(specf, raw, out):
     sh('ffmpeg','-v','error','-y',*ins,'-filter_complex',';'.join(fc),'-map','[vf]','-map','0:a','-c:v','libx264','-preset','veryfast','-crf','19','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-t',f'{T:.3f}',body)
     endv=f'{tmp}/end.mp4'
     sh('ffmpeg','-v','error','-y','-loop','1','-t','2.5','-i',f'{tmp}/end.png','-f','lavfi','-t','2.5','-i','anullsrc=r=48000:cl=stereo','-vf',f'format=yuv420p,fps={FPS}','-c:v','libx264','-preset','veryfast','-c:a','aac','-shortest',endv)
-    sh('ffmpeg','-v','error','-y','-i',body,'-i',endv,'-filter_complex','[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[v][a]','-map','[v]','-map','[a]','-c:v','libx264','-preset','medium','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart',out)
+    sh('ffmpeg','-v','error','-y','-i',body,'-i',endv,'-filter_complex','[0:v][0:a][1:v][1:a]concat=n=2:v=1:a=1[v][a]','-map','[v]','-map','[a]','-c:v','libx264','-preset','medium','-crf','20','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart',out if not S.get('musica') else f'{tmp}/semmus.mp4')
+    if S.get('musica'):
+        # música de fundo contínua (sem os cortes da fala), com fade no fim
+        M=S['musica']; D=probe(f'{tmp}/semmus.mp4'); v=M.get('vol',1.0)
+        sh('ffmpeg','-v','error','-y','-i',f'{tmp}/semmus.mp4','-stream_loop','-1','-i',M['src'],'-filter_complex',
+           f'[1:a]aresample=48000,atrim=0:{D:.3f},volume={v},afade=t=out:st={D-2:.3f}:d=2[m];[0:a][m]amix=inputs=2:duration=first:normalize=0[a]',
+           '-map','0:v','-map','[a]','-c:v','copy','-c:a','aac','-b:a','160k','-movflags','+faststart',out)
     print('ok',out,f'{T+2.5:.1f}s', 'blocos de fala:',len(segs),'trechos:',len(B))
     shutil.rmtree(tmp,ignore_errors=True)
 
