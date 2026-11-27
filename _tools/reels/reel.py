@@ -21,6 +21,7 @@ spec.json:
 import json, os, re, subprocess, sys, shutil, tempfile, math
 HERE = os.path.dirname(os.path.abspath(__file__)); POSTS = os.path.join(HERE, '..', 'posts')
 W, H, FPS = 1080, 1920, 30
+PW, PH, PX, PY = 672, 1150, 204, 150   # tela do site no topo (layout padrão desde o reel da Peleia)
 ENV = dict(os.environ, NODE_PATH=subprocess.check_output(['npm', 'root', '-g'], text=True).strip())
 def sh(*a): subprocess.check_call(list(a), env=ENV)
 def probe(f): return float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',f]).strip())
@@ -63,7 +64,7 @@ def chunks(t):
 
 CSS = '''*{box-sizing:border-box}body{margin:0;background:transparent;font-family:Poppins}#r{position:relative;width:1080px;height:1920px}
 .cap{position:absolute;left:40px;right:40px;top:1460px;text-align:center;font:900 76px/1.2 Poppins;color:#fff;text-transform:uppercase;text-shadow:0 3px 12px rgba(0,0,0,.55)}
-.cap.lo{top:1440px}
+.cap.lo{top:1420px}
 .band{position:absolute;left:0;right:0;top:1250px;bottom:0;background:linear-gradient(rgba(14,14,13,0),rgba(14,14,13,1) 130px,rgba(14,14,13,1))}
 .k{padding:2px 16px;border-radius:6px;text-shadow:none}.ky{background:#F2CE6E;color:#1D1E1A}.kb{background:#2F78C4;color:#fff}
 .hook{position:absolute;left:60px;right:60px;top:230px;text-align:center}
@@ -71,9 +72,9 @@ CSS = '''*{box-sizing:border-box}body{margin:0;background:transparent;font-famil
 .hook span.y{background:#F2CE6E;color:#1D1E1A;font-size:108px}
 .hd{position:absolute;right:36px;top:760px;text-align:center;color:#fff;font:600 17px Poppins;letter-spacing:.06em;opacity:.9;text-shadow:0 1px 4px rgba(0,0,0,.5)}
 .hd svg{display:block;margin:0 auto 8px}
-.pill{position:absolute;left:50%;top:130px;transform:translateX(-50%);background:#2F78C4;color:#fff;font:800 30px Poppins;padding:10px 26px;border-radius:999px;white-space:nowrap}
-.phone{position:absolute;left:50%;top:180px;transform:translateX(-50%);width:572px;height:1204px;border-radius:58px;border:14px solid #fff;box-shadow:0 0 0 2px rgba(0,0,0,.08)}
-.ring{position:absolute;right:110px;top:1080px;width:266px;height:266px;border-radius:50%;border:8px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.pill{position:absolute;left:50%;top:92px;z-index:2;transform:translateX(-50%);background:#2F78C4;color:#fff;font:800 30px Poppins;padding:10px 26px;border-radius:999px;white-space:nowrap}
+.phone{position:absolute;left:50%;top:136px;transform:translateX(-50%);width:700px;height:1178px;border-radius:62px;border:14px solid #fff;box-shadow:0 0 0 2px rgba(0,0,0,.08)}
+.ring{position:absolute;right:34px;top:1100px;width:296px;height:296px;border-radius:50%;border:8px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,.4)}
 .card{position:absolute;left:90px;right:90px;top:200px;background:#fff;border-radius:22px;padding:34px 40px 30px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
 .card .rule{height:8px;border-radius:4px;background:linear-gradient(90deg,#2F78C4 0 25%,#c2455a 25% 45%,#b07a12 45% 65%,#7a5ccc 65% 82%,#2e8f6d 82%);margin-bottom:22px}
 .card h3{margin:0;font:900 72px/1 Poppins;text-transform:uppercase;letter-spacing:-.04em;color:#1D1E1A}.card h3 i{font-weight:800;text-transform:none}
@@ -99,6 +100,14 @@ def main(specf, raw, out):
     S=json.load(open(specf)); tmp=tempfile.mkdtemp(prefix='reel_'); B=S['beats']
     # 1) cortes secos nos silêncios + enquadramento 1080x1920
     segs=speech(raw)
+    for ca,cb in S.get('cut',[]):   # trechos a tirar (tempo do bruto)
+        nw=[]
+        for a,b in segs:
+            if b<=ca or a>=cb: nw.append((a,b))
+            else:
+                if a<ca-0.2: nw.append((a,ca))
+                if b>cb+0.2: nw.append((cb,b))
+        segs=nw
     vf=f'scale={W}:{H}:force_original_aspect_ratio=increase,crop={W}:{H},fps={FPS},setsar=1'+(''.join(f',delogo=x={m[0]}:y={m[1]}:w={m[2]}:h={m[3]}' for m in S.get('mask',[])))
     lst=open(f'{tmp}/cut.txt','w')
     for k,(a,b) in enumerate(segs):
@@ -109,6 +118,8 @@ def main(specf, raw, out):
     lst.close(); cut=f'{tmp}/cut.mp4'
     sh('ffmpeg','-v','error','-y','-f','concat','-safe','0','-i',f'{tmp}/cut.txt','-c','copy',cut)
     segs=[(a,a+probe(f'{tmp}/seg{k:03d}.mp4')) for k,(a,b) in enumerate(segs)]
+    if S.get('fundo',True) and os.environ.get('REEL_PY'):   # desfoca o fundo atrás do Sergio
+        sh(os.environ['REEL_PY'],os.path.join(HERE,'fundo.py'),cut,f'{tmp}/cutb.mp4'); cut=f'{tmp}/cutb.mp4'
     T=probe(cut)
     # 2) tempo de cada trecho: um trecho por bloco de fala quando bate; senão, proporcional ao tamanho do texto
     lens=[b-a for a,b in segs]
@@ -120,6 +131,8 @@ def main(specf, raw, out):
     else:
         cs=[max(len(b['t']),4) for b in B]; tot=sum(cs); t0=0; tim=[]
         for c in cs: d=T*c/tot; tim.append((t0,t0+d)); t0+=d
+    for i in range(len(B)-1):
+        if B[i].get('site') and B[i+1].get('site'): tim[i]=(tim[i][0],tim[i+1][0])
     # 3) camadas em PNG
     items=[]; ov=[]  # ov: (png, a, b)
     items.append((f'<div class="hd">{IG}@GRAVATAIEMDADOS</div>', f'{tmp}/hd.png'))
@@ -149,7 +162,9 @@ def main(specf, raw, out):
                 p=f'{tmp}/b{i}k{k}.png'
                 items.append((f'<div class="card"><div class="rule"></div><h3>{C["t"]}</h3><p>{esc(C.get("sub",""))}</p><div class="chips">{chips}</div></div>',p))
                 ka=a+(b-a)*k/(n+1) if n else a; ov.append((p,ka,b if k==n else a+(b-a)*(k+1)/(n+1)))
-        if bt.get('site'):
+        if bt.get('site')=='mesmo' and sites:   # continua a mesma tela do trecho anterior
+            j,a0,_,st0,p0=sites[-1]; sites[-1]=(j,a0,b,st0,p0)
+        elif bt.get('site'):
             st=bt['site']; p=f'{tmp}/b{i}s.png'
             items.append((f'<div class="pill">{esc(st.get("label","No site"))}</div><div class="phone"></div><div class="ring"></div>',p))
             sites.append((i,a,b,st,p))
@@ -164,17 +179,22 @@ def main(specf, raw, out):
     # 4) gravação do site (tema claro, tela inteira de celular)
     for i,a,b,st,_ in sites:
         png=f'{tmp}/s{i}.png'
-        hh=int(subprocess.check_output(['node',os.path.join(HERE,'sitecap.js'),json.dumps({k:st[k] for k in st if k!='label'}),png],env=ENV,text=True).strip().split()[-1])
-        # tela do celular 544x1176; o print (390 px de largura) vira 544 px e desce devagar
-        sc=544/390; ph=int(hh*sc); pan=max(0,ph-1176); dur=max(b-a,0.5)
-        sh('ffmpeg','-v','error','-y','-loop','1','-framerate',str(FPS),'-t',f'{dur:.3f}','-i',png,'-vf',f"scale=544:{ph},crop=544:1176:0:'min({pan},{pan}*max(0,t-0.6)/{max(dur-1.2,0.5):.3f})',format=yuv420p",'-c:v','libx264','-preset','veryfast','-crf','18',f'{tmp}/s{i}.mp4')
+        if st.get('img'):
+            from PIL import Image
+            im=Image.open(st['img']).convert('RGB'); im=im.resize((390,int(im.height*390/im.width))); im.save(png); hh=im.height
+        else:
+            hh=int(subprocess.check_output(['node',os.path.join(HERE,'sitecap.js'),json.dumps({k:st[k] for k in st if k!='label'}),png],env=ENV,text=True).strip().split()[-1])
+        # tela do celular PWxPH; o print (390 px de largura) vira PW px e desce devagar
+        sc=PW/390; ph=int(hh*sc)//2*2; pan=max(0,ph-PH) if not st.get('fixo') else 0; dur=max(b-a,0.5)
+        pad=f',pad={PW}:{PH}:0:0:white' if ph<PH else ''
+        sh('ffmpeg','-v','error','-y','-loop','1','-framerate',str(FPS),'-t',f'{dur:.3f}','-i',png,'-vf',f"scale={PW}:{ph}{pad},crop={PW}:{PH}:0:'min({pan},{pan}*max(0,t-0.6)/{max(dur-1.2,0.5):.3f})',format=yuv420p",'-c:v','libx264','-preset','veryfast','-crf','18',f'{tmp}/s{i}.mp4')
     # 5) composição
     ins=['-i',cut]; fc=[]; lab='[0:v]'; n=1
     def en(a,b): return f"enable='between(t,{a:.3f},{b:.3f})'"
     if sites:
         fc.append(f'[0:v]split=3[base][bl0][fc0]')
         fc.append(f'[bl0]boxblur=24:2,eq=brightness=-0.18[blur]')
-        fc.append(f'[fc0]crop=iw*0.8:iw*0.8:iw*0.1:ih*0.25,scale=250:250,format=yuva420p,geq=lum=\'p(X,Y)\':cb=\'p(X,Y)\':cr=\'p(X,Y)\':a=\'if(lte(hypot(X-125,Y-125),125),255,0)\'[face]')
+        fc.append(f'[fc0]crop=iw*0.8:iw*0.8:iw*0.1:ih*0.25,scale=280:280,format=yuva420p,geq=lum=\'p(X,Y)\':cb=\'p(X,Y)\':cr=\'p(X,Y)\':a=\'if(lte(hypot(X-140,Y-140),140),255,0)\'[face]')
         fc.append('[face]split='+str(len(sites))+''.join(f'[fa{k}]' for k in range(len(sites))))
         fc.append('[blur]split='+str(len(sites))+''.join(f'[bl{k+1}]' for k in range(len(sites))))
         lab='[base]'
@@ -183,12 +203,13 @@ def main(specf, raw, out):
             ins+=['-i',png]; pv=n; n+=1
             fc.append(f'{lab}[bl{k+1}]overlay=0:0:{en(a,b)}[x{k}a]')
             fc.append(f'[{sv}:v]setpts=PTS-STARTPTS+{a:.3f}/TB[sv{k}]')
-            fc.append(f'[x{k}a][sv{k}]overlay=268:{180+14}:eof_action=pass:{en(a,b)}[x{k}b]')
+            fc.append(f'[x{k}a][sv{k}]overlay={PX}:{PY}:eof_action=pass:{en(a,b)}[x{k}b]')
             fc.append(f'[x{k}b][{pv}:v]overlay=0:0:{en(a,b)}[x{k}c]')
-            fc.append(f'[x{k}c][fa{k}]overlay={W-110-8-258}:{1080+8}:{en(a,b)}[x{k}]')
+            fc.append(f'[x{k}c][fa{k}]overlay={W-34-8-280}:{1100+8}:{en(a,b)}[x{k}]')
             lab=f'[x{k}]'
     ins+=['-loop','1','-i',f'{tmp}/hd.png']; hv=n; n+=1
-    fc.append(f'{lab}[{hv}:v]overlay=0:0:shortest=1[h0]'); lab='[h0]'
+    cnd='+'.join(f'between(t,{a:.3f},{b:.3f})' for _,a,b,_,_ in sites) or '0'
+    fc.append(f"{lab}[{hv}:v]overlay=0:0:shortest=1:enable='not({cnd})'[h0]"); lab='[h0]'
     if S.get('band'):
         ins+=['-i',f'{tmp}/band.png']; cond='+'.join(f'between(t,{a:.3f},{b:.3f})' for _,a,b,_,_ in sites) or '0'
         fc.append(f"{lab}[{n}:v]overlay=0:0:enable='not({cond})'[bd]"); lab='[bd]'; n+=1
