@@ -172,7 +172,7 @@ def main(specf, raw, out):
     if sites:
         fc.append(f'[0:v]split=3[base][bl0][fc0]')
         fc.append(f'[bl0]boxblur=24:2,eq=brightness=-0.18[blur]')
-        fc.append(f'[fc0]crop=iw*0.56:iw*0.56:iw*0.22:ih*0.24,scale=250:250,format=yuva420p,geq=lum=\'p(X,Y)\':cb=\'p(X,Y)\':cr=\'p(X,Y)\':a=\'if(lte(hypot(X-125,Y-125),125),255,0)\'[face]')
+        fc.append(f'[fc0]crop=iw*0.8:iw*0.8:iw*0.1:ih*0.25,scale=250:250,format=yuva420p,geq=lum=\'p(X,Y)\':cb=\'p(X,Y)\':cr=\'p(X,Y)\':a=\'if(lte(hypot(X-125,Y-125),125),255,0)\'[face]')
         fc.append('[face]split='+str(len(sites))+''.join(f'[fa{k}]' for k in range(len(sites))))
         fc.append('[blur]split='+str(len(sites))+''.join(f'[bl{k+1}]' for k in range(len(sites))))
         lab='[base]'
