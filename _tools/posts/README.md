@@ -16,6 +16,7 @@ Tipos de cena (scene): {"goto":"grupo:aba","title":"^regex do h2","clipTo":".cha
 - anim {"type":"clicks","steps":[{"sel":"...","hold":n}]} — toques em botões do card
 - anim {"type":"none"} — print parado
 - modo tela inteira: {"goto":..,"view":true,"anchor":"seletor","off":px,"vh":px,"steps":[{"sel":"...","inline":true}]} — grava a tela do celular (ex.: tocar numa votação e o site rolar até ela).
+- "nosticky": true — no print de card (tema escuro), solta o menu fixo do site para ele não cobrir o card.
 - botões de série (data-k) ligam e desligam linhas em todos os cards; em Gravataí × RS × Brasil a linha de Gravataí (k=0) fica fixa.
 
 Capa (slide 1) no formato cartaz (capa.py): use `cap.capa = {"t": "PERGUNTA CURTA.<br><i>a parte que vira pauta</i>", "tag": "o número principal, curto"}`.
