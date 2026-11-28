@@ -15,7 +15,8 @@ if(S.view){const meta={frames:[]};let n=0;const VH=S.vh||560;
  const vshot=async(touch,hold=1)=>{const f=`${out}/f${String(n).padStart(4,'0')}.png`;await p.screenshot({path:f,clip:{x:0,y:0,width:390,height:VH}});meta.frames.push({f,hold,crop:null,touch:touch?{x:touch.x,y:touch.y}:null});n++;};
  const a=p.locator(S.anchor).first();await a.evaluate((e,off)=>{window.scrollTo({top:e.getBoundingClientRect().top+scrollY-off,behavior:'instant'})},S.off||70);await p.waitForTimeout(400);
  await vshot(null,16);
- for(const st of S.steps){const el=p.locator(st.sel).first();if(st.inline)await el.evaluate(e=>e.scrollIntoView({block:'nearest',inline:'center',behavior:'instant'}));await p.waitForTimeout(150);const bb=await el.boundingBox();const t={x:bb.x+bb.width/2,y:bb.y+bb.height/2};
+ for(const st of S.steps){if(st.scrollBy){const k=st.frames||24;for(let i=0;i<k;i++){await p.evaluate(d=>window.scrollBy({top:d,behavior:'instant'}),st.scrollBy/k);await p.waitForTimeout(40);await vshot(null,2);}await vshot(null,st.hold||30);continue;}
+  const el=p.locator(st.sel).first();if(st.inline)await el.evaluate(e=>e.scrollIntoView({block:'nearest',inline:'center',behavior:'instant'}));await p.waitForTimeout(150);const bb=await el.boundingBox();const t={x:bb.x+bb.width/2,y:bb.y+bb.height/2};
   await vshot(t,9);await el.click();
   for(let i=0;i<(st.burst||6);i++){await p.waitForTimeout(70);await vshot(i<2?t:null,2);}
   await p.waitForTimeout(300);await vshot(null,st.hold||30);}
