@@ -32,6 +32,8 @@ def compose(base,fr,touch,scale_w=SLOT_W,y0=SLOT_Y,crop=None,off=0,offH=None):
         d.ellipse([tx-14,ty-14,tx+14,ty+14],fill=(217,137,90,255))
     return im
 def scene(spec,outdir):
+    if spec.get('img'):  # imagem pronta (print já recortado), sem captura
+        return {'frames':[{'f':os.path.abspath(spec['img']),'touch':None,'hold':1}]}
     os.makedirs(os.path.dirname(outdir),exist_ok=True); json.dump(spec,open(outdir+'.json','w'))
     if os.path.exists(outdir): shutil.rmtree(outdir)
     subprocess.check_call(['node','capture.js',outdir+'.json',outdir],env=ENV)
