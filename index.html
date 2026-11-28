@@ -2588,7 +2588,7 @@ function wlClose(v){try{localStorage.setItem('gv-wl',v||'skip');}catch(e){}$('#w
 /* manchetes */
 function mnList(src,n){if(src.dest){const it=src.itens.slice(0,n);return `<div class="mn mn-dest"><span class="pill">Fonte principal</span><h3><a href="${src.home}" target="_blank" rel="noopener">${src.nm}</a></h3><p class="note">${src.desc||''}</p>${it.length?`<ul>${it.map(i=>`<li><a href="${i.u}" target="_blank" rel="noopener">${i.t}</a><span>${i.ed||''}${i.d?' · '+i.d.split('-').reverse().slice(0,2).join('/'):''}</span></li>`).join('')}</ul>`:''}<div class="mn-sec">${(src.sec||[]).map(([l,u])=>`<a href="${u}" target="_blank" rel="noopener">${l} →</a>`).join('')}</div></div>`;}
  return `<div class="mn"><h3><a href="${src.home}" target="_blank" rel="noopener">${src.nm}</a></h3><ul>${src.itens.slice(0,n).map(i=>`<li><a href="${i.u}" target="_blank" rel="noopener">${i.t}</a><span>${i.ed}${i.d?' · '+i.d.split('-').reverse().slice(0,2).join('/'):''}</span></li>`).join('')}</ul><a class="mn-more" href="${src.home}" target="_blank" rel="noopener">Mais no ${src.nm} →</a></div>`;}
-R.push(function(){const M=DATA.manchetes;if(!M)return;const h=$('#mn-home');if(h){const d=M.fontes.find(s=>s.dest)||M.fontes[0];h.innerHTML=mnList(d,5);}const a=$('#mn-all');if(a)a.innerHTML=M.fontes.map(s=>mnList(s,40)).join('');
+R.push(function(){const M=DATA.manchetes;if(!M)return;const h=$('#mn-home');if(h){const d=M.fontes.find(s=>s.dest)||M.fontes[0];h.innerHTML=mnList(d,5);}const a=$('#mn-all');if(a)a.innerHTML=M.fontes.map(s=>mnList(s,8)).join('');
  document.querySelectorAll('#mn-asof,#mn-asof2').forEach(x=>x.textContent=`Atualizado em ${M.asof}.`);});
 
 
